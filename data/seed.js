@@ -139,17 +139,29 @@ window.SEED = {
       "customer": "Perfex Chemical Solutions",
       "unit": "2012 Peterbilt 348, Unit 9698",
       "vin": "2NP3LN9X7CM149698",
-      "engine": "",
+      "engine": "Cummins (CUM part numbers; PX-8 / ISC likely)",
       "jobNumber": "6796",
-      "seedRev": 1,
+      "seedRev": 2,
       "ro": "",
-      "notes": "Opened 2026-10-28. No parts requested yet.",
+      "notes": "Opened 2026-10-28. Injector job: 6 injectors plus rocker cover gasket, engine brake solenoids, P/S pump gasket and hardware, entered from the Fullbay estimate on 10/28 (our cost; Fullbay sell subtotal $4,930.88). Still need injector pass-through tubes, no part number or price yet.",
       "created": "2026-10-28",
       "log": [
-        { "date": "2026-10-28", "text": "Job opened in the portal. 2012 Peterbilt 348, unit 9698, VIN 2NP3LN9X7CM149698." }
+        { "date": "2026-10-28", "text": "Job opened in the portal. 2012 Peterbilt 348, unit 9698, VIN 2NP3LN9X7CM149698." },
+        { "date": "2026-10-28", "text": "9 part lines added from the Fullbay estimate (6 injectors 5579405SE at $543.49 each). Pass-through tubes still need a part number and price." }
       ],
       "quotes": [],
-      "parts": []
+      "parts": [
+        {"source":"manual","status":"needed","pn":"5579405SE","stage":6,"desc":"Injector, Cummins (x6)","qty":6,"unit":543.49,"sell":679.3625},
+        {"source":"gap","status":"needed","pn":"PASSTHRU","stage":6,"desc":"Injector pass-through tubes (connector tubes), part # and price TBD","qty":6,"unit":null,"note":"GAP. Jacob needs these but has no part number or price yet. Match to the injector part number when ordering."},
+        {"source":"manual","status":"needed","pn":"3959798CUM","stage":6,"desc":"Gasket, rocker/valve cover","qty":1,"unit":47,"sell":58.75},
+        {"source":"manual","status":"needed","pn":"4024759CUM","stage":8,"desc":"Solenoid, engine brake","qty":2,"unit":219.04333,"sell":277.5625},
+        {"source":"manual","status":"needed","pn":"4988280CUM","stage":7,"desc":"Gasket, power steering pump","qty":1,"unit":4.4,"sell":5.5},
+        {"source":"manual","status":"needed","pn":"5264181CUM","stage":9,"desc":"Retainer","qty":6,"unit":9.7317,"sell":12.8},
+        {"source":"manual","status":"needed","pn":"3397506CUM","stage":9,"desc":"Screw, hex flange head cap","qty":12,"unit":7.98,"sell":9.975},
+        {"source":"manual","status":"needed","pn":"3871638CUM","stage":9,"desc":"Cummins, no description in our history","qty":2,"unit":3.63,"sell":4.5375},
+        {"source":"manual","status":"needed","pn":"4026537CUM","stage":9,"desc":"Cummins, no description in our history","qty":2,"unit":7.46,"sell":9.325},
+        {"source":"manual","status":"needed","pn":"3871218CUM","stage":9,"desc":"Cummins, no description in our history","qty":2,"unit":3.48,"sell":4.35}
+      ]
     }
   ]
 };
