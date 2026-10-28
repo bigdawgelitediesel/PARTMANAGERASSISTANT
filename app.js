@@ -3,9 +3,11 @@
   'use strict';
 
   const KEY = 'pma.v1';
-  const STATUSES = ['needed', 'ordered', 'received', 'installed'];
-  const ALL_STATUSES = ['needed', 'ordered', 'received', 'installed', 'superseded'];
-  const LABEL = { needed: 'needed', ordered: 'ordered', received: 'IN', installed: 'installed', superseded: 'superseded' };
+  const STATUSES = ['needed', 'ordered', 'received'];
+  const ALL_STATUSES = ['needed', 'ordered', 'received', 'superseded'];
+  const STAGES = { 1: 'Block & liners', 2: 'Bottom end: crank, bearings, seals', 3: 'Pistons & rods', 4: 'Camshaft & timing', 5: 'Oil system', 6: 'Cylinder head & injectors', 7: 'Front structure & cooling', 8: 'Sensors, hoses & external', 9: 'Seals & hardware, used as you go', 10: 'Shop supplies' };
+  const stageName = n => (n ? n + '. ' + (STAGES[n] || 'Stage ' + n) : 'No stage');
+  const LABEL = { needed: 'needed', ordered: 'ordered', received: 'IN', installed: 'IN', superseded: 'superseded' };
 
   // ---------- store ----------
   function load() {
@@ -51,6 +53,7 @@
     j.parts.forEach((p, i) => {
       if (!p.id) p.id = 'p' + Date.now().toString(36) + i.toString(36) + Math.random().toString(36).slice(2, 6);
       if (!p.status) p.status = 'needed';
+      if (p.status === 'installed') p.status = 'received';
       if (p.qty == null) p.qty = 1;
       if (p.unit === '' || p.unit === undefined) p.unit = null;
     });
@@ -147,7 +150,7 @@
   }
 
   // ---------- job view ----------
-  const viewState = { filter: 'all', q: '' };
+  const viewState = { filter: 'all', q: '', sort: 'build' };
 
   function renderJob(id) {
     const job = jobById(id);
@@ -172,13 +175,13 @@
         <div class="stat"><b>${s.count - s.superseded}</b><span>Parts on job</span></div>
         <div class="stat needed"><b>${s.needed}</b><span>Needed</span></div>
         <div class="stat ordered"><b>${s.ordered}</b><span>Ordered</span></div>
-        <div class="stat received"><b>${s.received}</b><span>In, not installed</span></div>
-        <div class="stat installed"><b>${s.installed}</b><span>Installed</span></div>
+        <div class="stat received"><b>${s.received}</b><span>In · ${s.pct}%</span></div>
         <div class="stat"><b>${money(s.total$)}</b><span>Job parts total</span></div>
         <div class="stat received"><b>${money(s.in$)}</b><span>In so far</span></div>
         <div class="stat needed countdown"><b>${money(s.remaining$)}</b><span>Remaining to come in${s.unpriced ? ' · ' + s.unpriced + ' unpriced' : ''}</span></div>
       </div>
 
+      ${nextUpHtml(job)}
       ${job.notes ? `<div class="section"><h3>Job notes</h3><div>${esc(job.notes)}</div></div>` : ''}
       ${(job.log && job.log.length) ? `<div class="section"><h3>Updates</h3><ul class="log">${job.log.slice().sort((a, b) => (b.date || '').localeCompare(a.date || '')).map(e => `<li><b>${esc(e.date || '')}</b> ${esc(e.text)}</li>`).join('')}</ul></div>` : ''}
 
@@ -188,10 +191,11 @@
 
       <div class="row">
         <div class="filters" id="filters">
-          ${[['all', 'All'], ['open', 'Not in yet'], ['needed', 'Needed'], ['ordered', 'Ordered'], ['received', 'In'], ['installed', 'Installed'], ['gap', 'Gap (never quoted)'], ['extra', 'Received extras'], ['superseded', 'Superseded']]
+          ${[['all', 'All'], ['open', 'Not in yet'], ['needed', 'Needed'], ['ordered', 'Ordered'], ['received', 'In'], ['gap', 'Gap (never quoted)'], ['extra', 'Received extras'], ['superseded', 'Superseded']]
             .map(([k, l]) => `<button class="chip ${viewState.filter === k ? 'active' : ''}" data-f="${k}">${l}</button>`).join('')}
         </div>
         <input class="search" id="search" placeholder="Search part # or description" value="${esc(viewState.q)}">
+        <select id="sort" class="btn" title="Order of the list"><option value="build" ${viewState.sort === 'build' ? 'selected' : ''}>Build order (inside out)</option><option value="quote" ${viewState.sort === 'quote' ? 'selected' : ''}>Quote order</option></select>
       </div>
 
       <div class="tablewrap">
@@ -203,7 +207,7 @@
           <tfoot id="totals"></tfoot>
         </table>
       </div>
-      <p class="muted" style="font-size:12.5px;margin-top:8px">Click a part number or description to edit the line. Tick the IN box when the part shows up. Click the status pill to move it along (needed → ordered → IN → installed). Ext = each × qty, with any promo credit applied. Cores are shown separately and are refundable when the old part goes back.</p>
+      <p class="muted" style="font-size:12.5px;margin-top:8px">Click a part number or description to edit the line. Tick the IN box when the part shows up. Click the status pill to move it along (needed → ordered → IN). Ext = each × qty, with any promo credit applied. Cores are shown separately and are refundable when the old part goes back.</p>
     `;
     $('#b-quote').onclick = () => openPasteForm(job, 'quote');
     $('#b-received').onclick = () => openPasteForm(job, 'received');
@@ -212,6 +216,7 @@
     $('#b-print').onclick = () => window.print();
     $('#filters').onclick = e => { const b = e.target.closest('.chip'); if (!b) return; viewState.filter = b.dataset.f; renderJob(id); };
     $('#search').oninput = e => { viewState.q = e.target.value; renderRows(job); };
+    $('#sort').onchange = e => { viewState.sort = e.target.value; renderRows(job); };
     renderRows(job);
     renderTotals(job);
   }
@@ -230,6 +235,22 @@
       row('Worst case, nothing returned: parts + cores', s.total$ + s.cores$, 'core');
   }
 
+  function nextUpHtml(job) {
+    const open = p => p.status === 'needed' || p.status === 'ordered';
+    const byStage = {};
+    for (const p of job.parts) if (open(p)) { const k = p.stage || 9; (byStage[k] = byStage[k] || []).push(p); }
+    const keys = Object.keys(byStage).map(Number).filter(k => k !== 10).sort((a, b) => a - b);
+    if (!keys.length) return '<div class="section nextup"><h3>Next up</h3><div>Everything is in. Nothing left to chase.</div></div>';
+    const k = keys[0], list = byStage[k];
+    const open$ = list.reduce((a, p) => a + (lineTotal(p) || 0), 0);
+    return '<div class="section nextup"><h3>Next up for the tech</h3>'
+      + '<div class="nextup-stage">' + esc(stageName(k)) + '</div>'
+      + '<div class="muted">' + list.length + ' part' + (list.length === 1 ? '' : 's') + ' not in yet · ' + money(open$) + '</div>'
+      + '<div class="nextup-list">' + list.slice(0, 14).map(p => '<span class="pn-chip">' + esc(p.pn) + ' <small>×' + esc(p.qty) + '</small></span>').join('') + (list.length > 14 ? '<span class="muted">+' + (list.length - 14) + ' more</span>' : '') + '</div>'
+      + (keys[1] ? '<div class="muted" style="margin-top:6px">Then: ' + esc(stageName(keys[1])) + ' (' + byStage[keys[1]].length + ' not in)</div>' : '')
+      + '</div>';
+  }
+
   function filtered(job) {
     const q = norm(viewState.q);
     const f = viewState.filter;
@@ -243,11 +264,7 @@
     });
   }
 
-  function renderRows(job) {
-    const rows = filtered(job);
-    const tb = $('#rows');
-    if (!rows.length) { tb.innerHTML = `<tr><td colspan="8" class="empty">Nothing matches.</td></tr>`; return; }
-    tb.innerHTML = rows.map(p => {
+  function rowHtml(p) {
       const e = lineTotal(p);
       const srcTag = p.source === 'gap' ? `<span class="pill gap" style="cursor:default">gap</span>` : p.source === 'received' && !p.covers ? `<span class="src">received extra</span>` : '';
       const rel = p.covers ? `<span class="note">Covers quoted ${esc(p.covers)}</span>` : p.coveredBy ? `<span class="note">Replaced by ${esc(p.coveredBy)}</span>` : '';
@@ -261,6 +278,23 @@
         <td><button class="pill ${p.status}" data-act="cycle" title="Click to move to the next status">${LABEL[p.status] || p.status}</button></td>
         <td><span class="check ${(p.status === 'received' || p.status === 'installed') ? 'on' : ''}" data-act="in" title="Tick when the part is IN">${(p.status === 'received' || p.status === 'installed') ? '✓' : ''}</span></td>
       </tr>`;
+  }
+
+  function renderRows(job) {
+    let rows = filtered(job);
+    const tb = $('#rows');
+    if (!rows.length) { tb.innerHTML = `<tr><td colspan="8" class="empty">Nothing matches.</td></tr>`; return; }
+    if (viewState.sort === 'build') rows = rows.map((p, i) => [p, i]).sort((x, y) => ((x[0].stage || 9) - (y[0].stage || 9)) || (x[1] - y[1])).map(x => x[0]);
+    let lastStage = null;
+    tb.innerHTML = rows.map(p => {
+      let head = '';
+      if (viewState.sort === 'build' && (p.stage || 9) !== lastStage) {
+        lastStage = p.stage || 9;
+        const inStage = rows.filter(x => (x.stage || 9) === lastStage);
+        const left = inStage.filter(x => x.status === 'needed' || x.status === 'ordered').length;
+        head = '<tr class="stage-head"><td colspan="8">' + esc(stageName(lastStage)) + ' <span class="muted">· ' + inStage.length + ' line' + (inStage.length === 1 ? '' : 's') + (left ? ', ' + left + ' not in' : ', all in') + '</span></td></tr>';
+      }
+      return head + rowHtml(p);
     }).join('');
     tb.onclick = e => {
       const tr = e.target.closest('tr.part'); if (!tr) return;
@@ -269,7 +303,7 @@
       if (act === 'cycle') {
         if (p.status === 'superseded') { p.status = 'needed'; }
         else { const i = STATUSES.indexOf(p.status); p.status = STATUSES[(i + 1) % STATUSES.length]; }
-        if (p.status === 'installed') p.installedAt = today(); else delete p.installedAt;
+        if (p.status === 'received') p.receivedAt = today(); else delete p.receivedAt;
         save(); renderJob(job.id); return;
       }
       if (act === 'in') {
@@ -354,6 +388,7 @@
           <label>Status <select id="p-status">${ALL_STATUSES.map(s => `<option value="${s}" ${p.status === s ? 'selected' : ''}>${LABEL[s]}</option>`).join('')}</select></label>
         </div>
         <label>Description <input id="p-desc" value="${esc(p.desc)}"></label>
+        <label>Build stage (inside out) <select id="p-stage">${Object.keys(STAGES).map(k => `<option value="${k}" ${(p.stage || 9) == k ? 'selected' : ''}>${stageName(Number(k))}</option>`).join('')}</select></label>
         <div class="three">
           <label>Price each <input id="p-unit" type="number" step="0.01" value="${p.unit == null ? '' : p.unit}"></label>
           <label>Core each (refundable) <input id="p-core" type="number" step="0.01" value="${p.core == null ? '' : p.core}"></label>
@@ -376,8 +411,8 @@
       const pn = $('#p-pn', m).value.trim(); if (!pn) { toast('Part number is required'); return; }
       const numOrNull = id => { const v = $(id, m).value.trim(); return v === '' ? null : Number(v); };
       const prevCovers = p.covers;
-      Object.assign(p, { pn, desc: $('#p-desc', m).value.trim(), qty: Number($('#p-qty', m).value) || 0, unit: numOrNull('#p-unit'), core: numOrNull('#p-core'), promo: numOrNull('#p-promo'), status: $('#p-status', m).value, source: $('#p-src', m).value, covers: $('#p-covers', m).value.trim(), note: $('#p-note', m).value.trim() });
-      if (p.status === 'installed' && !p.installedAt) p.installedAt = today();
+      Object.assign(p, { pn, stage: Number($('#p-stage', m).value) || 9, desc: $('#p-desc', m).value.trim(), qty: Number($('#p-qty', m).value) || 0, unit: numOrNull('#p-unit'), core: numOrNull('#p-core'), promo: numOrNull('#p-promo'), status: $('#p-status', m).value, source: $('#p-src', m).value, covers: $('#p-covers', m).value.trim(), note: $('#p-note', m).value.trim() });
+      if (p.status === 'received' && !p.receivedAt) p.receivedAt = today();
       if (isNew) { p.id = uid(); job.parts.push(p); }
       applyCovers(job, p, prevCovers);
       save(); closeModal(); renderJob(job.id);
@@ -519,10 +554,10 @@
         const existing = job.parts.find(p => norm(p.pn) === norm(r.pn));
         if (isQuote) {
           if (existing) { existing.unit = r.unit ?? existing.unit; existing.core = r.core ?? existing.core; existing.promo = r.promo ?? existing.promo; if (!existing.desc) existing.desc = r.desc; existing.qty = r.qty || existing.qty; if (!existing.quoteId) existing.quoteId = quote.id; matched++; }
-          else { job.parts.push({ id: uid(), pn: r.pn, desc: r.desc, qty: r.qty || 1, unit: r.unit, core: r.core, promo: r.promo, source: 'quote', quoteId: quote.id, status: 'needed' }); added++; }
+          else { job.parts.push({ id: uid(), pn: r.pn, desc: r.desc, qty: r.qty || 1, unit: r.unit, core: r.core, promo: r.promo, source: 'quote', quoteId: quote.id, status: 'needed', stage: 9 }); added++; }
         } else {
           if (existing) { if (existing.status === 'needed' || existing.status === 'ordered') existing.status = 'received'; existing.receivedQty = r.qty; existing.receivedAt = quote.date; matched++; }
-          else { job.parts.push({ id: uid(), pn: r.pn, desc: r.desc, qty: r.qty || 1, unit: null, source: 'received', quoteId: quote.id, status: 'received', receivedAt: quote.date, note: 'Not on any quote. Open to set which quoted part it covers.' }); added++; }
+          else { job.parts.push({ id: uid(), pn: r.pn, desc: r.desc, qty: r.qty || 1, unit: null, source: 'received', quoteId: quote.id, status: 'received', receivedAt: quote.date, stage: 9, note: 'Not on any quote. Open to set which quoted part it covers.' }); added++; }
         }
       }
       save(); closeModal(); renderJob(job.id);

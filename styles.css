@@ -155,3 +155,12 @@ tr.tot.remaining td{font-weight:800;font-size:15px;color:var(--needed-ink);backg
 tr.tot.core td:first-child{color:var(--mut);font-size:12.5px}
 tr.tot.gap td{padding:3px;border:0}
 .stat.countdown b{color:var(--needed-ink);font-size:24px}
+.nextup{border-left:4px solid var(--red)}
+.nextup-stage{font-size:18px;font-weight:800;margin:2px 0}
+.nextup-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.pn-chip{font-family:"Cascadia Mono",Consolas,ui-monospace,monospace;font-weight:700;font-size:13px;background:var(--needed);color:var(--needed-ink);padding:3px 8px;border-radius:6px}
+.pn-chip small{font-weight:500;opacity:.8}
+tr.stage-head td{background:color-mix(in srgb,var(--ink) 6%,var(--paper));font-weight:800;font-size:13px;letter-spacing:.02em;padding:8px 10px;border-top:2px solid var(--line)}
+tr.stage-head td .muted{font-weight:500}
+select.btn{padding:7px 10px}
+tr.received td.pn,tr.received td.desc{opacity:.65}
