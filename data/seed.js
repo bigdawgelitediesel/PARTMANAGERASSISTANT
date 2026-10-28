@@ -12,12 +12,13 @@ window.SEED = {
       "unit": "Tractor / Semi / Sleeper",
       "engine": "CAT C18",
       "jobNumber": "6657",
-      "seedRev": 1,
+      "seedRev": 2,
       "ro": "25166952",
       "notes": "Tech sheet signed Simper (rev 11/19/2025). Block back from machine shop, liners and shims in as of 08/19/26. Pistons, rings, pins and rods are NOT on any quote (the reman cylinder packs were dropped for bare liners).",
       "created": "2026-07-28",
       "log": [
         { "date": "2026-08-19", "text": "Block back from machine shop. Liners 5560701 x6 and shims 9Y3368 x6 installed. Spacer plate on order." },
+        { "date": "2026-10-28", "text": "Corrected 20R0630: a Cat Reman cylinder pack includes the connecting rod too, so the gap from dropping the packs is piston + rings + pin + retainers + rod. Six packs ($5,170, cores refundable) still cost less than the loose set (~$6,024)." },
         { "date": "2026-10-28", "text": "Fullbay RO 25166952 shows 18 lines received. Reconciled against Peterbilt Q38373. Still open: everything else on the quote plus the piston/ring/rod/head-stud gap." }
       ],
       "quotes": [
@@ -30,7 +31,7 @@ window.SEED = {
         { "pn": "2314327", "desc": "Water cover", "qty": 1, "unit": 673.19, "source": "quote", "quoteId": "q-pb", "status": "needed" },
         { "pn": "3299776", "desc": "Regulator housing", "qty": 1, "unit": 124.01, "source": "quote", "quoteId": "q-pb", "status": "needed" },
         { "pn": "1264935", "desc": "Seal", "qty": 2, "unit": 11.79, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "20R0630", "desc": "Cylinder pack assy, reman (liner + piston + rings + pin)", "qty": 6, "unit": 861.69, "core": 262.78, "source": "quote", "quoteId": "q-pb", "status": "superseded", "coveredBy": "5560701", "note": "Dropped. Bare liners 5560701 went in instead. Pistons, rings and pins that the pack would have included are still open, see the GAP lines." },
+        { "pn": "20R0630", "desc": "Cylinder pack assy, Cat Reman (rod + piston + rings + pin + retainers + liner + liner seals)", "qty": 6, "unit": 861.69, "core": 262.78, "source": "quote", "quoteId": "q-pb", "status": "superseded", "coveredBy": "5560701", "note": "Dropped. Bare liners 5560701 went in instead. Cat confirms a Reman pack is a fully assembled rod, piston, rings, pin, retainers, liner and seals, so dropping it opened the piston, ring, pin AND rod gap, see the GAP lines. Option: 6 packs at $5,170 (cores refundable) still beats the ~$6,024 loose set even if the pack liners go unused. Cat bulletin: packs built Mar-Nov 2017 may carry 516-9693 liners, which Cat says to replace with 556-0701." },
         { "pn": "1962429", "desc": "Oil tube assy (piston cooling jet)", "qty": 6, "unit": 111.87, "source": "quote", "quoteId": "q-pb", "status": "needed", "note": "Must be in before any piston goes down a bore." },
         { "pn": "1515925", "desc": "Oil jet bolt", "qty": 6, "unit": 1.85, "source": "quote", "quoteId": "q-pb", "status": "needed" },
         { "pn": "0R9697", "desc": "Oil pump group", "qty": 1, "unit": 977.17, "core": 1118.60, "source": "quote", "quoteId": "q-pb", "status": "needed" },
@@ -124,7 +125,7 @@ window.SEED = {
         { "pn": "2476130", "desc": "Top ring", "qty": 6, "unit": 53.89, "source": "gap", "status": "needed", "note": "GAP. Not on any quote." },
         { "pn": "1644187", "desc": "Intermediate ring", "qty": 6, "unit": 43.92, "source": "gap", "status": "needed", "note": "GAP. Not on any quote." },
         { "pn": "3064014", "desc": "Oil ring", "qty": 6, "unit": 41.58, "source": "gap", "status": "needed", "note": "GAP. Not on any quote." },
-        { "pn": "10R2117", "desc": "Connecting rod assy", "qty": 6, "unit": 327.34, "source": "gap", "status": "needed", "note": "GAP. Not on any quote. Only needed if the old rods are not reused." },
+        { "pn": "10R2117", "desc": "Connecting rod assy", "qty": 6, "unit": 327.34, "source": "gap", "status": "needed", "note": "GAP. Not on any quote. The dropped 20R0630 pack included new rods. Needed unless the old rods are inspected and reused." },
         { "pn": "2613450", "desc": "Rod bearing, ACERT", "qty": 6, "unit": 40.94, "source": "gap", "status": "needed", "note": "GAP. Check whether the 6060909 Bronze kit's rod bearings are the right ones before buying these." },
         { "pn": "CATARP", "desc": "ARP head stud kit (or Cat bolts 1241854 x10 + 1241855 x16 + 9X8268 washers)", "qty": 1, "unit": 1349.00, "source": "gap", "status": "needed", "note": "GAP. Head studs were never on any quote. ARP kit ran $1,142 to $1,349 on past builds; Cat bolt route is roughly $530 plus washers." }
       ]
