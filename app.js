@@ -24,7 +24,7 @@
         if (!local) { data.jobs.push(JSON.parse(JSON.stringify(sj))); data.seeded[sj.id] = true; continue; }
         if (local.seedRev === sj.seedRev) continue;
         // job header from seed, but keep local notes if the user edited them
-        for (const k of ['jobNumber', 'name', 'customer', 'unit', 'engine', 'ro', 'vin']) if (sj[k] != null) local[k] = sj[k];
+        for (const k of ['jobNumber', 'name', 'customer', 'unit', 'engine', 'ro', 'vin', 'hidePrices']) if (sj[k] != null) local[k] = sj[k];
         if (!local.notesEdited && sj.notes != null) local.notes = sj.notes;
         local.log = local.log || [];
         for (const e of (sj.log || [])) if (!local.log.some(x => x.date === e.date && x.text === e.text)) local.log.push(JSON.parse(JSON.stringify(e)));
@@ -137,6 +137,7 @@
 
   // ---------- home ----------
   function renderHome() {
+    $('#view').classList.remove('noprice');
     const v = $('#view');
     v.innerHTML = `
       <div class="row"><div><h1>Jobs</h1><p class="sub">Pick a job, or start a new one and paste its quotes in.</p></div><div class="spacer"></div>
@@ -147,7 +148,7 @@
             <div class="num">${esc(j.jobNumber || '')}</div>
             <div class="name">${esc(j.name)}</div>
             <div class="meta">${esc(j.customer || '')}${j.engine ? ' · ' + esc(j.engine) : ''}</div>
-            <div class="meta">${s.received + s.installed} of ${s.count - s.superseded} in · ${s.needed + s.ordered} not in yet · ${money(s.needed$)} open</div>
+            <div class="meta">${s.received + s.installed} of ${s.count - s.superseded} in · ${s.needed + s.ordered} not in yet${j.hidePrices ? '' : ' · ' + money(s.needed$) + ' open'}</div>
             <div class="bar"><i style="width:${s.pct}%"></i></div>
           </a>`; }).join('')}
         <div class="card new" id="new-job-card">+ New job</div>
@@ -164,6 +165,7 @@
     const v = $('#view');
     if (!job) { v.innerHTML = `<div class="empty">Job not found. <a href="#/">Back to jobs</a></div>`; return; }
     const s = summarize(job);
+    v.classList.toggle('noprice', !!job.hidePrices);
     v.innerHTML = `
       <div class="row">
         <div>
@@ -183,9 +185,9 @@
         <div class="stat needed"><b>${s.needed}</b><span>Needed</span></div>
         <div class="stat ordered"><b>${s.ordered}</b><span>Ordered</span></div>
         <div class="stat received"><b>${s.received}</b><span>In · ${s.pct}%</span></div>
-        <div class="stat"><b>${money(s.total$)}</b><span>Job parts total</span></div>
+        ${job.hidePrices ? '' : `<div class="stat"><b>${money(s.total$)}</b><span>Job parts total</span></div>
         <div class="stat received"><b>${money(s.in$)}</b><span>In so far</span></div>
-        <div class="stat needed countdown"><b>${money(s.remaining$)}</b><span>Remaining to come in${s.unpriced ? ' · ' + s.unpriced + ' unpriced' : ''}</span></div>
+        <div class="stat needed countdown"><b>${money(s.remaining$)}</b><span>Remaining to come in${s.unpriced ? ' · ' + s.unpriced + ' unpriced' : ''}</span></div>`}
       </div>
 
       ${nextUpHtml(job)}
@@ -253,7 +255,7 @@
     const open$ = list.reduce((a, p) => a + (lineTotal(p) || 0), 0);
     return '<div class="section nextup"><h3>Next up for the tech</h3>'
       + '<div class="nextup-stage">' + esc(stageName(k)) + '</div>'
-      + '<div class="muted">' + list.length + ' part' + (list.length === 1 ? '' : 's') + ' not in yet · ' + money(open$) + '</div>'
+      + '<div class="muted">' + list.length + ' part' + (list.length === 1 ? '' : 's') + ' not in yet' + (job.hidePrices ? '' : ' · ' + money(open$)) + '</div>'
       + '<div class="nextup-list">' + list.slice(0, 14).map(p => '<span class="pn-chip">' + esc(p.pn) + ' <small>×' + esc(p.qty) + '</small></span>').join('') + (list.length > 14 ? '<span class="muted">+' + (list.length - 14) + ' more</span>' : '') + '</div>'
       + (keys[1] ? '<div class="muted" style="margin-top:6px">Then: ' + esc(stageName(keys[1])) + ' (' + byStage[keys[1]].length + ' not in)</div>' : '')
       + '</div>';
@@ -352,6 +354,7 @@
           <label>Customer <input id="f-cust" value="${esc(j.customer)}" placeholder="Simper Trucking"></label>
         </div>
         <label>Unit <input id="f-unit" value="${esc(j.unit)}" placeholder="2007 Peterbilt 379, VIN…"></label>
+        <label class="row" style="color:inherit"><input type="checkbox" id="f-hp" ${j.hidePrices ? 'checked' : ''}> Hide prices and totals on this job</label>
         <label>Notes <textarea id="f-notes" style="min-height:80px;font-family:inherit">${esc(j.notes)}</textarea></label>
       </div>
       <div class="actions">
@@ -367,11 +370,11 @@
       if (isNew) {
         let id = norm(num || name).toLowerCase() || uid();
         while (jobById(id)) id += '-' + Math.random().toString(36).slice(2, 5);
-        const nj = { id, jobNumber: num, name: name || num, customer: $('#f-cust', m).value.trim(), unit: $('#f-unit', m).value.trim(), engine: $('#f-eng', m).value.trim(), ro: $('#f-ro', m).value.trim(), notes: $('#f-notes', m).value.trim(), created: today(), quotes: [], parts: [] };
+        const nj = { id, jobNumber: num, name: name || num, customer: $('#f-cust', m).value.trim(), unit: $('#f-unit', m).value.trim(), engine: $('#f-eng', m).value.trim(), ro: $('#f-ro', m).value.trim(), notes: $('#f-notes', m).value.trim(), hidePrices: $('#f-hp', m).checked, created: today(), quotes: [], parts: [] };
         DB.jobs.push(nj); save(); closeModal(); location.hash = '#/job/' + encodeURIComponent(id);
       } else {
         const newNotes = $('#f-notes', m).value.trim(); if (newNotes !== (job.notes || '')) job.notesEdited = true;
-        Object.assign(job, { jobNumber: num, name: name || num, customer: $('#f-cust', m).value.trim(), unit: $('#f-unit', m).value.trim(), engine: $('#f-eng', m).value.trim(), ro: $('#f-ro', m).value.trim(), notes: newNotes });
+        Object.assign(job, { jobNumber: num, name: name || num, customer: $('#f-cust', m).value.trim(), unit: $('#f-unit', m).value.trim(), engine: $('#f-eng', m).value.trim(), ro: $('#f-ro', m).value.trim(), notes: newNotes, hidePrices: $('#f-hp', m).checked });
         save(); closeModal(); route();
       }
     };

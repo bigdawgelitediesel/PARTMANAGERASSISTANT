@@ -165,3 +165,4 @@ tr.stage-head td .muted{font-weight:500}
 select.btn{padding:7px 10px}
 tr.received td.pn,tr.received td.desc{opacity:.65}
 .section.sm{border-left:4px solid var(--ordered-ink)}
+.noprice th:nth-child(4),.noprice th:nth-child(5),.noprice th:nth-child(6),.noprice tbody tr.part td:nth-child(4),.noprice tbody tr.part td:nth-child(5),.noprice tbody tr.part td:nth-child(6),.noprice tfoot{display:none}

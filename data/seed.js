@@ -177,9 +177,10 @@ window.SEED = {
       "vin": "3AKJHHDR0PSNH8637",
       "engine": "Detroit DD15 14.8L",
       "jobNumber": "6957",
-      "seedRev": 1,
+      "seedRev": 2,
+      "hidePrices": true,
       "ro": "26971752",
-      "notes": "Oil pan / oil pump / suction pipe job plus oil cooler, EGR cooler seals, compressor coolant lines, clutch and pilot bearing, filters and fluids. All 30 lines were IN as of 10/28/26 per the Fullbay parts list. Prices are our last Fullbay purchase cost where we had one; blank means no history on file.",
+      "notes": "Oil pan / oil pump / suction pipe job plus oil cooler, EGR cooler seals, compressor coolant lines, clutch and pilot bearing, filters and fluids. All 30 lines were IN as of 10/28/26 per the Fullbay parts list. Prices and totals are hidden on this job: the true cost was far higher than our history shows and the full pricing is no longer on hand.",
       "created": "2026-10-28",
       "log": [
         { "date": "2026-10-28", "text": "Job added. All parts on Fullbay RO 26971752 are in (30 lines). Oil pump EA4721807001 shows on two RO lines." }
