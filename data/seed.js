@@ -12,7 +12,7 @@ window.SEED = {
       "unit": "Tractor / Semi / Sleeper",
       "engine": "CAT C18",
       "jobNumber": "6657",
-      "seedRev": 8,
+      "seedRev": 9,
       "ro": "25166952",
       "notes": "Tech sheet signed Simper (rev 11/19/2025). Block back from machine shop, liners and shims in as of 08/19/26. The reman cylinder packs (20R0630) were dropped for bare liners, so pistons, pins, retainers, rings and rods are quoted separately on Peterbilt Q43751 (27 Oct 26, $6,999.06 with $1,233.54 refundable rod cores). Still not on any quote: rod bearings (check the 6060909 Bronze kit) and head studs.",
       "created": "2026-07-28",
@@ -23,7 +23,9 @@ window.SEED = {
         { "date": "2026-10-28", "text": "Corrected 20R0630: a Cat Reman cylinder pack includes the connecting rod too, so the gap from dropping the packs is piston + rings + pin + retainers + rod. Six packs ($5,170, cores refundable) still cost less than the loose set (~$6,024)." },
         { "date": "2026-10-28", "text": "Fullbay RO 25166952 shows 18 lines received. Reconciled against Peterbilt Q38373. Still open: everything else on the quote plus the piston/ring/rod/head-stud gap." }
       ],
-      "smUpdates": [],
+      "smUpdates": [
+        { "date": "2026-10-28", "text": "Truck will be here this week. This will be Kevin's next project." }
+      ],
       "quotes": [
         { "id": "q-pb", "vendor": "Jackson Group Peterbilt, Cheyenne", "number": "Q38373", "date": "2026-08-05", "note": "73 of 73 tech-list lines. $850 CAT promo applied. Cores credited on the face. Total $22,874.78." },
         { "id": "q-pb2", "vendor": "Jackson Group Peterbilt, Cheyenne", "number": "Q43751", "date": "2026-10-27", "note": "Loose piston/rod set to fill the gap left by dropping the 20R0630 packs. 7 lines, $6,999.06 incl. $1,233.54 refundable rod cores ($5,765.52 net)." },
@@ -142,7 +144,7 @@ window.SEED = {
       "vin": "2NP3LN9X7CM149698",
       "engine": "Cummins (CUM part numbers; PX-8 / ISC likely)",
       "jobNumber": "6796",
-      "seedRev": 3,
+      "seedRev": 4,
       "ro": "",
       "notes": "Opened 2026-10-28. Injector job: 6 injectors plus rocker cover gasket, engine brake solenoids, P/S pump gasket and hardware, entered from the Fullbay estimate on 10/28 (our cost; Fullbay sell subtotal $4,930.88). Still need injector pass-through tubes, no part number or price yet.",
       "created": "2026-10-28",
@@ -150,10 +152,12 @@ window.SEED = {
         { "date": "2026-10-28", "text": "Job opened in the portal. 2012 Peterbilt 348, unit 9698, VIN 2NP3LN9X7CM149698." },
         { "date": "2026-10-28", "text": "9 part lines added from the Fullbay estimate (6 injectors 5579405SE at $543.49 each). Pass-through tubes still need a part number and price." }
       ],
-      "smUpdates": [],
+      "smUpdates": [
+        { "date": "2026-10-28", "text": "Need to order injectors from Industrial. All other repairs are done." }
+      ],
       "quotes": [],
       "parts": [
-        {"source":"manual","status":"needed","pn":"5579405SE","stage":6,"desc":"Injector, Cummins (x6)","qty":6,"unit":543.49,"sell":679.3625},
+        {"source":"manual","status":"needed","pn":"5579405SE","stage":6,"desc":"Injector, Cummins (x6)","qty":6,"unit":543.49,"sell":679.3625,"note":"Service manager 10/28: order from Industrial Injection. Everything else on the truck is done, injectors are the hold-up."},
         {"source":"gap","status":"needed","pn":"PASSTHRU","stage":6,"desc":"Injector pass-through tubes (connector tubes), part # and price TBD","qty":6,"unit":null,"note":"GAP. Jacob needs these but has no part number or price yet. Match to the injector part number when ordering."},
         {"source":"manual","status":"needed","pn":"3959798CUM","stage":6,"desc":"Gasket, rocker/valve cover","qty":1,"unit":47,"sell":58.75},
         {"source":"manual","status":"needed","pn":"4024759CUM","stage":8,"desc":"Solenoid, engine brake","qty":2,"unit":219.04333,"sell":277.5625},
