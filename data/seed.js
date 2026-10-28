@@ -12,17 +12,19 @@ window.SEED = {
       "unit": "Tractor / Semi / Sleeper",
       "engine": "CAT C18",
       "jobNumber": "6657",
-      "seedRev": 2,
+      "seedRev": 3,
       "ro": "25166952",
       "notes": "Tech sheet signed Simper (rev 11/19/2025). Block back from machine shop, liners and shims in as of 08/19/26. Pistons, rings, pins and rods are NOT on any quote (the reman cylinder packs were dropped for bare liners).",
       "created": "2026-07-28",
       "log": [
         { "date": "2026-08-19", "text": "Block back from machine shop. Liners 5560701 x6 and shims 9Y3368 x6 installed. Spacer plate on order." },
+        { "date": "2026-10-28", "text": "Added Peterbilt Q43751 (27 Oct): loose piston/pin/retainer/ring/rod set, $6,999.06 with $1,233.54 refundable rod cores. Replaces the history-priced gap lines. Pack route (6 x 20R0630, $5,170 net of cores) is still about $595 cheaper but wastes the installed liners." },
         { "date": "2026-10-28", "text": "Corrected 20R0630: a Cat Reman cylinder pack includes the connecting rod too, so the gap from dropping the packs is piston + rings + pin + retainers + rod. Six packs ($5,170, cores refundable) still cost less than the loose set (~$6,024)." },
         { "date": "2026-10-28", "text": "Fullbay RO 25166952 shows 18 lines received. Reconciled against Peterbilt Q38373. Still open: everything else on the quote plus the piston/ring/rod/head-stud gap." }
       ],
       "quotes": [
         { "id": "q-pb", "vendor": "Jackson Group Peterbilt, Cheyenne", "number": "Q38373", "date": "2026-08-05", "note": "73 of 73 tech-list lines. $850 CAT promo applied. Cores credited on the face. Total $22,874.78." },
+        { "id": "q-pb2", "vendor": "Jackson Group Peterbilt, Cheyenne", "number": "Q43751", "date": "2026-10-27", "note": "Loose piston/rod set to fill the gap left by dropping the 20R0630 packs. 7 lines, $6,999.06 incl. $1,233.54 refundable rod cores ($5,765.52 net)." },
         { "id": "q-fb", "vendor": "Fullbay received list", "number": "RO 25166952", "date": "2026-10-28", "note": "Parts list 6657, inventoryOnly=1. 18 lines received." }
       ],
       "parts": [
@@ -119,15 +121,15 @@ window.SEED = {
         { "pn": "20A148FB", "desc": "3/4-16 HSS bottoming tap", "qty": 1, "unit": null, "source": "received", "quoteId": "q-fb", "status": "received", "note": "Shop tool." },
         { "pn": "FRTINCOMING", "desc": "Incoming freight", "qty": 1, "unit": null, "source": "received", "quoteId": "q-fb", "status": "received", "note": "Freight line on the RO." },
 
-        { "pn": "3466615", "desc": "Piston, 16:1 ACERT", "qty": 6, "unit": 398.45, "source": "gap", "status": "needed", "note": "GAP. Not on any quote. Opened when the cylinder packs were dropped. Price is our C15 ACERT history; confirm fit against this ESN." },
-        { "pn": "5245565", "desc": "Piston pin", "qty": 6, "unit": 78.66, "source": "gap", "status": "needed", "note": "GAP. Not on any quote." },
-        { "pn": "2502940", "desc": "Pin retainer", "qty": 12, "unit": 9.58, "source": "gap", "status": "needed", "note": "GAP. Not on any quote." },
-        { "pn": "2476130", "desc": "Top ring", "qty": 6, "unit": 53.89, "source": "gap", "status": "needed", "note": "GAP. Not on any quote." },
-        { "pn": "1644187", "desc": "Intermediate ring", "qty": 6, "unit": 43.92, "source": "gap", "status": "needed", "note": "GAP. Not on any quote." },
-        { "pn": "3064014", "desc": "Oil ring", "qty": 6, "unit": 41.58, "source": "gap", "status": "needed", "note": "GAP. Not on any quote." },
-        { "pn": "10R2117", "desc": "Connecting rod assy", "qty": 6, "unit": 327.34, "source": "gap", "status": "needed", "note": "GAP. Not on any quote. The dropped 20R0630 pack included new rods. Needed unless the old rods are inspected and reused." },
-        { "pn": "2613450", "desc": "Rod bearing, ACERT", "qty": 6, "unit": 40.94, "source": "gap", "status": "needed", "note": "GAP. Check whether the 6060909 Bronze kit's rod bearings are the right ones before buying these." },
-        { "pn": "CATARP", "desc": "ARP head stud kit (or Cat bolts 1241854 x10 + 1241855 x16 + 9X8268 washers)", "qty": 1, "unit": 1349.00, "source": "gap", "status": "needed", "note": "GAP. Head studs were never on any quote. ARP kit ran $1,142 to $1,349 on past builds; Cat bolt route is roughly $530 plus washers." }
+        { "pn": "3294509", "desc": "Piston body assy", "qty": 6, "unit": 374.85, "source": "quote", "quoteId": "q-pb2", "status": "needed", "note": "Fills the piston gap from the dropped 20R0630 packs. Quoted Q43751." },
+        { "pn": "5245565", "desc": "Piston pin", "qty": 6, "unit": 88.76, "source": "quote", "quoteId": "q-pb2", "status": "needed" },
+        { "pn": "2302569", "desc": "Pin retainer", "qty": 12, "unit": 5.67, "source": "quote", "quoteId": "q-pb2", "status": "needed" },
+        { "pn": "2239159", "desc": "Piston ring (top)", "qty": 6, "unit": 48.92, "source": "quote", "quoteId": "q-pb2", "status": "needed" },
+        { "pn": "1871503", "desc": "Piston ring, intermediate", "qty": 6, "unit": 48.00, "source": "quote", "quoteId": "q-pb2", "status": "needed" },
+        { "pn": "2465659", "desc": "Piston ring (oil)", "qty": 6, "unit": 48.00, "source": "quote", "quoteId": "q-pb2", "status": "needed" },
+        { "pn": "10R2117", "desc": "Connecting rod assy, reman", "qty": 6, "unit": 341.05, "core": 205.59, "source": "quote", "quoteId": "q-pb2", "status": "needed", "note": "The dropped 20R0630 pack included new rods. Needed unless the old rods are inspected and reused." },
+        { "pn": "2613450", "desc": "Rod bearing, ACERT", "qty": 6, "unit": 40.94, "source": "gap", "status": "needed", "note": "GAP. Not on Q43751 either. The 6060909 Bronze kit carries rod bearings; confirm they are the right ones before buying these separately." },
+        { "pn": "CATARP", "desc": "ARP head stud kit (or Cat bolts 1241854 x10 + 1241855 x16 + 9X8268 washers)", "qty": 1, "unit": 1349.00, "source": "gap", "status": "needed", "note": "GAP. Head studs are not on Q38373 or Q43751. ARP kit ran $1,142 to $1,349 on past builds; Cat bolt route is roughly $530 plus washers." }
       ]
     }
   ]
