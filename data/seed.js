@@ -12,9 +12,9 @@ window.SEED = {
       "unit": "Tractor / Semi / Sleeper",
       "engine": "CAT C18",
       "jobNumber": "6657",
-      "seedRev": 3,
+      "seedRev": 4,
       "ro": "25166952",
-      "notes": "Tech sheet signed Simper (rev 11/19/2025). Block back from machine shop, liners and shims in as of 08/19/26. Pistons, rings, pins and rods are NOT on any quote (the reman cylinder packs were dropped for bare liners).",
+      "notes": "Tech sheet signed Simper (rev 11/19/2025). Block back from machine shop, liners and shims in as of 08/19/26. The reman cylinder packs (20R0630) were dropped for bare liners, so pistons, pins, retainers, rings and rods are quoted separately on Peterbilt Q43751 (27 Oct 26, $6,999.06 with $1,233.54 refundable rod cores). Still not on any quote: rod bearings (check the 6060909 Bronze kit) and head studs.",
       "created": "2026-07-28",
       "log": [
         { "date": "2026-08-19", "text": "Block back from machine shop. Liners 5560701 x6 and shims 9Y3368 x6 installed. Spacer plate on order." },
