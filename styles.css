@@ -148,3 +148,10 @@ tr.superseded td{opacity:.6}
   .tablewrap{border:0}
 }
 .log{margin:0;padding-left:18px}.log li{margin:4px 0}.log b{color:var(--mut);font-weight:600;margin-right:6px}
+tfoot td{border-top:1px solid var(--line);border-bottom:0;font-size:13.5px}
+tr.tot td:first-child{color:var(--mut)}
+tr.tot.in td.num{color:var(--received-ink)}
+tr.tot.remaining td{font-weight:800;font-size:15px;color:var(--needed-ink);background:var(--needed)}
+tr.tot.core td:first-child{color:var(--mut);font-size:12.5px}
+tr.tot.gap td{padding:3px;border:0}
+.stat.countdown b{color:var(--needed-ink);font-size:24px}

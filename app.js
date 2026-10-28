@@ -78,7 +78,8 @@
 
   function summarize(job) {
     const s = { count: 0, needed: 0, ordered: 0, received: 0, installed: 0, superseded: 0, gap: 0,
-      quoted$: 0, needed$: 0, received$: 0, installed$: 0, unpriced: 0 };
+      quoted$: 0, needed$: 0, received$: 0, installed$: 0, unpriced: 0,
+      total$: 0, in$: 0, remaining$: 0, cores$: 0, coresRemaining$: 0, coresIn$: 0 };
     for (const p of job.parts) {
       s.count++;
       s[p.status] = (s[p.status] || 0) + 1;
@@ -89,7 +90,15 @@
       if ((p.status === 'needed' || p.status === 'ordered') && t != null) s.needed$ += t;
       if ((p.status === 'received' || p.status === 'installed') && t != null) s.received$ += t;
       if (p.status === 'installed' && t != null) s.installed$ += t;
+      if (p.status !== 'superseded') {
+        if (t != null) s.total$ += t;
+        const c = Number(p.core || 0) * Number(p.qty || 0);
+        s.cores$ += c;
+        if (p.status === 'received' || p.status === 'installed') { if (t != null) s.in$ += t; s.coresIn$ += c; }
+        else { s.coresRemaining$ += c; }
+      }
     }
+    s.remaining$ = s.total$ - s.in$;
     const active = s.count - s.superseded;
     s.pct = active ? Math.round(100 * (s.received + s.installed) / active) : 0;
     return s;
@@ -165,9 +174,9 @@
         <div class="stat ordered"><b>${s.ordered}</b><span>Ordered</span></div>
         <div class="stat received"><b>${s.received}</b><span>In, not installed</span></div>
         <div class="stat installed"><b>${s.installed}</b><span>Installed</span></div>
-        <div class="stat"><b>${money(s.quoted$)}</b><span>Quoted (active lines)</span></div>
-        <div class="stat needed"><b>${money(s.needed$)}</b><span>Still to buy</span></div>
-        <div class="stat received"><b>${money(s.received$)}</b><span>In hand (incl. installed)</span></div>
+        <div class="stat"><b>${money(s.total$)}</b><span>Job parts total</span></div>
+        <div class="stat received"><b>${money(s.in$)}</b><span>In so far</span></div>
+        <div class="stat needed countdown"><b>${money(s.remaining$)}</b><span>Remaining to come in${s.unpriced ? ' · ' + s.unpriced + ' unpriced' : ''}</span></div>
       </div>
 
       ${job.notes ? `<div class="section"><h3>Job notes</h3><div>${esc(job.notes)}</div></div>` : ''}
@@ -191,6 +200,7 @@
             <th>Part #</th><th>Description</th><th class="num">Qty</th><th class="num hide-sm">Each</th><th class="num">Ext</th><th class="hide-sm">Core</th><th>Status</th><th title="In">IN</th>
           </tr></thead>
           <tbody id="rows"></tbody>
+          <tfoot id="totals"></tfoot>
         </table>
       </div>
       <p class="muted" style="font-size:12.5px;margin-top:8px">Click a part number or description to edit the line. Tick the IN box when the part shows up. Click the status pill to move it along (needed → ordered → IN → installed). Ext = each × qty, with any promo credit applied. Cores are shown separately and are refundable when the old part goes back.</p>
@@ -203,6 +213,21 @@
     $('#filters').onclick = e => { const b = e.target.closest('.chip'); if (!b) return; viewState.filter = b.dataset.f; renderJob(id); };
     $('#search').oninput = e => { viewState.q = e.target.value; renderRows(job); };
     renderRows(job);
+    renderTotals(job);
+  }
+
+  function renderTotals(job) {
+    const s = summarize(job);
+    const row = (label, val, cls = '') => `<tr class="tot ${cls}"><td colspan="4">${label}</td><td class="num">${money(val)}</td><td colspan="3"></td></tr>`;
+    $('#totals').innerHTML =
+      row('Job parts total (all active lines, promos applied)', s.total$) +
+      row('In so far', -s.in$, 'in') +
+      row('REMAINING TO COME IN', s.remaining$, 'remaining') +
+      `<tr class="tot gap"><td colspan="8"></td></tr>` +
+      row('Cores on this job (refundable when the old parts go back)', s.cores$, 'core') +
+      row('Cores already paid out (on lines that are in)', s.coresIn$, 'core') +
+      row('Cores still to pay out (on lines not in yet)', s.coresRemaining$, 'core') +
+      row('Worst case, nothing returned: parts + cores', s.total$ + s.cores$, 'core');
   }
 
   function filtered(job) {
