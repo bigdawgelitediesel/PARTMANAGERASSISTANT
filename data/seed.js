@@ -168,6 +168,60 @@ window.SEED = {
         {"source":"manual","status":"needed","pn":"4026537CUM","stage":9,"desc":"Cummins, no description in our history","qty":2,"unit":7.46,"sell":9.325},
         {"source":"manual","status":"needed","pn":"3871218CUM","stage":9,"desc":"Cummins, no description in our history","qty":2,"unit":3.48,"sell":4.35}
       ]
+    },
+    {
+      "id": "6957",
+      "name": "Sapsan Logistics",
+      "customer": "SAPSAN LOGISTICS INC",
+      "unit": "2023 Freightliner Cascadia, Unit 1640",
+      "vin": "3AKJHHDR0PSNH8637",
+      "engine": "Detroit DD15 14.8L",
+      "jobNumber": "6957",
+      "seedRev": 1,
+      "ro": "26971752",
+      "notes": "Oil pan / oil pump / suction pipe job plus oil cooler, EGR cooler seals, compressor coolant lines, clutch and pilot bearing, filters and fluids. All 30 lines were IN as of 10/28/26 per the Fullbay parts list. Prices are our last Fullbay purchase cost where we had one; blank means no history on file.",
+      "created": "2026-10-28",
+      "log": [
+        { "date": "2026-10-28", "text": "Job added. All parts on Fullbay RO 26971752 are in (30 lines). Oil pump EA4721807001 shows on two RO lines." }
+      ],
+      "smUpdates": [
+        { "date": "2026-10-28", "text": "This should complete tomorrow." }
+      ],
+      "quotes": [
+        { "id": "q-fb", "vendor": "Fullbay received list", "number": "RO 26971752", "date": "2026-10-28", "note": "Parts list 6957, inventoryOnly=1. 30 lines, all in. PDF in jobs/6957/." }
+      ],
+      "parts": [
+        {"pn":"A47301104313","stage":5,"desc":"Oil pan","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"A4730140122","stage":5,"desc":"Oil pan gasket","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"EA4721807001","stage":5,"desc":"Oil pump assembly","qty":2,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28","note":"Listed twice on the RO, one each. Check whether the second one is a duplicate line or a return."},
+        {"pn":"A4721870231","stage":5,"desc":"Oil suction pipe","qty":1,"unit":42.81,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"A4721881480","stage":5,"desc":"Oil suction manifold seal","qty":2,"unit":13.95,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"A4721870980","stage":5,"desc":"Seal","qty":1,"unit":9.67,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"A4721870880","stage":5,"desc":"Seal","qty":2,"unit":10.19,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"A0229979548","stage":5,"desc":"O-ring","qty":1,"unit":3.37,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"07-25222-000","stage":5,"desc":"Oil cooler","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"A4711800209","stage":8,"desc":"Oil filter kit with seals","qty":1,"unit":27.7,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"A4720921705","stage":8,"desc":"Fuel filter kit","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"03-42776-010","stage":8,"desc":"Filter element","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"A4722005052","stage":7,"desc":"A/C compressor coolant supply line","qty":1,"unit":17.54,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"A4722004851","stage":7,"desc":"A/C compressor coolant return line","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"A14-22076-000","stage":7,"desc":"Power steering reservoir","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"RA4721401380","stage":8,"desc":"EGR cooler seals","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"23516100","stage":8,"desc":"Gasket","qty":1,"unit":3.94,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"23-13329-095","stage":8,"desc":"Hex screws","qty":12,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"T130130349AC2","stage":8,"desc":"V-band clamp","qty":1,"unit":22.74,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"AMS012","stage":8,"desc":"Gasket, 4 inch with tabs","qty":2,"unit":14.15,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"A0009957033","stage":8,"desc":"Clamps","qty":2,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"A0004921680","stage":8,"desc":"Gasket","qty":2,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"A0039955101","stage":8,"desc":"Clamp","qty":2,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"A0009957702","stage":8,"desc":"Clamp","qty":1,"unit":29.73,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"262PPCDOT-4","stage":8,"desc":"1/4 in DOT push-connect composite union","qty":9,"unit":8.15,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28","note":"Two RO lines, 4 + 5."},
+        {"pn":"K4680CL","stage":8,"desc":"Clutch","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"A0119812025","stage":8,"desc":"Pilot bearing","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"EG5081","stage":10,"desc":"Trans fluid 75W-90","qty":3,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"122485","stage":10,"desc":"Oil 10W-30","qty":12,"unit":22.5,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
+        {"pn":"FREIGHT","stage":10,"desc":"Freight charge","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"}
+      ]
     }
   ]
 };
