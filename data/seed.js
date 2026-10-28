@@ -12,7 +12,7 @@ window.SEED = {
       "unit": "Tractor / Semi / Sleeper",
       "engine": "CAT C18",
       "jobNumber": "6657",
-      "seedRev": 9,
+      "seedRev": 10,
       "ro": "25166952",
       "notes": "Tech sheet signed Simper (rev 11/19/2025). Block back from machine shop, liners and shims in as of 08/19/26. The reman cylinder packs (20R0630) were dropped for bare liners, so pistons, pins, retainers, rings and rods are quoted separately on Peterbilt Q43751 (27 Oct 26, $6,999.06 with $1,233.54 refundable rod cores). Still not on any quote: rod bearings (check the 6060909 Bronze kit) and head studs.",
       "created": "2026-07-28",
@@ -24,7 +24,7 @@ window.SEED = {
         { "date": "2026-10-28", "text": "Fullbay RO 25166952 shows 18 lines received. Reconciled against Peterbilt Q38373. Still open: everything else on the quote plus the piston/ring/rod/head-stud gap." }
       ],
       "smUpdates": [
-        { "date": "2026-10-28", "text": "Truck will be here this week. This will be Kevin's next project." }
+        { "date": "2026-10-27", "text": "Truck will be here this week. This will be Kevin's next project." }
       ],
       "quotes": [
         { "id": "q-pb", "vendor": "Jackson Group Peterbilt, Cheyenne", "number": "Q38373", "date": "2026-08-05", "note": "73 of 73 tech-list lines. $850 CAT promo applied. Cores credited on the face. Total $22,874.78." },
@@ -144,7 +144,7 @@ window.SEED = {
       "vin": "2NP3LN9X7CM149698",
       "engine": "Cummins (CUM part numbers; PX-8 / ISC likely)",
       "jobNumber": "6796",
-      "seedRev": 4,
+      "seedRev": 5,
       "ro": "",
       "notes": "Opened 2026-10-28. Injector job: 6 injectors plus rocker cover gasket, engine brake solenoids, P/S pump gasket and hardware, entered from the Fullbay estimate on 10/28 (our cost; Fullbay sell subtotal $4,930.88). Still need injector pass-through tubes, no part number or price yet.",
       "created": "2026-10-28",
@@ -153,11 +153,11 @@ window.SEED = {
         { "date": "2026-10-28", "text": "9 part lines added from the Fullbay estimate (6 injectors 5579405SE at $543.49 each). Pass-through tubes still need a part number and price." }
       ],
       "smUpdates": [
-        { "date": "2026-10-28", "text": "Need to order injectors from Industrial. All other repairs are done." }
+        { "date": "2026-10-27", "text": "Need to order injectors from Industrial. All other repairs are done." }
       ],
       "quotes": [],
       "parts": [
-        {"source":"manual","status":"needed","pn":"5579405SE","stage":6,"desc":"Injector, Cummins (x6)","qty":6,"unit":543.49,"sell":679.3625,"note":"Service manager 10/28: order from Industrial Injection. Everything else on the truck is done, injectors are the hold-up."},
+        {"source":"manual","status":"needed","pn":"5579405SE","stage":6,"desc":"Injector, Cummins (x6)","qty":6,"unit":543.49,"sell":679.3625,"note":"Service manager 10/27: order from Industrial Injection. Everything else on the truck is done, injectors are the hold-up."},
         {"source":"gap","status":"needed","pn":"PASSTHRU","stage":6,"desc":"Injector pass-through tubes (connector tubes), part # and price TBD","qty":6,"unit":null,"note":"GAP. Jacob needs these but has no part number or price yet. Match to the injector part number when ordering."},
         {"source":"manual","status":"needed","pn":"3959798CUM","stage":6,"desc":"Gasket, rocker/valve cover","qty":1,"unit":47,"sell":58.75},
         {"source":"manual","status":"needed","pn":"4024759CUM","stage":8,"desc":"Solenoid, engine brake","qty":2,"unit":219.04333,"sell":277.5625},
@@ -177,7 +177,7 @@ window.SEED = {
       "vin": "3AKJHHDR0PSNH8637",
       "engine": "Detroit DD15 14.8L",
       "jobNumber": "6957",
-      "seedRev": 2,
+      "seedRev": 3,
       "hidePrices": true,
       "ro": "26971752",
       "notes": "Oil pan / oil pump / suction pipe job plus oil cooler, EGR cooler seals, compressor coolant lines, clutch and pilot bearing, filters and fluids. All 30 lines were IN as of 10/28/26 per the Fullbay parts list. Prices and totals are hidden on this job: the true cost was far higher than our history shows and the full pricing is no longer on hand.",
@@ -186,7 +186,7 @@ window.SEED = {
         { "date": "2026-10-28", "text": "Job added. All parts on Fullbay RO 26971752 are in (30 lines). Oil pump EA4721807001 shows on two RO lines." }
       ],
       "smUpdates": [
-        { "date": "2026-10-28", "text": "This should complete tomorrow." }
+        { "date": "2026-10-27", "text": "This should complete tomorrow." }
       ],
       "quotes": [
         { "id": "q-fb", "vendor": "Fullbay received list", "number": "RO 26971752", "date": "2026-10-28", "note": "Parts list 6957, inventoryOnly=1. 30 lines, all in. PDF in jobs/6957/." }
