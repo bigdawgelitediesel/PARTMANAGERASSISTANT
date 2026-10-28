@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parts Manager Assistant</title>
+<meta name="description" content="Job parts tracker for Elite Diesel Service. Paste quotes and received lists, click each part through to installed.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23b3261e'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'>P</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#/">
+    <span class="brand-mark">P</span>
+    <span class="brand-text">Parts Manager<span>Elite Diesel Service</span></span>
+  </a>
+  <nav class="tabs" id="tabs"></nav>
+  <div class="top-actions">
+    <button class="btn ghost" id="btn-export" title="Download all jobs as JSON">Export</button>
+    <label class="btn ghost" for="file-import" title="Load a JSON file exported from this app">Import</label>
+    <input type="file" id="file-import" accept="application/json" hidden>
+  </div>
+</header>
+
+<main id="view"></main>
+
+<div id="modal-root"></div>
+
+<footer class="foot">
+  <span>Data is saved in this browser. Use Export to back it up or move it to another device.</span>
+</footer>
+
+<script src="data/seed.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

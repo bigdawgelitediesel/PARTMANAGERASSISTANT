@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>CAT C18 - Build Parts Order Log</title>
+<style>
+  :root{--ink:#16130f;--mut:#6d6459;--line:#ddd6ca;--paper:#fff;
+        --ok:#eef4ec;--okln:#3f7d40;--warn:#fbf0e4;--warnln:#b06a1c;
+        --sub:#eef1f6;--subln:#3c5a86;--add:#f6efee;--addln:#a33b2f}
+  *{box-sizing:border-box}
+  body{margin:0;padding:0;background:#f4f1eb;color:var(--ink);
+       font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;font-size:10.2pt;line-height:1.45}
+  .page{max-width:1180px;margin:0 auto;background:var(--paper);padding:34px 40px 48px}
+  .eyebrow{font-size:8.4pt;letter-spacing:.16em;text-transform:uppercase;color:#8a6a2f;font-weight:600;margin-bottom:10px}
+  h1{font-size:27pt;line-height:1.04;margin:0 0 10px;letter-spacing:-.015em;font-weight:800}
+  h1 span{display:block;font-weight:400;color:#3d372f;font-size:15pt;margin-top:6px}
+  .lede{color:#3d372f;max-width:80ch;margin:0 0 20px}
+  .rule{height:3px;background:var(--ink);margin:16px 0 22px}
+  h2{font-size:12.5pt;letter-spacing:.02em;margin:30px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+  .box{border:1px solid var(--line);border-left:4px solid var(--okln);background:var(--ok);padding:14px 18px;margin:0 0 18px}
+  .box.warn{border-left-color:var(--warnln);background:var(--warn)}
+  .box.note{border-left-color:var(--subln);background:var(--sub)}
+  .box h3{margin:0 0 8px;font-size:8.6pt;letter-spacing:.15em;text-transform:uppercase;color:#4b5c46}
+  .box.warn h3{color:#8a5416}
+  .box.note h3{color:#33507a}
+  .box p{margin:0 0 9px}.box p:last-child{margin:0}
+  .stats{display:flex;gap:12px;margin:20px 0 8px}
+  .stat{flex:1;border:1px solid var(--line);padding:10px 12px}
+  .stat b{display:block;font-size:19pt;line-height:1;font-variant-numeric:tabular-nums}
+  .stat span{display:block;font-size:7.4pt;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin-top:5px;line-height:1.3}
+  table{width:100%;border-collapse:collapse;font-size:8.9pt}
+  th{text-align:left;font-size:7.6pt;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);
+     border-bottom:1.5px solid var(--ink);padding:6px 7px;font-weight:600}
+  td{padding:6px 7px;border-bottom:1px solid #eee7dc;vertical-align:top}
+  .seq{text-align:right;font-variant-numeric:tabular-nums;color:var(--mut);font-weight:700;width:34px}
+  .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .pn{font-family:"Cascadia Mono",Consolas,monospace;font-size:9.2pt;font-weight:700;white-space:nowrap}
+  .tag{display:inline-block;padding:2px 7px;font-size:7.2pt;letter-spacing:.09em;
+       text-transform:uppercase;font-weight:700;white-space:nowrap}
+  .t-q{background:var(--ok);color:#2c5f2e}
+  .t-s{background:var(--sub);color:#33507a}
+  .t-a{background:var(--add);color:#8c3226}
+  .t-in{background:#e8e3d8;color:#4b4438}
+  .t-rc{background:#f1ece1;color:#6d6459}
+  .t-oo{background:var(--warn);color:#8a5416}
+  .note-cell{color:var(--mut);font-size:8.2pt;line-height:1.35}
+  .blank td{height:26px;color:#c9c1b4}
+  .blank .seq{color:#c9c1b4}
+  .why td{border-bottom:1px solid #eee7dc}
+  .why .pri{font-size:16pt;font-weight:800;color:#b06a1c;line-height:1;text-align:center;width:34px}
+  .src{margin-top:26px;padding-top:12px;border-top:1px solid var(--line);color:var(--mut);font-size:7.8pt;line-height:1.5}
+  ul{padding-left:18px;margin:0}li{margin-bottom:7px}
+  @media print{
+    body{background:#fff} .page{max-width:none;padding:0}
+    tr{page-break-inside:avoid} .stats,.box,li{page-break-inside:avoid}
+    h2{page-break-after:avoid}
+    @page{size:letter landscape;margin:0.4in}
+  }
+</style>
+</head><body><div class="page">
+
+<div class="eyebrow">Elite Diesel Service &middot; Cheyenne WY &middot; C18 CAT swap &middot; Simper &middot; Log opened 08/19/26</div>
+<h1>C18 BUILD &mdash; PARTS ORDER LOG<span>Every part number in the order it was ordered, checked against the 73&#8209;line quote</span></h1>
+<p class="lede">A running record of what actually goes into this engine, in sequence, as the build progresses.
+Each entry is flagged against the original tech list so parts that were substituted or added after the fact
+stay visible instead of disappearing into the job. Add a row every time something is ordered.</p>
+<div class="rule"></div>
+
+<div class="stats">
+  <div class="stat"><b>3</b><span>Entries logged</span></div>
+  <div class="stat"><b>1</b><span>On the original quote</span></div>
+  <div class="stat"><b>1</b><span>Substituted</span></div>
+  <div class="stat"><b>1</b><span>Added, not quoted</span></div>
+</div>
+
+<h2>Order log</h2>
+<table>
+<thead><tr>
+  <th class="seq">#</th>
+  <th style="width:74px">Ordered</th>
+  <th style="width:92px">Part number</th>
+  <th>Description</th>
+  <th class="num" style="width:38px">Qty</th>
+  <th style="width:108px">Vs. quote</th>
+  <th style="width:88px">Status</th>
+  <th style="width:270px">Notes</th>
+</tr></thead>
+<tbody>
+
+<tr>
+  <td class="seq">1</td>
+  <td></td>
+  <td class="pn">5560701</td>
+  <td>Cylinder liner</td>
+  <td class="num">6</td>
+  <td><span class="tag t-s">Substitution</span></td>
+  <td><span class="tag t-in">Installed</span></td>
+  <td class="note-cell">Quote carried reman cylinder <i>packs</i> 20R0630 x6. Went to bare liners instead.
+      Confirm pistons, rings and pins are sourced. A pack would have included them.</td>
+</tr>
+
+<tr>
+  <td class="seq">2</td>
+  <td></td>
+  <td class="pn">9Y3368</td>
+  <td>Shim</td>
+  <td class="num">6</td>
+  <td><span class="tag t-q">On quote</span></td>
+  <td><span class="tag t-in">Installed</span></td>
+  <td class="note-cell">Used setting liner height. Record the measured protrusion per hole before the
+      spacer plate goes down.</td>
+</tr>
+
+<tr>
+  <td class="seq">3</td>
+  <td></td>
+  <td class="pn">6I4421</td>
+  <td>Spacer plate</td>
+  <td class="num">1</td>
+  <td><span class="tag t-a">Added</span></td>
+  <td><span class="tag t-oo">On order</span></td>
+  <td class="note-cell">Not on the 73&#8209;line tech list and not on any vendor quote. Confirm the spacer plate
+      gasket and block dowels are covered.</td>
+</tr>
+
+<tr class="blank"><td class="seq">4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="blank"><td class="seq">5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="blank"><td class="seq">6</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="blank"><td class="seq">7</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="blank"><td class="seq">8</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="blank"><td class="seq">9</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="blank"><td class="seq">10</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="blank"><td class="seq">11</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="blank"><td class="seq">12</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="blank"><td class="seq">13</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="blank"><td class="seq">14</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="blank"><td class="seq">15</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+</tbody>
+</table>
+
+<h2>Next five off the quote, in the order I would pull them</h2>
+<p class="lede">Ranked by how soon the window closes on installing them, not by cost. Everything here is already
+on the 73&#8209;line tech list, so none of it moves the quoted number.</p>
+
+<table>
+<thead><tr>
+  <th class="pri">&nbsp;</th>
+  <th style="width:92px">Part number</th>
+  <th>Description</th>
+  <th class="num" style="width:38px">Qty</th>
+  <th style="width:52%">Why now</th>
+</tr></thead>
+<tbody>
+
+<tr class="why">
+  <td class="pri">1</td>
+  <td class="pn">1962429<br>1515925</td>
+  <td>Jet, piston cooling<br>Bolt</td>
+  <td class="num">6<br>6</td>
+  <td>The cooling jets bolt into the block and spray the underside of the pistons. They have to be in
+      <b>before a single piston goes down a bore</b>. Liners are already in, so pistons are the next thing to
+      happen. Miss these and you pull every piston back out. The bolts are the matching hardware and they get
+      torqued and often secured, so do not reuse the old ones.</td>
+</tr>
+
+<tr class="why">
+  <td class="pri">2</td>
+  <td class="pn">3483295</td>
+  <td>Liner o&#8209;ring kit</td>
+  <td class="num">6</td>
+  <td>Liner projection gets set dry with the shims, then the liners come back out, the o&#8209;rings and crevice
+      seal go on, and they get seated for final. If the liners in line 1 are only dry&#8209;set right now, this is
+      the part that lets you finish that step. Nothing above the block can be trusted until the liners are
+      sealed and re&#8209;checked.</td>
+</tr>
+
+<tr class="why">
+  <td class="pri">3</td>
+  <td class="pn">6060909</td>
+  <td>Bronze overhaul kit</td>
+  <td class="num">1</td>
+  <td>This is the gasket and seal pack for the whole job and it is the single biggest unknown on the build.
+      The <b>spacer plate gasket almost certainly lives in here</b>. Get it in hand and physically inventory it
+      against what the plate needs before the plate goes on, because if the gasket is not in the kit you are
+      ordering it and waiting while the engine sits open.</td>
+</tr>
+
+<tr class="why">
+  <td class="pri">4</td>
+  <td class="pn">7F8817</td>
+  <td>Dowel</td>
+  <td class="num">2</td>
+  <td>The spacer plate locates on the block dowels. They go in with the plate, and they are a two dollar part
+      that stops a very expensive alignment problem. Since the plate is already inbound, these should be in the
+      same box, not ordered after you find out the old ones are damaged.</td>
+</tr>
+
+<tr class="why">
+  <td class="pri">5</td>
+  <td class="pn">10R7155</td>
+  <td>Camshaft</td>
+  <td class="num">1</td>
+  <td>Cam&#8209;in&#8209;block engine, so the cam goes in before the head, the valve train and the injectors. It is
+      also a reman with a core and one of the longest lead times on the list. Order it now even though it
+      installs later, because it is the part most likely to stall the build if you wait until you need it.</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="box note">
+  <h3>Sixth, and it is close</h3>
+  <p>Crank seals <b>4W8133</b> front and <b>4W8134</b> rear, plus <b>9N0037</b> carrier seals x2 and the
+  <b>1121102</b> o&#8209;ring seals. These install while the block is still open at both ends. Once the flywheel
+  housing, front cover and pan close up, the window shuts. If the bottom end is going together in the next
+  stretch, promote these ahead of the camshaft.</p>
+</div>
+
+<h2>Open items on this build</h2>
+
+<div class="box warn">
+  <h3>Pistons and rings are not accounted for</h3>
+  <p>The quote priced <b>20R0630</b> reman cylinder packs, which come as an assembly: liner, piston, rings and
+  pin. Line 1 replaced that with bare <b>5560701</b> liners. Unless the original pistons are being cleaned and
+  reused with new rings, pistons and rings need their own part numbers on this log and their own money.
+  This is the biggest open question on the build and it needs answering before the short block closes up.</p>
+</div>
+
+<div class="box note">
+  <h3>Thrust bearing</h3>
+  <p><b>5L1100</b> thrust bearing and <b>4N8626</b> races x2 are on the quote. If the block came back with the
+  crank already in, confirm these went in at the machine shop and log them. If the crank is still out, they are
+  ahead of everything in the list above.</p>
+</div>
+
+<div class="box">
+  <h3>Cost drift</h3>
+  <p>The quoted basket was <b>$22,869.75</b> at Peterbilt for all 73 tech lines with cores returned.
+  Every row tagged <span class="tag t-a">Added</span> or <span class="tag t-s">Substitution</span> moves that
+  number. Keep the tags honest and the delta stays visible when the job gets invoiced.</p>
+</div>
+
+<h2>Chassis side, not on any engine parts list</h2>
+<p class="lede">From the Kustom Truck packet in this folder (Peterbilt NAMUX3 repower). None of this is on the
+73&#8209;line tech sheet, and none of it is quoted. It is a separate work&#8209;stream from the engine build and it
+has its own parts and its own software.</p>
+
+<table>
+<thead><tr>
+  <th style="width:110px">Part / item</th>
+  <th>What it is</th>
+  <th style="width:46%">Why it matters</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td class="pn">19906013<br>19905013</td>
+  <td>Power Fuse Harness<br>Power Adapter Harness</td>
+  <td>Kustom Truck expects one or the other to feed the J142 fuse harness connector, which carries the main
+      ECM unswitched battery power. Neither is on the engine quote. If neither was bought, the J142 has to be
+      landed on a fused constant source, <b>15 amp on each wire</b>.</td>
+</tr>
+<tr>
+  <td class="pn">Bendix<br>EC60 / EC80</td>
+  <td>ABS module</td>
+  <td>Retarder Control and ATC Control have to be disabled. On <b>Advanced or Premium</b> modules those are
+      hard coded and cannot be changed, and the module must be replaced with a <b>Basic</b> module to clear the
+      codes. That is a surprise part if nobody checks which module the truck has before the swap.</td>
+</tr>
+<tr>
+  <td>Software</td>
+  <td>Paccar ESA<br>Bendix ACOM</td>
+  <td>ESA is needed in the CECU to disable "Use Outside Air Temp From Engine Message" or the dash OAT reads
+      wrong. ACOM is needed for the ABS self&#8209;config and parameters. Confirm both are on hand before the
+      truck goes back together.</td>
+</tr>
+<tr>
+  <td class="pn">Doc 9025</td>
+  <td>TPS sheet, <b>Cummins CM870 ECM</b></td>
+  <td><b>Open question.</b> The throttle position sheet in the packet is written for a Cummins CM870. A Cat C18
+      runs a Cat ADEM, not a CM870. Either Kustom Truck included a generic sheet, or the harness kit that was
+      ordered is spec'd for a Cummins repower. Worth one phone call before the harness goes in.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>How to keep this current</h2>
+<ul>
+  <li>One row per part number, in the order it was <b>ordered</b>, not the order it was installed.</li>
+  <li><b>Vs. quote</b> is one of three: <span class="tag t-q">On quote</span> it was on the 73&#8209;line tech
+      list, <span class="tag t-s">Substitution</span> it replaced a quoted line,
+      <span class="tag t-a">Added</span> it was never quoted.</li>
+  <li><b>Status</b> moves <span class="tag t-oo">On order</span> to <span class="tag t-rc">Received</span> to
+      <span class="tag t-in">Installed</span>.</li>
+  <li>Note the vendor and the PO or quote number in Notes once parts start coming from more than one place.</li>
+</ul>
+
+<div class="src">
+  Cross&#8209;referenced against <b>CAT C18 - Parts List Tech Only.csv</b> (73 lines, Simper tech sheet revised
+  11/19/2025) and <b>CAT Swap Parts - Rush vs Peterbilt, rev 08_05_26.html</b>.
+  Sequencing in the "next five" section is inferred from the parts list, <b>not</b> from Cat service literature.
+  Checked 08/19/26 against <b>ENGINE SWAP INSTRUCTIONS.pdf</b> and <b>KUSTOM TRUCK INSTRUCTIONS.pdf</b> in this
+  folder: both are the same Kustom Truck chassis&#8209;electrical packet and contain <b>no engine assembly
+  procedure</b>. Verify torque and sequence against Cat SIS, Disassembly &amp; Assembly for the C18.
+  Folder: OneDrive - Elite Diesel Service &rsaquo; Desktop &rsaquo; CAT C18 Swap - Simper.
+</div>
+
+</div></body></html>
