@@ -80,6 +80,11 @@
   }
 
   function jobById(id) { return DB.jobs.find(j => j.id === id); }
+  // Jobs always show in numerical order by job number (non-numeric ones go last, alphabetical).
+  function jobsSorted() {
+    const num = j => { const n = parseInt(String(j.jobNumber || j.id).replace(/D/g, ''), 10); return isNaN(n) ? Infinity : n; };
+    return DB.jobs.slice().sort((x, y) => (num(x) - num(y)) || String(x.jobNumber || x.id).localeCompare(String(y.jobNumber || y.id)));
+  }
 
   function summarize(job) {
     const s = { count: 0, needed: 0, ordered: 0, received: 0, installed: 0, superseded: 0, gap: 0,
@@ -123,7 +128,7 @@
   // ---------- tabs ----------
   function renderTabs(activeId) {
     const t = $('#tabs');
-    t.innerHTML = DB.jobs.map(j => {
+    t.innerHTML = jobsSorted().map(j => {
       const s = summarize(j);
       return `<a class="tab ${j.id === activeId ? 'active' : ''}" href="#/job/${encodeURIComponent(j.id)}">${esc(j.jobNumber || j.name)}<small>${s.pct}%</small></a>`;
     }).join('') + `<a class="tab" href="#/" id="tab-new" style="border-style:dashed">+ Job</a>`;
@@ -137,7 +142,7 @@
       <div class="row"><div><h1>Jobs</h1><p class="sub">Pick a job, or start a new one and paste its quotes in.</p></div><div class="spacer"></div>
       <button class="btn primary" id="new-job">New job</button></div>
       <div class="cards">
-        ${DB.jobs.map(j => { const s = summarize(j); return `
+        ${jobsSorted().map(j => { const s = summarize(j); return `
           <a class="card" href="#/job/${encodeURIComponent(j.id)}">
             <div class="num">${esc(j.jobNumber || '')}</div>
             <div class="name">${esc(j.name)}</div>
