@@ -164,3 +164,4 @@ tr.stage-head td{background:color-mix(in srgb,var(--ink) 6%,var(--paper));font-w
 tr.stage-head td .muted{font-weight:500}
 select.btn{padding:7px 10px}
 tr.received td.pn,tr.received td.desc{opacity:.65}
+.section.sm{border-left:4px solid var(--ordered-ink)}

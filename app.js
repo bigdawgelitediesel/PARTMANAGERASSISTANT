@@ -28,6 +28,8 @@
         if (!local.notesEdited && sj.notes != null) local.notes = sj.notes;
         local.log = local.log || [];
         for (const e of (sj.log || [])) if (!local.log.some(x => x.date === e.date && x.text === e.text)) local.log.push(JSON.parse(JSON.stringify(e)));
+        local.smUpdates = local.smUpdates || [];
+        for (const e of (sj.smUpdates || [])) if (!local.smUpdates.some(x => x.date === e.date && x.text === e.text)) local.smUpdates.push(JSON.parse(JSON.stringify(e)));
         local.quotes = local.quotes || [];
         for (const q of (sj.quotes || [])) if (!local.quotes.some(x => x.id === q.id)) local.quotes.push(JSON.parse(JSON.stringify(q)));
         local.parts = local.parts || [];
@@ -183,7 +185,8 @@
 
       ${nextUpHtml(job)}
       ${job.notes ? `<div class="section"><h3>Job notes</h3><div>${esc(job.notes)}</div></div>` : ''}
-      ${(job.log && job.log.length) ? `<div class="section"><h3>Updates</h3><ul class="log">${job.log.slice().sort((a, b) => (b.date || '').localeCompare(a.date || '')).map(e => `<li><b>${esc(e.date || '')}</b> ${esc(e.text)}</li>`).join('')}</ul></div>` : ''}
+      <div class="section sm"><h3>Service manager updates</h3>${(job.smUpdates && job.smUpdates.length) ? `<ul class="log">${job.smUpdates.slice().sort((a, b) => (b.date || '').localeCompare(a.date || '')).map(e => `<li><b>${esc(e.date || '')}</b> ${esc(e.text)}</li>`).join('')}</ul>` : '<div class="muted">No service manager updates logged for this job yet.</div>'}</div>
+      ${(job.log && job.log.length) ? `<div class="section"><h3>Parts updates</h3><ul class="log">${job.log.slice().sort((a, b) => (b.date || '').localeCompare(a.date || '')).map(e => `<li><b>${esc(e.date || '')}</b> ${esc(e.text)}</li>`).join('')}</ul></div>` : ''}
 
       <div class="section"><h3>Quotes and lists on this job</h3>
         ${job.quotes.length ? `<ul class="quotes">${job.quotes.map(q => `<li><b>${esc(q.vendor)}</b> ${esc(q.number || '')} <span class="muted">${esc(q.date || '')}${q.note ? ' · ' + esc(q.note) : ''}</span></li>`).join('')}</ul>` : '<span class="muted">None yet. Use “Add quote”.</span>'}
