@@ -27,9 +27,11 @@
         for (const k of ['jobNumber', 'name', 'customer', 'unit', 'engine', 'ro', 'vin', 'hidePrices']) if (sj[k] != null) local[k] = sj[k];
         if (!local.notesEdited && sj.notes != null) local.notes = sj.notes;
         local.log = local.log || [];
-        for (const e of (sj.log || [])) if (!local.log.some(x => x.date === e.date && x.text === e.text)) local.log.push(JSON.parse(JSON.stringify(e)));
+        // Merge dated entries by text: same text with a new date means the date was corrected, so update it instead of duplicating.
+        const mergeEntries = (list, incoming) => { for (const e of incoming) { const hit = list.find(x => x.text === e.text); if (hit) hit.date = e.date; else list.push(JSON.parse(JSON.stringify(e))); } };
+        mergeEntries(local.log, sj.log || []);
         local.smUpdates = local.smUpdates || [];
-        for (const e of (sj.smUpdates || [])) if (!local.smUpdates.some(x => x.date === e.date && x.text === e.text)) local.smUpdates.push(JSON.parse(JSON.stringify(e)));
+        mergeEntries(local.smUpdates, sj.smUpdates || []);
         local.quotes = local.quotes || [];
         for (const q of (sj.quotes || [])) if (!local.quotes.some(x => x.id === q.id)) local.quotes.push(JSON.parse(JSON.stringify(q)));
         local.parts = local.parts || [];
