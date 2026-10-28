@@ -161,7 +161,7 @@
       <div class="row">
         <div>
           <h1>${esc(job.jobNumber ? job.jobNumber + ' · ' : '')}${esc(job.name)}</h1>
-          <p class="sub">${esc(job.customer || '')}${job.engine ? ' · ' + esc(job.engine) : ''}${job.ro ? ' · Fullbay RO ' + esc(job.ro) : ''}</p>
+          <p class="sub">${esc(job.customer || '')}${job.unit ? ' · ' + esc(job.unit) : ''}${job.vin ? ' · VIN ' + esc(job.vin) : ''}${job.engine ? ' · ' + esc(job.engine) : ''}${job.ro ? ' · Fullbay RO ' + esc(job.ro) : ''}</p>
         </div>
         <div class="spacer"></div>
         <button class="btn" id="b-quote">+ Add quote</button>

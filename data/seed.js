@@ -132,6 +132,24 @@ window.SEED = {
         { "pn": "2613450", "stage": 2, "desc": "Rod bearing, ACERT", "qty": 6, "unit": 40.94, "source": "gap", "status": "needed", "note": "GAP. Not on Q43751 either. The 6060909 Bronze kit carries rod bearings; confirm they are the right ones before buying these separately." },
         { "pn": "CATARP", "stage": 6, "desc": "ARP head stud kit (or Cat bolts 1241854 x10 + 1241855 x16 + 9X8268 washers)", "qty": 1, "unit": 1349.00, "source": "gap", "status": "needed", "note": "GAP. Head studs are not on Q38373 or Q43751. ARP kit ran $1,142 to $1,349 on past builds; Cat bolt route is roughly $530 plus washers." }
       ]
+    },
+    {
+      "id": "6796",
+      "name": "Perfex Chemical Solutions",
+      "customer": "Perfex Chemical Solutions",
+      "unit": "2012 Peterbilt 348, Unit 9698",
+      "vin": "2NP3LN9X7CM149698",
+      "engine": "",
+      "jobNumber": "6796",
+      "seedRev": 1,
+      "ro": "",
+      "notes": "Opened 2026-10-28. No parts requested yet.",
+      "created": "2026-10-28",
+      "log": [
+        { "date": "2026-10-28", "text": "Job opened in the portal. 2012 Peterbilt 348, unit 9698, VIN 2NP3LN9X7CM149698." }
+      ],
+      "quotes": [],
+      "parts": []
     }
   ]
 };
