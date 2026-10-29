@@ -12,7 +12,7 @@ window.SEED = {
       "unit": "Tractor / Semi / Sleeper",
       "engine": "CAT C18",
       "jobNumber": "6657",
-      "seedRev": 11,
+      "seedRev": 12,
       "ro": "25166952",
       "notes": "Tech sheet signed Simper (rev 11/19/2025). Block back from machine shop, liners and shims in as of 08/19/26. The reman cylinder packs (20R0630) were dropped for bare liners, so pistons, pins, retainers, rings and rods are quoted separately on Peterbilt Q43751 (27 Oct 26, $6,999.06 with $1,233.54 refundable rod cores). Still not on any quote: rod bearings (check the 6060909 Bronze kit) and head studs.",
       "created": "2026-07-28",
@@ -25,7 +25,7 @@ window.SEED = {
       ],
       "smUpdates": [
         { "date": "2026-10-27", "text": "Truck will be here this week. This will be Kevin's next project." },
-        { "date": "2026-10-29", "text": "Truck will be here this week, this will be Kevin's next project. Jacob has some parts on order, should see them mid next week." }
+        { "date": "2026-10-28", "text": "Truck will be here this week, this will be Kevin's next project. Jacob has some parts on order, should see them mid next week." }
       ],
       "quotes": [
         { "id": "q-pb", "vendor": "Jackson Group Peterbilt, Cheyenne", "number": "Q38373", "date": "2026-08-05", "note": "73 of 73 tech-list lines. $850 CAT promo applied. Cores credited on the face. Total $22,874.78." },
@@ -145,7 +145,7 @@ window.SEED = {
       "vin": "1XPXD49X4RD679298",
       "engine": "Cummins ISX / X15 14.9L",
       "jobNumber": "6682",
-      "seedRev": 2,
+      "seedRev": 3,
       "ro": "25324800",
       "notes": "Opened 2026-10-29. Engine/electrical conversion on a 2024 389X: Kustom Truck B5 engine harness, NAMUX fuse harness, J1708-to-J1939 converter, Cat 8T9655 isolation mounts, driveline yoke and u-joint, FASS 290, pyro and fuel pressure gauges, battery box and air tank relocation. All 43 lines on Fullbay RO 25324800 were IN as of 10/29/26. Prices are our most recent Fullbay purchase cost where we have one; lines with no history show blank.",
       "created": "2026-10-29",
@@ -161,7 +161,7 @@ window.SEED = {
       ],
       "smUpdates": [
         {
-          "date": "2026-10-29",
+          "date": "2026-10-28",
           "text": "Skirts sent to 4 States. Bevel is working on this tonight with Troy."
         }
       ],
@@ -701,7 +701,7 @@ window.SEED = {
       "vin": "2NP3LN9X7CM149698",
       "engine": "Cummins (CUM part numbers; PX-8 / ISC likely)",
       "jobNumber": "6796",
-      "seedRev": 6,
+      "seedRev": 7,
       "ro": "",
       "notes": "Opened 2026-10-28. Injector job: 6 injectors plus rocker cover gasket, engine brake solenoids, P/S pump gasket and hardware, entered from the Fullbay estimate on 10/28 (our cost; Fullbay sell subtotal $4,930.88). Still need injector pass-through tubes, no part number or price yet.",
       "created": "2026-10-28",
@@ -711,7 +711,7 @@ window.SEED = {
       ],
       "smUpdates": [
         { "date": "2026-10-27", "text": "Need to order injectors from Industrial. All other repairs are done." },
-        { "date": "2026-10-29", "text": "Need to order injectors from Industrial. All other repairs are done." }
+        { "date": "2026-10-28", "text": "Need to order injectors from Industrial. All other repairs are done." }
       ],
       "quotes": [],
       "parts": [
@@ -735,7 +735,7 @@ window.SEED = {
       "vin": "3AKJHHDR0PSNH8637",
       "engine": "Detroit DD15 14.8L",
       "jobNumber": "6957",
-      "seedRev": 4,
+      "seedRev": 5,
       "hidePrices": true,
       "ro": "26971752",
       "notes": "Oil pan / oil pump / suction pipe job plus oil cooler, EGR cooler seals, compressor coolant lines, clutch and pilot bearing, filters and fluids. All 30 lines were IN as of 10/28/26 per the Fullbay parts list. Prices and totals are hidden on this job: the true cost was far higher than our history shows and the full pricing is no longer on hand.",
@@ -745,7 +745,7 @@ window.SEED = {
       ],
       "smUpdates": [
         { "date": "2026-10-27", "text": "This should complete tomorrow." },
-        { "date": "2026-10-29", "text": "Tee got this running. Has 2 coolant leaks to figure out: 1 at the cooler and 1 at the surge tank. Also need to figure out why the intake is sucking down when running. Then driveline and hood go back on and test drive." }
+        { "date": "2026-10-28", "text": "Tee got this running. Has 2 coolant leaks to figure out: 1 at the cooler and 1 at the surge tank. Also need to figure out why the intake is sucking down when running. Then driveline and hood go back on and test drive." }
       ],
       "quotes": [
         { "id": "q-fb", "vendor": "Fullbay received list", "number": "RO 26971752", "date": "2026-10-28", "note": "Parts list 6957, inventoryOnly=1. 30 lines, all in. PDF in jobs/6957/." }
