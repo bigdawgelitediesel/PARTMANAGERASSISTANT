@@ -138,6 +138,33 @@ window.SEED = {
       ]
     },
     {
+      "id": "6682",
+      "name": "Roger Wilson Inc",
+      "customer": "Roger Wilson Inc",
+      "unit": "2024 Peterbilt 389X",
+      "vin": "1XPXD49X4RD679298",
+      "engine": "",
+      "jobNumber": "6682",
+      "seedRev": 1,
+      "ro": "",
+      "notes": "Opened 2026-10-29. Skirts sent to 4 States; Bevel and Troy working on it.",
+      "created": "2026-10-29",
+      "log": [
+        {
+          "date": "2026-10-29",
+          "text": "Job opened in the portal. 2024 Peterbilt 389X, VIN 1XPXD49X4RD679298. No parts entered yet."
+        }
+      ],
+      "smUpdates": [
+        {
+          "date": "2026-10-29",
+          "text": "Skirts sent to 4 States. Bevel is working on this tonight with Troy."
+        }
+      ],
+      "quotes": [],
+      "parts": []
+    },
+    {
       "id": "6796",
       "name": "Perfex Chemical Solutions",
       "customer": "Perfex Chemical Solutions",
