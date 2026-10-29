@@ -740,12 +740,13 @@ window.SEED = {
       "vin": "3AKJHHDR0PSNH8637",
       "engine": "Detroit DD15 14.8L",
       "jobNumber": "6957",
-      "seedRev": 5,
+      "seedRev": 6,
       "hidePrices": true,
       "ro": "26971752",
       "notes": "Oil pan / oil pump / suction pipe job plus oil cooler, EGR cooler seals, compressor coolant lines, clutch and pilot bearing, filters and fluids. All 30 lines were IN as of 10/28/26 per the Fullbay parts list. Prices and totals are hidden on this job: the true cost was far higher than our history shows and the full pricing is no longer on hand.",
       "created": "2026-10-28",
       "log": [
+        { "date": "2026-10-29", "text": "Fuel pressure sensor needed. Added A0071530228 from our Cascadia history, confirm fitment on the 2023 DD15 before ordering." },
         { "date": "2026-10-28", "text": "Job added. All parts on Fullbay RO 26971752 are in (30 lines). Oil pump EA4721807001 shows on two RO lines." }
       ],
       "smUpdates": [
@@ -756,6 +757,7 @@ window.SEED = {
         { "id": "q-fb", "vendor": "Fullbay received list", "number": "RO 26971752", "date": "2026-10-28", "note": "Parts list 6957, inventoryOnly=1. 30 lines, all in. PDF in jobs/6957/." }
       ],
       "parts": [
+        {"pn":"A0071530228","stage":8,"desc":"Fuel pressure sensor, Detroit DD15 (DDE)","qty":1,"unit":405.64,"source":"manual","status":"needed","note":"Added 10/29, Jacob needs one. PN is our last Cascadia fuel pressure sensor buy (3x, last 04/2024 at $405.64). Confirm it fits a 2023 DD15 and whether Tee means the rail sensor or the low-side sensor on the fuel filter module."},
         {"pn":"A47301104313","stage":5,"desc":"Oil pan","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
         {"pn":"A4730140122","stage":5,"desc":"Oil pan gasket","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
         {"pn":"EA4721807001","stage":5,"desc":"Oil pump assembly","qty":2,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28","note":"Listed twice on the RO, one each. Check whether the second one is a duplicate line or a return."},
