@@ -2356,7 +2356,7 @@ window.SEED = {
       "vin": "1XP5DB9X0WD477713",
       "engine": "",
       "jobNumber": "7003",
-      "seedRev": 20,
+      "seedRev": 21,
       "ro": "",
       "notes": "Opened 2026-11-02. New truck for TCL (not in our Fullbay unit history). No parts entered yet; the six lines entered 11/02 belonged to 6999 (unit 56) and were moved.",
       "created": "2026-11-02",
@@ -2390,7 +2390,7 @@ window.SEED = {
         {"pn":"07-05861-2","stage":7,"desc":"Mount (Freightliner PN)","qty":2,"unit":27.43,"source":"received","status":"received","receivedAt":"2026-11-02"},
         {"pn":"PL1126AHTATR","stage":7,"desc":"Bushing, mount","qty":4,"unit":7.42,"source":"received","status":"received","receivedAt":"2026-11-02"},
         {"pn":"PL1015HTATR","stage":7,"desc":"Motor / radiator mount","qty":4,"unit":25.76,"source":"received","status":"received","receivedAt":"2026-11-02"},
-        {"pn":"DR-PE-1000-001-ST","stage":9,"desc":"No description in our history (Peterbilt, DR-PE prefix)","qty":1,"unit":null,"source":"received","status":"received","receivedAt":"2026-11-02"}
+        {"pn":"DR-PE-1000-001-ST","stage":9,"desc":"Peterbilt part, description TBD (DR-PE prefix)","qty":1,"unit":2036.25,"source":"received","status":"received","receivedAt":"2026-11-02"}
       ]
     }
   ]
