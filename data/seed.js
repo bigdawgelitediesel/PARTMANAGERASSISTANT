@@ -17,124 +17,1107 @@ window.SEED = {
       "notes": "Tech sheet signed Simper (rev 11/19/2025). Block back from machine shop, liners and shims in as of 08/19/26. The reman cylinder packs (20R0630) were dropped for bare liners, so pistons, pins, retainers, rings and rods are quoted separately on Peterbilt Q43751 (27 Oct 26, $6,999.06 with $1,233.54 refundable rod cores). Still not on any quote: rod bearings (check the 6060909 Bronze kit) and head studs.",
       "created": "2026-07-28",
       "log": [
-        { "date": "2026-08-19", "text": "Block back from machine shop. Liners 5560701 x6 and shims 9Y3368 x6 installed. Spacer plate on order." },
-        { "date": "2026-10-28", "text": "Parts tagged with a build stage, inside out: block and liners, bottom end, pistons and rods, cam, oil system, head and injectors, front structure and cooling, sensors and external, then loose seals and hardware. Stage is a best guess on the small o-rings; move any line with the Stage picker." },
-        { "date": "2026-10-28", "text": "Added Peterbilt Q43751 (27 Oct): loose piston/pin/retainer/ring/rod set, $6,999.06 with $1,233.54 refundable rod cores. Replaces the history-priced gap lines. Pack route (6 x 20R0630, $5,170 net of cores) is still about $595 cheaper but wastes the installed liners." },
-        { "date": "2026-10-28", "text": "Corrected 20R0630: a Cat Reman cylinder pack includes the connecting rod too, so the gap from dropping the packs is piston + rings + pin + retainers + rod. Six packs ($5,170, cores refundable) still cost less than the loose set (~$6,024)." },
-        { "date": "2026-10-28", "text": "Fullbay RO 25166952 shows 18 lines received. Reconciled against Peterbilt Q38373. Still open: everything else on the quote plus the piston/ring/rod/head-stud gap." }
+        {
+          "date": "2026-08-19",
+          "text": "Block back from machine shop. Liners 5560701 x6 and shims 9Y3368 x6 installed. Spacer plate on order."
+        },
+        {
+          "date": "2026-10-28",
+          "text": "Parts tagged with a build stage, inside out: block and liners, bottom end, pistons and rods, cam, oil system, head and injectors, front structure and cooling, sensors and external, then loose seals and hardware. Stage is a best guess on the small o-rings; move any line with the Stage picker."
+        },
+        {
+          "date": "2026-10-28",
+          "text": "Added Peterbilt Q43751 (27 Oct): loose piston/pin/retainer/ring/rod set, $6,999.06 with $1,233.54 refundable rod cores. Replaces the history-priced gap lines. Pack route (6 x 20R0630, $5,170 net of cores) is still about $595 cheaper but wastes the installed liners."
+        },
+        {
+          "date": "2026-10-28",
+          "text": "Corrected 20R0630: a Cat Reman cylinder pack includes the connecting rod too, so the gap from dropping the packs is piston + rings + pin + retainers + rod. Six packs ($5,170, cores refundable) still cost less than the loose set (~$6,024)."
+        },
+        {
+          "date": "2026-10-28",
+          "text": "Fullbay RO 25166952 shows 18 lines received. Reconciled against Peterbilt Q38373. Still open: everything else on the quote plus the piston/ring/rod/head-stud gap."
+        }
       ],
       "smUpdates": [
-        { "date": "2026-10-27", "text": "Truck will be here this week. This will be Kevin's next project." },
-        { "date": "2026-10-28", "text": "Truck will be here this week, this will be Kevin's next project. Jacob has some parts on order, should see them mid next week." }
+        {
+          "date": "2026-10-27",
+          "text": "Truck will be here this week. This will be Kevin's next project."
+        },
+        {
+          "date": "2026-10-28",
+          "text": "Truck will be here this week, this will be Kevin's next project. Jacob has some parts on order, should see them mid next week."
+        }
       ],
       "quotes": [
-        { "id": "q-pb", "vendor": "Jackson Group Peterbilt, Cheyenne", "number": "Q38373", "date": "2026-08-05", "note": "73 of 73 tech-list lines. $850 CAT promo applied. Cores credited on the face. Total $22,874.78." },
-        { "id": "q-pb2", "vendor": "Jackson Group Peterbilt, Cheyenne", "number": "Q43751", "date": "2026-10-27", "note": "Loose piston/rod set to fill the gap left by dropping the 20R0630 packs. 7 lines, $6,999.06 incl. $1,233.54 refundable rod cores ($5,765.52 net)." },
-        { "id": "q-fb", "vendor": "Fullbay received list", "number": "RO 25166952", "date": "2026-10-28", "note": "Parts list 6657, inventoryOnly=1. 18 lines received." }
+        {
+          "id": "q-pb",
+          "vendor": "Jackson Group Peterbilt, Cheyenne",
+          "number": "Q38373",
+          "date": "2026-08-05",
+          "note": "73 of 73 tech-list lines. $850 CAT promo applied. Cores credited on the face. Total $22,874.78."
+        },
+        {
+          "id": "q-pb2",
+          "vendor": "Jackson Group Peterbilt, Cheyenne",
+          "number": "Q43751",
+          "date": "2026-10-27",
+          "note": "Loose piston/rod set to fill the gap left by dropping the 20R0630 packs. 7 lines, $6,999.06 incl. $1,233.54 refundable rod cores ($5,765.52 net)."
+        },
+        {
+          "id": "q-fb",
+          "vendor": "Fullbay received list",
+          "number": "RO 25166952",
+          "date": "2026-10-28",
+          "note": "Parts list 6657, inventoryOnly=1. 18 lines received."
+        }
       ],
       "parts": [
-        { "pn": "10R7155", "stage": 4, "desc": "Camshaft, reman", "qty": 1, "unit": 1798.50, "core": 1084.71, "source": "quote", "quoteId": "q-pb", "status": "needed", "note": "Long-lead reman. Cam goes in before head, valve train and injectors." },
-        { "pn": "2396304", "stage": 7, "desc": "Manifold housing", "qty": 1, "unit": 184.82, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "2314327", "stage": 7, "desc": "Water cover", "qty": 1, "unit": 673.19, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "3299776", "stage": 7, "desc": "Regulator housing", "qty": 1, "unit": 124.01, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "1264935", "stage": 9, "desc": "Seal", "qty": 2, "unit": 11.79, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "20R0630", "stage": 1, "desc": "Cylinder pack assy, Cat Reman (rod + piston + rings + pin + retainers + liner + liner seals)", "qty": 6, "unit": 861.69, "core": 262.78, "source": "quote", "quoteId": "q-pb", "status": "superseded", "coveredBy": "5560701", "note": "Dropped. Bare liners 5560701 went in instead. Cat confirms a Reman pack is a fully assembled rod, piston, rings, pin, retainers, liner and seals, so dropping it opened the piston, ring, pin AND rod gap, see the GAP lines. Option: 6 packs at $5,170 (cores refundable) still beats the ~$6,024 loose set even if the pack liners go unused. Cat bulletin: packs built Mar-Nov 2017 may carry 516-9693 liners, which Cat says to replace with 556-0701." },
-        { "pn": "1962429", "stage": 1, "desc": "Oil tube assy (piston cooling jet)", "qty": 6, "unit": 111.87, "source": "quote", "quoteId": "q-pb", "status": "needed", "note": "Must be in before any piston goes down a bore." },
-        { "pn": "1515925", "stage": 1, "desc": "Oil jet bolt", "qty": 6, "unit": 1.85, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "0R9697", "stage": 5, "desc": "Oil pump group", "qty": 1, "unit": 977.17, "core": 1118.60, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "20R9847", "stage": 7, "desc": "Water pump group (Cat replaced by 10R8660)", "qty": 1, "unit": 929.35, "core": 580.25, "source": "quote", "quoteId": "q-pb", "status": "needed", "note": "Peterbilt shows this number replaced by 10R8660. Expect the new number on the box." },
-        { "pn": "8T6703", "stage": 8, "desc": "Clamp", "qty": 2, "unit": 15.58, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "2239257", "stage": 8, "desc": "Hose", "qty": 1, "unit": 11.70, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "1095313", "stage": 8, "desc": "Gasket", "qty": 6, "unit": 4.31, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "6060909", "stage": 2, "desc": "Engine kit, Cat Bronze overhaul (bearings + full gasket set)", "qty": 1, "unit": 3285.95, "promo": -250.00, "source": "quote", "quoteId": "q-pb", "status": "needed", "note": "Bronze = main, rod and thrust bearings + complete gasket/seal set. Does NOT include pistons, rings, liners, rods or head bolts. Received gasket kits 4366597 / 4380907 may overlap this kit; inventory before ordering." },
-        { "pn": "9Y3368", "stage": 1, "desc": "Liner insert (counterbore shim)", "qty": 6, "unit": 96.72, "source": "quote", "quoteId": "q-pb", "status": "received", "receivedQty": 6, "receivedUnit": 87.85, "note": "Received on RO 25166952. Installed setting liner height (08/19/26 log)." },
-        { "pn": "10R7228", "stage": 6, "desc": "Fuel injector group, reman", "qty": 6, "unit": 794.00, "core": 201.97, "promo": -600.00, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "1S9544", "stage": 9, "desc": "Seal", "qty": 1, "unit": 6.04, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "8C3107", "stage": 6, "desc": "O-ring", "qty": 2, "unit": 17.63, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "1A5964", "stage": 9, "desc": "Capscrew", "qty": 4, "unit": 1.79, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "9L6910", "stage": 9, "desc": "Gasket", "qty": 2, "unit": 3.76, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "1142687", "stage": 6, "desc": "O-ring", "qty": 6, "unit": 4.87, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "0619457", "stage": 9, "desc": "Seal", "qty": 2, "unit": 15.98, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "9X7432", "stage": 9, "desc": "O-ring", "qty": 2, "unit": 9.40, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "3K7346", "stage": 9, "desc": "Spring", "qty": 1, "unit": 18.39, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "1090072", "stage": 6, "desc": "O-ring", "qty": 3, "unit": 7.46, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "1090076", "stage": 6, "desc": "O-ring", "qty": 4, "unit": 8.93, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "1090078", "stage": 6, "desc": "O-ring", "qty": 4, "unit": 6.69, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "1210145", "stage": 9, "desc": "O-ring", "qty": 1, "unit": 4.16, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "8J4351", "stage": 9, "desc": "O-ring", "qty": 3, "unit": 12.03, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "9N0662", "stage": 8, "desc": "Clamp", "qty": 1, "unit": 26.61, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "9Y1375", "stage": 9, "desc": "Ring", "qty": 2, "unit": 8.61, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "2P3203", "stage": 9, "desc": "Bolt", "qty": 38, "unit": 1.85, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "2P3760", "stage": 9, "desc": "Gasket", "qty": 1, "unit": 1.51, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "4N8150", "stage": 5, "desc": "Spring", "qty": 1, "unit": 9.72, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "3929208", "stage": 5, "desc": "Relief plunger", "qty": 1, "unit": 26.89, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "8C5230", "stage": 6, "desc": "O-ring", "qty": 2, "unit": 16.64, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "3483295", "stage": 1, "desc": "Liner seal kit (gasket kit)", "qty": 6, "unit": 35.91, "source": "quote", "quoteId": "q-pb", "status": "superseded", "coveredBy": "1550809 / 1550810 / 1552793", "note": "Came in as the three individual liner seals instead of the kit." },
-        { "pn": "7W7071", "stage": 9, "desc": "Gasket", "qty": 2, "unit": 6.15, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "1121102", "stage": 9, "desc": "O-ring", "qty": 2, "unit": 10.54, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "6J0488", "stage": 9, "desc": "Screw", "qty": 1, "unit": 3.88, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "6V3683", "stage": 9, "desc": "O-ring", "qty": 1, "unit": 7.71, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "2644297", "stage": 8, "desc": "Temp sensor", "qty": 3, "unit": 53.17, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "6V6609", "stage": 8, "desc": "Seal", "qty": 3, "unit": 1.25, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "1946722", "stage": 8, "desc": "Pressure sensor group", "qty": 1, "unit": 229.61, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "1946725", "stage": 8, "desc": "Pressure sensor group", "qty": 1, "unit": 229.61, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "2147568", "stage": 9, "desc": "O-ring (Cat replaced by 6V5049)", "qty": 1, "unit": 4.46, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "6V5048", "stage": 9, "desc": "O-ring", "qty": 3, "unit": 3.81, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "9S4182", "stage": 1, "desc": "Plug", "qty": 1, "unit": 8.87, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "6P8601", "stage": 9, "desc": "Stop", "qty": 1, "unit": 40.36, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "1T0414", "stage": 9, "desc": "Bolt", "qty": 12, "unit": 2.99, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "8L6565", "stage": 4, "desc": "Pin", "qty": 1, "unit": 0.30, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "4N8626", "stage": 4, "desc": "Race", "qty": 2, "unit": 10.28, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "5L1100", "stage": 4, "desc": "Bearing", "qty": 1, "unit": 5.03, "source": "quote", "quoteId": "q-pb", "status": "needed", "note": "Not on the tech's 73-line list. Peterbilt added it." },
-        { "pn": "2S6538", "stage": 5, "desc": "Spring", "qty": 1, "unit": 18.42, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "1S5646", "stage": 5, "desc": "Spring", "qty": 1, "unit": 16.16, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "1580507", "stage": 9, "desc": "Diaphragm", "qty": 1, "unit": 59.48, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "1541684", "stage": 9, "desc": "Retainer", "qty": 1, "unit": 163.15, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "1W4204", "stage": 2, "desc": "Ring seal", "qty": 2, "unit": 43.32, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "2W4838", "stage": 2, "desc": "Sleeve", "qty": 2, "unit": 659.34, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "4W8133", "stage": 2, "desc": "Brakesaver seal group, red (154 mm ID)", "qty": 1, "unit": 113.98, "source": "quote", "quoteId": "q-pb", "status": "needed", "note": "Cat Brakesaver (hydraulic retarder) crank seal, not the engine front seal. Pairs with 4W8134, carriers 9N0037, rings 7W8983, sleeves 2W4838. Only needed if this truck runs a Brakesaver." },
-        { "pn": "4W8134", "stage": 2, "desc": "Brakesaver seal group, blue (154 mm ID)", "qty": 1, "unit": 110.75, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "7W8983", "stage": 2, "desc": "Ring", "qty": 2, "unit": 96.85, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "9N0037", "stage": 2, "desc": "Carrier (crank seal)", "qty": 2, "unit": 292.71, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "0617538", "stage": 9, "desc": "O-ring", "qty": 5, "unit": 3.65, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "1J9671", "stage": 9, "desc": "O-ring", "qty": 2, "unit": 1.09, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "1N5999", "stage": 1, "desc": "Plug", "qty": 5, "unit": 3.75, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "4S5924", "stage": 9, "desc": "O-ring", "qty": 1, "unit": 10.10, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "6V3907", "stage": 9, "desc": "O-ring", "qty": 2, "unit": 27.85, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "7F8817", "stage": 1, "desc": "Dowel (spacer plate)", "qty": 2, "unit": 7.85, "source": "quote", "quoteId": "q-pb", "status": "needed", "note": "Goes in with the spacer plate." },
-        { "pn": "3303517", "stage": 9, "desc": "O-ring", "qty": 1, "unit": 10.57, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "3308196", "stage": 9, "desc": "O-ring", "qty": 6, "unit": 4.54, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "5937750", "stage": 7, "desc": "Temp regulator (thermostat)", "qty": 2, "unit": 64.72, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "2234903", "stage": 9, "desc": "Hex head bolt", "qty": 2, "unit": 2.40, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-        { "pn": "9M0853", "stage": 5, "desc": "Plunger", "qty": 1, "unit": 28.81, "source": "quote", "quoteId": "q-pb", "status": "needed" },
-
-        { "pn": "5560701", "stage": 1, "desc": "Cylinder liner (bare)", "qty": 6, "unit": 229.54, "source": "received", "quoteId": "q-fb", "status": "received", "covers": "20R0630", "note": "Substitution for the reman cylinder packs. Liners only. Installed 08/19/26." },
-        { "pn": "1550809", "stage": 1, "desc": "Liner seal", "qty": 6, "unit": null, "source": "received", "quoteId": "q-fb", "status": "received", "covers": "3483295", "note": "One of three seals that make up liner seal kit 3483295. No purchase cost on file yet." },
-        { "pn": "1550810", "stage": 1, "desc": "Liner seal", "qty": 6, "unit": null, "source": "received", "quoteId": "q-fb", "status": "received", "covers": "3483295", "note": "One of three seals that make up liner seal kit 3483295. No purchase cost on file yet." },
-        { "pn": "1552793", "stage": 1, "desc": "Liner seal", "qty": 6, "unit": null, "source": "received", "quoteId": "q-fb", "status": "received", "covers": "3483295", "note": "One of three seals that make up liner seal kit 3483295. No purchase cost on file yet." },
-        { "pn": "360466 PAI", "stage": 1, "desc": "Spacer plate, PAI aftermarket", "qty": 1, "unit": null, "source": "received", "quoteId": "q-fb", "status": "received", "covers": "6I4421", "note": "Not on the tech list or any quote. Came in place of the Cat 6I4421 that was on order 08/19. Cost not in purchase history yet." },
-        { "pn": "6I4362", "stage": 1, "desc": "Shim", "qty": 1, "unit": 95.09, "source": "received", "quoteId": "q-fb", "status": "received", "note": "Added, not quoted." },
-        { "pn": "1007399", "stage": 1, "desc": "Plug", "qty": 2, "unit": 13.14, "source": "received", "quoteId": "q-fb", "status": "received", "note": "Added, not quoted. Standard C15/C18 inframe add on our past builds." },
-        { "pn": "2500466", "stage": 1, "desc": "O-ring", "qty": 2, "unit": 8.35, "source": "received", "quoteId": "q-fb", "status": "received", "note": "Added, not quoted." },
-        { "pn": "4366597", "stage": 7, "desc": "Gasket kit, front structure set (front housing/cover)", "qty": 1, "unit": 550.69, "source": "received", "quoteId": "q-fb", "status": "received", "note": "Added, not quoted. Likely overlaps the gasket set inside 6060909 Bronze kit. Inventory before buying the Bronze kit." },
-        { "pn": "4380907", "stage": 9, "desc": "Gasket kit (unidentified set)", "qty": 1, "unit": null, "source": "received", "quoteId": "q-fb", "status": "received", "note": "Added, not quoted. Could not identify which set this is. No purchase cost on file." },
-        { "pn": "1018468", "stage": 2, "desc": "Bushing", "qty": 1, "unit": 44.05, "source": "received", "quoteId": "q-fb", "status": "received", "note": "Added, not quoted. Standard inframe add on our past C15 builds." },
-        { "pn": "1304698", "stage": 2, "desc": "Bushing", "qty": 1, "unit": 43.60, "source": "received", "quoteId": "q-fb", "status": "received", "note": "Added, not quoted." },
-        { "pn": "1317123", "stage": 2, "desc": "Bushing", "qty": 1, "unit": 40.44, "source": "received", "quoteId": "q-fb", "status": "received", "note": "Added, not quoted." },
-        { "pn": "1261756", "stage": 2, "desc": "Locking bolt, 5/16-18 x 7/8", "qty": 10, "unit": 0.40, "source": "received", "quoteId": "q-fb", "status": "received", "note": "Added, not quoted." },
-        { "pn": "10120", "stage": 10, "desc": "Cat head bolt brush", "qty": 1, "unit": 15.79, "source": "received", "quoteId": "q-fb", "status": "received", "note": "Shop supply." },
-        { "pn": "20A148FB", "stage": 10, "desc": "3/4-16 HSS bottoming tap", "qty": 1, "unit": null, "source": "received", "quoteId": "q-fb", "status": "received", "note": "Shop tool." },
-        { "pn": "FRTINCOMING", "stage": 10, "desc": "Incoming freight", "qty": 1, "unit": null, "source": "received", "quoteId": "q-fb", "status": "received", "note": "Freight line on the RO." },
-
-        { "pn": "3294509", "stage": 3, "desc": "Piston body assy", "qty": 6, "unit": 374.85, "source": "quote", "quoteId": "q-pb2", "status": "needed", "note": "Fills the piston gap from the dropped 20R0630 packs. Quoted Q43751." },
-        { "pn": "5245565", "stage": 3, "desc": "Piston pin", "qty": 6, "unit": 88.76, "source": "quote", "quoteId": "q-pb2", "status": "needed" },
-        { "pn": "2302569", "stage": 3, "desc": "Pin retainer", "qty": 12, "unit": 5.67, "source": "quote", "quoteId": "q-pb2", "status": "needed" },
-        { "pn": "2239159", "stage": 3, "desc": "Piston ring (top)", "qty": 6, "unit": 48.92, "source": "quote", "quoteId": "q-pb2", "status": "needed" },
-        { "pn": "1871503", "stage": 3, "desc": "Piston ring, intermediate", "qty": 6, "unit": 48.00, "source": "quote", "quoteId": "q-pb2", "status": "needed" },
-        { "pn": "2465659", "stage": 3, "desc": "Piston ring (oil)", "qty": 6, "unit": 48.00, "source": "quote", "quoteId": "q-pb2", "status": "needed" },
-        { "pn": "10R2117", "stage": 3, "desc": "Connecting rod assy, reman", "qty": 6, "unit": 341.05, "core": 205.59, "source": "quote", "quoteId": "q-pb2", "status": "needed", "note": "The dropped 20R0630 pack included new rods. Needed unless the old rods are inspected and reused." },
-        { "pn": "2613450", "stage": 2, "desc": "Rod bearing, ACERT", "qty": 6, "unit": 40.94, "source": "gap", "status": "needed", "note": "GAP. Not on Q43751 either. The 6060909 Bronze kit carries rod bearings; confirm they are the right ones before buying these separately." },
-        { "pn": "CATARP", "stage": 6, "desc": "ARP head stud kit (or Cat bolts 1241854 x10 + 1241855 x16 + 9X8268 washers)", "qty": 1, "unit": 1349.00, "source": "gap", "status": "needed", "note": "GAP. Head studs are not on Q38373 or Q43751. ARP kit ran $1,142 to $1,349 on past builds; Cat bolt route is roughly $530 plus washers." }
+        {
+          "pn": "10R7155",
+          "stage": 4,
+          "desc": "Camshaft, reman",
+          "qty": 1,
+          "unit": 1798.5,
+          "core": 1084.71,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed",
+          "note": "Long-lead reman. Cam goes in before head, valve train and injectors."
+        },
+        {
+          "pn": "2396304",
+          "stage": 7,
+          "desc": "Manifold housing",
+          "qty": 1,
+          "unit": 184.82,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "2314327",
+          "stage": 7,
+          "desc": "Water cover",
+          "qty": 1,
+          "unit": 673.19,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "3299776",
+          "stage": 7,
+          "desc": "Regulator housing",
+          "qty": 1,
+          "unit": 124.01,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "1264935",
+          "stage": 9,
+          "desc": "Seal",
+          "qty": 2,
+          "unit": 11.79,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "20R0630",
+          "stage": 1,
+          "desc": "Cylinder pack assy, Cat Reman (rod + piston + rings + pin + retainers + liner + liner seals)",
+          "qty": 6,
+          "unit": 861.69,
+          "core": 262.78,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "superseded",
+          "coveredBy": "5560701",
+          "note": "Dropped. Bare liners 5560701 went in instead. Cat confirms a Reman pack is a fully assembled rod, piston, rings, pin, retainers, liner and seals, so dropping it opened the piston, ring, pin AND rod gap, see the GAP lines. Option: 6 packs at $5,170 (cores refundable) still beats the ~$6,024 loose set even if the pack liners go unused. Cat bulletin: packs built Mar-Nov 2017 may carry 516-9693 liners, which Cat says to replace with 556-0701."
+        },
+        {
+          "pn": "1962429",
+          "stage": 1,
+          "desc": "Oil tube assy (piston cooling jet)",
+          "qty": 6,
+          "unit": 111.87,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed",
+          "note": "Must be in before any piston goes down a bore."
+        },
+        {
+          "pn": "1515925",
+          "stage": 1,
+          "desc": "Oil jet bolt",
+          "qty": 6,
+          "unit": 1.85,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "0R9697",
+          "stage": 5,
+          "desc": "Oil pump group",
+          "qty": 1,
+          "unit": 977.17,
+          "core": 1118.6,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "20R9847",
+          "stage": 7,
+          "desc": "Water pump group (Cat replaced by 10R8660)",
+          "qty": 1,
+          "unit": 929.35,
+          "core": 580.25,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed",
+          "note": "Peterbilt shows this number replaced by 10R8660. Expect the new number on the box."
+        },
+        {
+          "pn": "8T6703",
+          "stage": 8,
+          "desc": "Clamp",
+          "qty": 2,
+          "unit": 15.58,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "2239257",
+          "stage": 8,
+          "desc": "Hose",
+          "qty": 1,
+          "unit": 11.7,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "1095313",
+          "stage": 8,
+          "desc": "Gasket",
+          "qty": 6,
+          "unit": 4.31,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "6060909",
+          "stage": 2,
+          "desc": "Engine kit, Cat Bronze overhaul (bearings + full gasket set)",
+          "qty": 1,
+          "unit": 3285.95,
+          "promo": -250,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed",
+          "note": "Bronze = main, rod and thrust bearings + complete gasket/seal set. Does NOT include pistons, rings, liners, rods or head bolts. Received gasket kits 4366597 / 4380907 may overlap this kit; inventory before ordering."
+        },
+        {
+          "pn": "9Y3368",
+          "stage": 1,
+          "desc": "Liner insert (counterbore shim)",
+          "qty": 6,
+          "unit": 96.72,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "received",
+          "receivedQty": 6,
+          "receivedUnit": 87.85,
+          "note": "Received on RO 25166952. Installed setting liner height (08/19/26 log)."
+        },
+        {
+          "pn": "10R7228",
+          "stage": 6,
+          "desc": "Fuel injector group, reman",
+          "qty": 6,
+          "unit": 794,
+          "core": 201.97,
+          "promo": -600,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "1S9544",
+          "stage": 9,
+          "desc": "Seal",
+          "qty": 1,
+          "unit": 6.04,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "8C3107",
+          "stage": 6,
+          "desc": "O-ring",
+          "qty": 2,
+          "unit": 17.63,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "1A5964",
+          "stage": 9,
+          "desc": "Capscrew",
+          "qty": 4,
+          "unit": 1.79,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "9L6910",
+          "stage": 9,
+          "desc": "Gasket",
+          "qty": 2,
+          "unit": 3.76,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "1142687",
+          "stage": 6,
+          "desc": "O-ring",
+          "qty": 6,
+          "unit": 4.87,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "0619457",
+          "stage": 9,
+          "desc": "Seal",
+          "qty": 2,
+          "unit": 15.98,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "9X7432",
+          "stage": 9,
+          "desc": "O-ring",
+          "qty": 2,
+          "unit": 9.4,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "3K7346",
+          "stage": 9,
+          "desc": "Spring",
+          "qty": 1,
+          "unit": 18.39,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "1090072",
+          "stage": 6,
+          "desc": "O-ring",
+          "qty": 3,
+          "unit": 7.46,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "1090076",
+          "stage": 6,
+          "desc": "O-ring",
+          "qty": 4,
+          "unit": 8.93,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "1090078",
+          "stage": 6,
+          "desc": "O-ring",
+          "qty": 4,
+          "unit": 6.69,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "1210145",
+          "stage": 9,
+          "desc": "O-ring",
+          "qty": 1,
+          "unit": 4.16,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "8J4351",
+          "stage": 9,
+          "desc": "O-ring",
+          "qty": 3,
+          "unit": 12.03,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "9N0662",
+          "stage": 8,
+          "desc": "Clamp",
+          "qty": 1,
+          "unit": 26.61,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "9Y1375",
+          "stage": 9,
+          "desc": "Ring",
+          "qty": 2,
+          "unit": 8.61,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "2P3203",
+          "stage": 9,
+          "desc": "Bolt",
+          "qty": 38,
+          "unit": 1.85,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "2P3760",
+          "stage": 9,
+          "desc": "Gasket",
+          "qty": 1,
+          "unit": 1.51,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "4N8150",
+          "stage": 5,
+          "desc": "Spring",
+          "qty": 1,
+          "unit": 9.72,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "3929208",
+          "stage": 5,
+          "desc": "Relief plunger",
+          "qty": 1,
+          "unit": 26.89,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "8C5230",
+          "stage": 6,
+          "desc": "O-ring",
+          "qty": 2,
+          "unit": 16.64,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "3483295",
+          "stage": 1,
+          "desc": "Liner seal kit (gasket kit)",
+          "qty": 6,
+          "unit": 35.91,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "superseded",
+          "coveredBy": "1550809 / 1550810 / 1552793",
+          "note": "Came in as the three individual liner seals instead of the kit."
+        },
+        {
+          "pn": "7W7071",
+          "stage": 9,
+          "desc": "Gasket",
+          "qty": 2,
+          "unit": 6.15,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "1121102",
+          "stage": 9,
+          "desc": "O-ring",
+          "qty": 2,
+          "unit": 10.54,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "6J0488",
+          "stage": 9,
+          "desc": "Screw",
+          "qty": 1,
+          "unit": 3.88,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "6V3683",
+          "stage": 9,
+          "desc": "O-ring",
+          "qty": 1,
+          "unit": 7.71,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "2644297",
+          "stage": 8,
+          "desc": "Temp sensor",
+          "qty": 3,
+          "unit": 53.17,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "6V6609",
+          "stage": 8,
+          "desc": "Seal",
+          "qty": 3,
+          "unit": 1.25,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "1946722",
+          "stage": 8,
+          "desc": "Pressure sensor group",
+          "qty": 1,
+          "unit": 229.61,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "1946725",
+          "stage": 8,
+          "desc": "Pressure sensor group",
+          "qty": 1,
+          "unit": 229.61,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "2147568",
+          "stage": 9,
+          "desc": "O-ring (Cat replaced by 6V5049)",
+          "qty": 1,
+          "unit": 4.46,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "6V5048",
+          "stage": 9,
+          "desc": "O-ring",
+          "qty": 3,
+          "unit": 3.81,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "9S4182",
+          "stage": 1,
+          "desc": "Plug",
+          "qty": 1,
+          "unit": 8.87,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "6P8601",
+          "stage": 9,
+          "desc": "Stop",
+          "qty": 1,
+          "unit": 40.36,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "1T0414",
+          "stage": 9,
+          "desc": "Bolt",
+          "qty": 12,
+          "unit": 2.99,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "8L6565",
+          "stage": 4,
+          "desc": "Pin",
+          "qty": 1,
+          "unit": 0.3,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "4N8626",
+          "stage": 4,
+          "desc": "Race",
+          "qty": 2,
+          "unit": 10.28,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "5L1100",
+          "stage": 4,
+          "desc": "Bearing",
+          "qty": 1,
+          "unit": 5.03,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed",
+          "note": "Not on the tech's 73-line list. Peterbilt added it."
+        },
+        {
+          "pn": "2S6538",
+          "stage": 5,
+          "desc": "Spring",
+          "qty": 1,
+          "unit": 18.42,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "1S5646",
+          "stage": 5,
+          "desc": "Spring",
+          "qty": 1,
+          "unit": 16.16,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "1580507",
+          "stage": 9,
+          "desc": "Diaphragm",
+          "qty": 1,
+          "unit": 59.48,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "1541684",
+          "stage": 9,
+          "desc": "Retainer",
+          "qty": 1,
+          "unit": 163.15,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "1W4204",
+          "stage": 2,
+          "desc": "Ring seal",
+          "qty": 2,
+          "unit": 43.32,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "2W4838",
+          "stage": 2,
+          "desc": "Sleeve",
+          "qty": 2,
+          "unit": 659.34,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "4W8133",
+          "stage": 2,
+          "desc": "Brakesaver seal group, red (154 mm ID)",
+          "qty": 1,
+          "unit": 113.98,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed",
+          "note": "Cat Brakesaver (hydraulic retarder) crank seal, not the engine front seal. Pairs with 4W8134, carriers 9N0037, rings 7W8983, sleeves 2W4838. Only needed if this truck runs a Brakesaver."
+        },
+        {
+          "pn": "4W8134",
+          "stage": 2,
+          "desc": "Brakesaver seal group, blue (154 mm ID)",
+          "qty": 1,
+          "unit": 110.75,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "7W8983",
+          "stage": 2,
+          "desc": "Ring",
+          "qty": 2,
+          "unit": 96.85,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "9N0037",
+          "stage": 2,
+          "desc": "Carrier (crank seal)",
+          "qty": 2,
+          "unit": 292.71,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "0617538",
+          "stage": 9,
+          "desc": "O-ring",
+          "qty": 5,
+          "unit": 3.65,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "1J9671",
+          "stage": 9,
+          "desc": "O-ring",
+          "qty": 2,
+          "unit": 1.09,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "1N5999",
+          "stage": 1,
+          "desc": "Plug",
+          "qty": 5,
+          "unit": 3.75,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "4S5924",
+          "stage": 9,
+          "desc": "O-ring",
+          "qty": 1,
+          "unit": 10.1,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "6V3907",
+          "stage": 9,
+          "desc": "O-ring",
+          "qty": 2,
+          "unit": 27.85,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "7F8817",
+          "stage": 1,
+          "desc": "Dowel (spacer plate)",
+          "qty": 2,
+          "unit": 7.85,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed",
+          "note": "Goes in with the spacer plate."
+        },
+        {
+          "pn": "3303517",
+          "stage": 9,
+          "desc": "O-ring",
+          "qty": 1,
+          "unit": 10.57,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "3308196",
+          "stage": 9,
+          "desc": "O-ring",
+          "qty": 6,
+          "unit": 4.54,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "5937750",
+          "stage": 7,
+          "desc": "Temp regulator (thermostat)",
+          "qty": 2,
+          "unit": 64.72,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "2234903",
+          "stage": 9,
+          "desc": "Hex head bolt",
+          "qty": 2,
+          "unit": 2.4,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "9M0853",
+          "stage": 5,
+          "desc": "Plunger",
+          "qty": 1,
+          "unit": 28.81,
+          "source": "quote",
+          "quoteId": "q-pb",
+          "status": "needed"
+        },
+        {
+          "pn": "5560701",
+          "stage": 1,
+          "desc": "Cylinder liner (bare)",
+          "qty": 6,
+          "unit": 229.54,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "covers": "20R0630",
+          "note": "Substitution for the reman cylinder packs. Liners only. Installed 08/19/26."
+        },
+        {
+          "pn": "1550809",
+          "stage": 1,
+          "desc": "Liner seal",
+          "qty": 6,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "covers": "3483295",
+          "note": "One of three seals that make up liner seal kit 3483295. No purchase cost on file yet."
+        },
+        {
+          "pn": "1550810",
+          "stage": 1,
+          "desc": "Liner seal",
+          "qty": 6,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "covers": "3483295",
+          "note": "One of three seals that make up liner seal kit 3483295. No purchase cost on file yet."
+        },
+        {
+          "pn": "1552793",
+          "stage": 1,
+          "desc": "Liner seal",
+          "qty": 6,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "covers": "3483295",
+          "note": "One of three seals that make up liner seal kit 3483295. No purchase cost on file yet."
+        },
+        {
+          "pn": "360466 PAI",
+          "stage": 1,
+          "desc": "Spacer plate, PAI aftermarket",
+          "qty": 1,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "covers": "6I4421",
+          "note": "Not on the tech list or any quote. Came in place of the Cat 6I4421 that was on order 08/19. Cost not in purchase history yet."
+        },
+        {
+          "pn": "6I4362",
+          "stage": 1,
+          "desc": "Shim",
+          "qty": 1,
+          "unit": 95.09,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "note": "Added, not quoted."
+        },
+        {
+          "pn": "1007399",
+          "stage": 1,
+          "desc": "Plug",
+          "qty": 2,
+          "unit": 13.14,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "note": "Added, not quoted. Standard C15/C18 inframe add on our past builds."
+        },
+        {
+          "pn": "2500466",
+          "stage": 1,
+          "desc": "O-ring",
+          "qty": 2,
+          "unit": 8.35,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "note": "Added, not quoted."
+        },
+        {
+          "pn": "4366597",
+          "stage": 7,
+          "desc": "Gasket kit, front structure set (front housing/cover)",
+          "qty": 1,
+          "unit": 550.69,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "note": "Added, not quoted. Likely overlaps the gasket set inside 6060909 Bronze kit. Inventory before buying the Bronze kit."
+        },
+        {
+          "pn": "4380907",
+          "stage": 9,
+          "desc": "Gasket kit (unidentified set)",
+          "qty": 1,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "note": "Added, not quoted. Could not identify which set this is. No purchase cost on file."
+        },
+        {
+          "pn": "1018468",
+          "stage": 2,
+          "desc": "Bushing",
+          "qty": 1,
+          "unit": 44.05,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "note": "Added, not quoted. Standard inframe add on our past C15 builds."
+        },
+        {
+          "pn": "1304698",
+          "stage": 2,
+          "desc": "Bushing",
+          "qty": 1,
+          "unit": 43.6,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "note": "Added, not quoted."
+        },
+        {
+          "pn": "1317123",
+          "stage": 2,
+          "desc": "Bushing",
+          "qty": 1,
+          "unit": 40.44,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "note": "Added, not quoted."
+        },
+        {
+          "pn": "1261756",
+          "stage": 2,
+          "desc": "Locking bolt, 5/16-18 x 7/8",
+          "qty": 10,
+          "unit": 0.4,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "note": "Added, not quoted."
+        },
+        {
+          "pn": "10120",
+          "stage": 10,
+          "desc": "Cat head bolt brush",
+          "qty": 1,
+          "unit": 15.79,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "note": "Shop supply."
+        },
+        {
+          "pn": "20A148FB",
+          "stage": 10,
+          "desc": "3/4-16 HSS bottoming tap",
+          "qty": 1,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "note": "Shop tool."
+        },
+        {
+          "pn": "FRTINCOMING",
+          "stage": 10,
+          "desc": "Incoming freight",
+          "qty": 1,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "note": "Freight line on the RO."
+        },
+        {
+          "pn": "3294509",
+          "stage": 3,
+          "desc": "Piston body assy",
+          "qty": 6,
+          "unit": 374.85,
+          "source": "quote",
+          "quoteId": "q-pb2",
+          "status": "needed",
+          "note": "Fills the piston gap from the dropped 20R0630 packs. Quoted Q43751."
+        },
+        {
+          "pn": "5245565",
+          "stage": 3,
+          "desc": "Piston pin",
+          "qty": 6,
+          "unit": 88.76,
+          "source": "quote",
+          "quoteId": "q-pb2",
+          "status": "needed"
+        },
+        {
+          "pn": "2302569",
+          "stage": 3,
+          "desc": "Pin retainer",
+          "qty": 12,
+          "unit": 5.67,
+          "source": "quote",
+          "quoteId": "q-pb2",
+          "status": "needed"
+        },
+        {
+          "pn": "2239159",
+          "stage": 3,
+          "desc": "Piston ring (top)",
+          "qty": 6,
+          "unit": 48.92,
+          "source": "quote",
+          "quoteId": "q-pb2",
+          "status": "needed"
+        },
+        {
+          "pn": "1871503",
+          "stage": 3,
+          "desc": "Piston ring, intermediate",
+          "qty": 6,
+          "unit": 48,
+          "source": "quote",
+          "quoteId": "q-pb2",
+          "status": "needed"
+        },
+        {
+          "pn": "2465659",
+          "stage": 3,
+          "desc": "Piston ring (oil)",
+          "qty": 6,
+          "unit": 48,
+          "source": "quote",
+          "quoteId": "q-pb2",
+          "status": "needed"
+        },
+        {
+          "pn": "10R2117",
+          "stage": 3,
+          "desc": "Connecting rod assy, reman",
+          "qty": 6,
+          "unit": 341.05,
+          "core": 205.59,
+          "source": "quote",
+          "quoteId": "q-pb2",
+          "status": "needed",
+          "note": "The dropped 20R0630 pack included new rods. Needed unless the old rods are inspected and reused."
+        },
+        {
+          "pn": "2613450",
+          "stage": 2,
+          "desc": "Rod bearing, ACERT",
+          "qty": 6,
+          "unit": 40.94,
+          "source": "gap",
+          "status": "needed",
+          "note": "GAP. Not on Q43751 either. The 6060909 Bronze kit carries rod bearings; confirm they are the right ones before buying these separately."
+        },
+        {
+          "pn": "CATARP",
+          "stage": 6,
+          "desc": "ARP head stud kit (or Cat bolts 1241854 x10 + 1241855 x16 + 9X8268 washers)",
+          "qty": 1,
+          "unit": 1349,
+          "source": "gap",
+          "status": "needed",
+          "note": "GAP. Head studs are not on Q38373 or Q43751. ARP kit ran $1,142 to $1,349 on past builds; Cat bolt route is roughly $530 plus washers."
+        }
       ]
     },
     {
@@ -150,8 +1133,14 @@ window.SEED = {
       "notes": "Opened 2026-10-29. Engine/electrical conversion on a 2024 389X: Kustom Truck B5 engine harness, NAMUX fuse harness, J1708-to-J1939 converter, Cat 8T9655 isolation mounts, driveline yoke and u-joint, FASS 290, pyro and fuel pressure gauges, battery box and air tank relocation. All 43 lines on Fullbay RO 25324800 were IN as of 10/29/26. Prices are our most recent Fullbay purchase cost where we have one; lines with no history show blank.",
       "created": "2026-10-29",
       "log": [
-        { "date": "2026-10-29", "text": "Two Kustom Truck Smart Gauge kits needed: 19115002 pyrometer $735 and 19115001 oil temp $495. Oil temp kit is listed Cat ONLY, confirm it works on the ISX before ordering." },
-        { "date": "2026-10-29", "text": "ECM needed: $3,649.18 plus $762.72 core. Not ordered yet." },
+        {
+          "date": "2026-10-29",
+          "text": "Two Kustom Truck Smart Gauge kits needed: 19115002 pyrometer $735 and 19115001 oil temp $495. Oil temp kit is listed Cat ONLY, confirm it works on the ISX before ordering."
+        },
+        {
+          "date": "2026-10-29",
+          "text": "ECM needed: $3,649.18 plus $762.72 core. Not ordered yet."
+        },
         {
           "date": "2026-10-29",
           "text": "Job opened in the portal. 2024 Peterbilt 389X, VIN 1XPXD49X4RD679298."
@@ -177,9 +1166,37 @@ window.SEED = {
         }
       ],
       "parts": [
-        {"pn":"19115002","stage":8,"desc":"Peterbilt Smart Gauge Kit, pyrometer / exhaust temp, NAMUX1 or NAMUX3","qty":1,"unit":735.00,"source":"manual","status":"needed","note":"Added 10/29. Kustom Truck web price $735.00 plus shipping. Pairs with the R605P10 pyro kit already in."},
-        {"pn":"19115001","stage":8,"desc":"Peterbilt Smart Gauge Kit, engine oil temp, NAMUX3 (listed Cat ONLY)","qty":1,"unit":495.00,"source":"manual","status":"needed","note":"Added 10/29. Kustom Truck web price $495.00 plus shipping. CHECK: vendor lists this kit as Cat ONLY and Fullbay has this truck as ISX/X15. Confirm fitment before ordering."},
-        {"pn":"ECM","stage":8,"desc":"ECM, Cummins ISX/X15 (part # TBD)","qty":1,"unit":3649.18,"core":762.72,"source":"manual","status":"needed","note":"Added 10/29. $3,649.18 plus $762.72 core, refundable on return of the old ECM. Still needs ordering."},
+        {
+          "pn": "19115002",
+          "stage": 8,
+          "desc": "Peterbilt Smart Gauge Kit, pyrometer / exhaust temp, NAMUX1 or NAMUX3",
+          "qty": 1,
+          "unit": 735,
+          "source": "manual",
+          "status": "needed",
+          "note": "Added 10/29. Kustom Truck web price $735.00 plus shipping. Pairs with the R605P10 pyro kit already in."
+        },
+        {
+          "pn": "19115001",
+          "stage": 8,
+          "desc": "Peterbilt Smart Gauge Kit, engine oil temp, NAMUX3 (listed Cat ONLY)",
+          "qty": 1,
+          "unit": 495,
+          "source": "manual",
+          "status": "needed",
+          "note": "Added 10/29. Kustom Truck web price $495.00 plus shipping. CHECK: vendor lists this kit as Cat ONLY and Fullbay has this truck as ISX/X15. Confirm fitment before ordering."
+        },
+        {
+          "pn": "ECM",
+          "stage": 8,
+          "desc": "ECM, Cummins ISX/X15 (part # TBD)",
+          "qty": 1,
+          "unit": 3649.18,
+          "core": 762.72,
+          "source": "manual",
+          "status": "needed",
+          "note": "Added 10/29. $3,649.18 plus $762.72 core, refundable on return of the old ECM. Still needs ordering."
+        },
         {
           "pn": "31HDS30",
           "stage": 8,
@@ -711,25 +1728,128 @@ window.SEED = {
       "notes": "Opened 2026-10-28. Injector job: 6 injectors plus rocker cover gasket, engine brake solenoids, P/S pump gasket and hardware, entered from the Fullbay estimate on 10/28 (our cost; Fullbay sell subtotal $4,930.88). Still need injector pass-through tubes, no part number or price yet.",
       "created": "2026-10-28",
       "log": [
-        { "date": "2026-10-28", "text": "Job opened in the portal. 2012 Peterbilt 348, unit 9698, VIN 2NP3LN9X7CM149698." },
-        { "date": "2026-10-28", "text": "9 part lines added from the Fullbay estimate (6 injectors 5579405SE at $543.49 each). Pass-through tubes still need a part number and price." }
+        {
+          "date": "2026-10-28",
+          "text": "Job opened in the portal. 2012 Peterbilt 348, unit 9698, VIN 2NP3LN9X7CM149698."
+        },
+        {
+          "date": "2026-10-28",
+          "text": "9 part lines added from the Fullbay estimate (6 injectors 5579405SE at $543.49 each). Pass-through tubes still need a part number and price."
+        }
       ],
       "smUpdates": [
-        { "date": "2026-10-27", "text": "Need to order injectors from Industrial. All other repairs are done." },
-        { "date": "2026-10-28", "text": "Need to order injectors from Industrial. All other repairs are done." }
+        {
+          "date": "2026-10-27",
+          "text": "Need to order injectors from Industrial. All other repairs are done."
+        },
+        {
+          "date": "2026-10-28",
+          "text": "Need to order injectors from Industrial. All other repairs are done."
+        }
       ],
       "quotes": [],
       "parts": [
-        {"source":"manual","status":"needed","pn":"5579405SE","stage":6,"desc":"Injector, Cummins (x6)","qty":6,"unit":543.49,"sell":679.3625,"note":"Service manager 10/27: order from Industrial Injection. Everything else on the truck is done, injectors are the hold-up."},
-        {"source":"gap","status":"needed","pn":"PASSTHRU","stage":6,"desc":"Injector pass-through tubes (connector tubes), part # and price TBD","qty":6,"unit":null,"note":"GAP. Jacob needs these but has no part number or price yet. Match to the injector part number when ordering."},
-        {"source":"manual","status":"needed","pn":"3959798CUM","stage":6,"desc":"Gasket, rocker/valve cover","qty":1,"unit":47,"sell":58.75},
-        {"source":"manual","status":"needed","pn":"4024759CUM","stage":8,"desc":"Solenoid, engine brake","qty":2,"unit":219.04333,"sell":277.5625},
-        {"source":"manual","status":"needed","pn":"4988280CUM","stage":7,"desc":"Gasket, power steering pump","qty":1,"unit":4.4,"sell":5.5},
-        {"source":"manual","status":"needed","pn":"5264181CUM","stage":9,"desc":"Retainer","qty":6,"unit":9.7317,"sell":12.8},
-        {"source":"manual","status":"needed","pn":"3397506CUM","stage":9,"desc":"Screw, hex flange head cap","qty":12,"unit":7.98,"sell":9.975},
-        {"source":"manual","status":"needed","pn":"3871638CUM","stage":9,"desc":"Cummins, no description in our history","qty":2,"unit":3.63,"sell":4.5375},
-        {"source":"manual","status":"needed","pn":"4026537CUM","stage":9,"desc":"Cummins, no description in our history","qty":2,"unit":7.46,"sell":9.325},
-        {"source":"manual","status":"needed","pn":"3871218CUM","stage":9,"desc":"Cummins, no description in our history","qty":2,"unit":3.48,"sell":4.35}
+        {
+          "source": "manual",
+          "status": "needed",
+          "pn": "5579405SE",
+          "stage": 6,
+          "desc": "Injector, Cummins (x6)",
+          "qty": 6,
+          "unit": 543.49,
+          "sell": 679.3625,
+          "note": "Service manager 10/27: order from Industrial Injection. Everything else on the truck is done, injectors are the hold-up."
+        },
+        {
+          "source": "gap",
+          "status": "needed",
+          "pn": "PASSTHRU",
+          "stage": 6,
+          "desc": "Injector pass-through tubes (connector tubes), part # and price TBD",
+          "qty": 6,
+          "unit": null,
+          "note": "GAP. Jacob needs these but has no part number or price yet. Match to the injector part number when ordering."
+        },
+        {
+          "source": "manual",
+          "status": "needed",
+          "pn": "3959798CUM",
+          "stage": 6,
+          "desc": "Gasket, rocker/valve cover",
+          "qty": 1,
+          "unit": 47,
+          "sell": 58.75
+        },
+        {
+          "source": "manual",
+          "status": "needed",
+          "pn": "4024759CUM",
+          "stage": 8,
+          "desc": "Solenoid, engine brake",
+          "qty": 2,
+          "unit": 219.04333,
+          "sell": 277.5625
+        },
+        {
+          "source": "manual",
+          "status": "needed",
+          "pn": "4988280CUM",
+          "stage": 7,
+          "desc": "Gasket, power steering pump",
+          "qty": 1,
+          "unit": 4.4,
+          "sell": 5.5
+        },
+        {
+          "source": "manual",
+          "status": "needed",
+          "pn": "5264181CUM",
+          "stage": 9,
+          "desc": "Retainer",
+          "qty": 6,
+          "unit": 9.7317,
+          "sell": 12.8
+        },
+        {
+          "source": "manual",
+          "status": "needed",
+          "pn": "3397506CUM",
+          "stage": 9,
+          "desc": "Screw, hex flange head cap",
+          "qty": 12,
+          "unit": 7.98,
+          "sell": 9.975
+        },
+        {
+          "source": "manual",
+          "status": "needed",
+          "pn": "3871638CUM",
+          "stage": 9,
+          "desc": "Cummins, no description in our history",
+          "qty": 2,
+          "unit": 3.63,
+          "sell": 4.5375
+        },
+        {
+          "source": "manual",
+          "status": "needed",
+          "pn": "4026537CUM",
+          "stage": 9,
+          "desc": "Cummins, no description in our history",
+          "qty": 2,
+          "unit": 7.46,
+          "sell": 9.325
+        },
+        {
+          "source": "manual",
+          "status": "needed",
+          "pn": "3871218CUM",
+          "stage": 9,
+          "desc": "Cummins, no description in our history",
+          "qty": 2,
+          "unit": 3.48,
+          "sell": 4.35
+        }
       ]
     },
     {
@@ -746,48 +1866,484 @@ window.SEED = {
       "notes": "Oil pan / oil pump / suction pipe job plus oil cooler, EGR cooler seals, compressor coolant lines, clutch and pilot bearing, filters and fluids. All 30 lines were IN as of 10/28/26 per the Fullbay parts list. Prices and totals are hidden on this job: the true cost was far higher than our history shows and the full pricing is no longer on hand.",
       "created": "2026-10-28",
       "log": [
-        { "date": "2026-10-29", "text": "Fuel pressure sensor needed. Added A0071530228 from our Cascadia history, confirm fitment on the 2023 DD15 before ordering." },
-        { "date": "2026-10-28", "text": "Job added. All parts on Fullbay RO 26971752 are in (30 lines). Oil pump EA4721807001 shows on two RO lines." }
+        {
+          "date": "2026-10-29",
+          "text": "Fuel pressure sensor needed. Added A0071530228 from our Cascadia history, confirm fitment on the 2023 DD15 before ordering."
+        },
+        {
+          "date": "2026-10-28",
+          "text": "Job added. All parts on Fullbay RO 26971752 are in (30 lines). Oil pump EA4721807001 shows on two RO lines."
+        }
       ],
       "smUpdates": [
-        { "date": "2026-10-27", "text": "This should complete tomorrow." },
-        { "date": "2026-10-28", "text": "Tee got this running. Has 2 coolant leaks to figure out: 1 at the cooler and 1 at the surge tank. Also need to figure out why the intake is sucking down when running. Then driveline and hood go back on and test drive." }
+        {
+          "date": "2026-10-27",
+          "text": "This should complete tomorrow."
+        },
+        {
+          "date": "2026-10-28",
+          "text": "Tee got this running. Has 2 coolant leaks to figure out: 1 at the cooler and 1 at the surge tank. Also need to figure out why the intake is sucking down when running. Then driveline and hood go back on and test drive."
+        }
       ],
       "quotes": [
-        { "id": "q-fb", "vendor": "Fullbay received list", "number": "RO 26971752", "date": "2026-10-28", "note": "Parts list 6957, inventoryOnly=1. 30 lines, all in. PDF in jobs/6957/." }
+        {
+          "id": "q-fb",
+          "vendor": "Fullbay received list",
+          "number": "RO 26971752",
+          "date": "2026-10-28",
+          "note": "Parts list 6957, inventoryOnly=1. 30 lines, all in. PDF in jobs/6957/."
+        }
       ],
       "parts": [
-        {"pn":"A0071530228","stage":8,"desc":"Fuel pressure sensor, Detroit DD15 (DDE)","qty":1,"unit":405.64,"source":"manual","status":"needed","note":"Added 10/29, Jacob needs one. PN is our last Cascadia fuel pressure sensor buy (3x, last 04/2024 at $405.64). Confirm it fits a 2023 DD15 and whether Tee means the rail sensor or the low-side sensor on the fuel filter module."},
-        {"pn":"A47301104313","stage":5,"desc":"Oil pan","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"A4730140122","stage":5,"desc":"Oil pan gasket","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"EA4721807001","stage":5,"desc":"Oil pump assembly","qty":2,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28","note":"Listed twice on the RO, one each. Check whether the second one is a duplicate line or a return."},
-        {"pn":"A4721870231","stage":5,"desc":"Oil suction pipe","qty":1,"unit":42.81,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"A4721881480","stage":5,"desc":"Oil suction manifold seal","qty":2,"unit":13.95,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"A4721870980","stage":5,"desc":"Seal","qty":1,"unit":9.67,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"A4721870880","stage":5,"desc":"Seal","qty":2,"unit":10.19,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"A0229979548","stage":5,"desc":"O-ring","qty":1,"unit":3.37,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"07-25222-000","stage":5,"desc":"Oil cooler","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"A4711800209","stage":8,"desc":"Oil filter kit with seals","qty":1,"unit":27.7,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"A4720921705","stage":8,"desc":"Fuel filter kit","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"03-42776-010","stage":8,"desc":"Filter element","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"A4722005052","stage":7,"desc":"A/C compressor coolant supply line","qty":1,"unit":17.54,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"A4722004851","stage":7,"desc":"A/C compressor coolant return line","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"A14-22076-000","stage":7,"desc":"Power steering reservoir","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"RA4721401380","stage":8,"desc":"EGR cooler seals","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"23516100","stage":8,"desc":"Gasket","qty":1,"unit":3.94,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"23-13329-095","stage":8,"desc":"Hex screws","qty":12,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"T130130349AC2","stage":8,"desc":"V-band clamp","qty":1,"unit":22.74,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"AMS012","stage":8,"desc":"Gasket, 4 inch with tabs","qty":2,"unit":14.15,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"A0009957033","stage":8,"desc":"Clamps","qty":2,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"A0004921680","stage":8,"desc":"Gasket","qty":2,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"A0039955101","stage":8,"desc":"Clamp","qty":2,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"A0009957702","stage":8,"desc":"Clamp","qty":1,"unit":29.73,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"262PPCDOT-4","stage":8,"desc":"1/4 in DOT push-connect composite union","qty":9,"unit":8.15,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28","note":"Two RO lines, 4 + 5."},
-        {"pn":"K4680CL","stage":8,"desc":"Clutch","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"A0119812025","stage":8,"desc":"Pilot bearing","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"EG5081","stage":10,"desc":"Trans fluid 75W-90","qty":3,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"122485","stage":10,"desc":"Oil 10W-30","qty":12,"unit":22.5,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
-        {"pn":"FREIGHT","stage":10,"desc":"Freight charge","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"}
+        {
+          "pn": "A0071530228",
+          "stage": 8,
+          "desc": "Fuel pressure sensor, Detroit DD15 (DDE)",
+          "qty": 1,
+          "unit": 405.64,
+          "source": "manual",
+          "status": "needed",
+          "note": "Added 10/29, Jacob needs one. PN is our last Cascadia fuel pressure sensor buy (3x, last 04/2024 at $405.64). Confirm it fits a 2023 DD15 and whether Tee means the rail sensor or the low-side sensor on the fuel filter module."
+        },
+        {
+          "pn": "A47301104313",
+          "stage": 5,
+          "desc": "Oil pan",
+          "qty": 1,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "A4730140122",
+          "stage": 5,
+          "desc": "Oil pan gasket",
+          "qty": 1,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "EA4721807001",
+          "stage": 5,
+          "desc": "Oil pump assembly",
+          "qty": 2,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28",
+          "note": "Listed twice on the RO, one each. Check whether the second one is a duplicate line or a return."
+        },
+        {
+          "pn": "A4721870231",
+          "stage": 5,
+          "desc": "Oil suction pipe",
+          "qty": 1,
+          "unit": 42.81,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "A4721881480",
+          "stage": 5,
+          "desc": "Oil suction manifold seal",
+          "qty": 2,
+          "unit": 13.95,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "A4721870980",
+          "stage": 5,
+          "desc": "Seal",
+          "qty": 1,
+          "unit": 9.67,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "A4721870880",
+          "stage": 5,
+          "desc": "Seal",
+          "qty": 2,
+          "unit": 10.19,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "A0229979548",
+          "stage": 5,
+          "desc": "O-ring",
+          "qty": 1,
+          "unit": 3.37,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "07-25222-000",
+          "stage": 5,
+          "desc": "Oil cooler",
+          "qty": 1,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "A4711800209",
+          "stage": 8,
+          "desc": "Oil filter kit with seals",
+          "qty": 1,
+          "unit": 27.7,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "A4720921705",
+          "stage": 8,
+          "desc": "Fuel filter kit",
+          "qty": 1,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "03-42776-010",
+          "stage": 8,
+          "desc": "Filter element",
+          "qty": 1,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "A4722005052",
+          "stage": 7,
+          "desc": "A/C compressor coolant supply line",
+          "qty": 1,
+          "unit": 17.54,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "A4722004851",
+          "stage": 7,
+          "desc": "A/C compressor coolant return line",
+          "qty": 1,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "A14-22076-000",
+          "stage": 7,
+          "desc": "Power steering reservoir",
+          "qty": 1,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "RA4721401380",
+          "stage": 8,
+          "desc": "EGR cooler seals",
+          "qty": 1,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "23516100",
+          "stage": 8,
+          "desc": "Gasket",
+          "qty": 1,
+          "unit": 3.94,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "23-13329-095",
+          "stage": 8,
+          "desc": "Hex screws",
+          "qty": 12,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "T130130349AC2",
+          "stage": 8,
+          "desc": "V-band clamp",
+          "qty": 1,
+          "unit": 22.74,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "AMS012",
+          "stage": 8,
+          "desc": "Gasket, 4 inch with tabs",
+          "qty": 2,
+          "unit": 14.15,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "A0009957033",
+          "stage": 8,
+          "desc": "Clamps",
+          "qty": 2,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "A0004921680",
+          "stage": 8,
+          "desc": "Gasket",
+          "qty": 2,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "A0039955101",
+          "stage": 8,
+          "desc": "Clamp",
+          "qty": 2,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "A0009957702",
+          "stage": 8,
+          "desc": "Clamp",
+          "qty": 1,
+          "unit": 29.73,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "262PPCDOT-4",
+          "stage": 8,
+          "desc": "1/4 in DOT push-connect composite union",
+          "qty": 9,
+          "unit": 8.15,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28",
+          "note": "Two RO lines, 4 + 5."
+        },
+        {
+          "pn": "K4680CL",
+          "stage": 8,
+          "desc": "Clutch",
+          "qty": 1,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "A0119812025",
+          "stage": 8,
+          "desc": "Pilot bearing",
+          "qty": 1,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "EG5081",
+          "stage": 10,
+          "desc": "Trans fluid 75W-90",
+          "qty": 3,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "122485",
+          "stage": 10,
+          "desc": "Oil 10W-30",
+          "qty": 12,
+          "unit": 22.5,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        },
+        {
+          "pn": "FREIGHT",
+          "stage": 10,
+          "desc": "Freight charge",
+          "qty": 1,
+          "unit": null,
+          "source": "received",
+          "quoteId": "q-fb",
+          "status": "received",
+          "receivedAt": "2026-10-28"
+        }
+      ]
+    },
+    {
+      "id": "6999",
+      "name": "TCL Transport (unit 56)",
+      "customer": "TCL TRANSPORT, LLC",
+      "unit": "2001 Peterbilt 379, Unit 56",
+      "vin": "1XP5DB9X01D543718",
+      "engine": "CAT (1R0716 / 1R0749 / 1R0750 filters on the job; 3406E or C-12 likely, confirm)",
+      "jobNumber": "6999",
+      "seedRev": 1,
+      "ro": "",
+      "notes": "Opened 2026-11-02. Received parts were first logged on 7003 by mistake and moved here the same day. Unit 56 has prior history with us (see Parts Pricing Tool/tcl56_parts_order.html).",
+      "created": "2026-11-02",
+      "log": [
+        {
+          "date": "2026-11-02",
+          "text": "Job opened. 2001 Peterbilt 379, unit 56, VIN 1XP5DB9X01D543718. Six received lines moved over from 7003 (entered there by mistake)."
+        },
+        {
+          "date": "2026-11-02",
+          "text": "FS1023FLG Fuel/water separator filter (Fleetguard) (1) received, marked IN."
+        },
+        {
+          "date": "2026-11-02",
+          "text": "1R0749 Filter, fuel secondary (CAT) (1) received, marked IN."
+        },
+        {
+          "date": "2026-11-02",
+          "text": "1R0750 Filter, fuel (CAT) (1) received, marked IN."
+        },
+        {
+          "date": "2026-11-02",
+          "text": "M203315 fuel tank isolators (2) received, marked IN."
+        },
+        {
+          "date": "2026-11-02",
+          "text": "11-02331-000 cotton ply webbing received, 21 ft, marked IN."
+        },
+        {
+          "date": "2026-11-02",
+          "text": "1R0716 CAT oil filter received, marked IN ($27.23)."
+        }
+      ],
+      "smUpdates": [],
+      "quotes": [],
+      "parts": [
+        {
+          "pn": "FS1023FLG",
+          "stage": 8,
+          "desc": "Fuel/water separator filter (Fleetguard)",
+          "qty": 1,
+          "unit": 46.73,
+          "source": "received",
+          "status": "received",
+          "receivedAt": "2026-11-02"
+        },
+        {
+          "pn": "1R0749",
+          "stage": 8,
+          "desc": "Filter, fuel secondary (CAT)",
+          "qty": 1,
+          "unit": 27.09,
+          "source": "received",
+          "status": "received",
+          "receivedAt": "2026-11-02"
+        },
+        {
+          "pn": "1R0750",
+          "stage": 8,
+          "desc": "Filter, fuel (CAT)",
+          "qty": 1,
+          "unit": 22.7,
+          "source": "received",
+          "status": "received",
+          "receivedAt": "2026-11-02"
+        },
+        {
+          "pn": "M203315",
+          "stage": 9,
+          "desc": "Isolator, fuel tank",
+          "qty": 2,
+          "unit": 31.6,
+          "source": "received",
+          "status": "received",
+          "receivedAt": "2026-11-02"
+        },
+        {
+          "pn": "11-02331-000",
+          "stage": 9,
+          "desc": "Webbing, cotton ply (per ft)",
+          "qty": 21,
+          "unit": 15.21,
+          "source": "received",
+          "status": "received",
+          "receivedAt": "2026-11-02"
+        },
+        {
+          "pn": "1R0716",
+          "stage": 8,
+          "desc": "Filter, engine oil (CAT)",
+          "qty": 1,
+          "unit": 27.23,
+          "source": "received",
+          "status": "received",
+          "receivedAt": "2026-11-02"
+        }
       ]
     },
     {
@@ -796,31 +2352,25 @@ window.SEED = {
       "customer": "TCL TRANSPORT, LLC",
       "unit": "1998 Peterbilt 379, Unit 59",
       "vin": "1XP5DB9X0WD477713",
-      "engine": "CAT (1R0716 filter on the job; 3406E or C-12 likely, confirm)",
+      "engine": "",
       "jobNumber": "7003",
-      "seedRev": 7,
+      "seedRev": 8,
       "ro": "",
-      "notes": "Opened 2026-11-02. New truck for TCL (not in our Fullbay unit history; their other units are 15, 18, 56 and a Columbia). First part received 11/02: CAT oil filter 1R0716, IN.",
+      "notes": "Opened 2026-11-02. New truck for TCL (not in our Fullbay unit history). No parts entered yet; the six lines entered 11/02 belonged to 6999 (unit 56) and were moved.",
       "created": "2026-11-02",
       "log": [
-        { "date": "2026-11-02", "text": "FS1023FLG Fuel/water separator filter (Fleetguard) (1) received, marked IN." },
-        { "date": "2026-11-02", "text": "1R0749 Filter, fuel secondary (CAT) (1) received, marked IN." },
-        { "date": "2026-11-02", "text": "1R0750 Filter, fuel (CAT) (1) received, marked IN." },
-        { "date": "2026-11-02", "text": "M203315 fuel tank isolators (2) received, marked IN." },
-        { "date": "2026-11-02", "text": "11-02331-000 cotton ply webbing received, 21 ft, marked IN." },
-        { "date": "2026-11-02", "text": "1R0716 CAT oil filter received, marked IN ($27.23)." },
-        { "date": "2026-11-02", "text": "Job opened in the portal. 1998 Peterbilt 379, unit 59, VIN 1XP5DB9X0WD477713." }
+        {
+          "date": "2026-11-02",
+          "text": "Six received lines entered here by mistake were moved to job 6999 (unit 56)."
+        },
+        {
+          "date": "2026-11-02",
+          "text": "Job opened in the portal. 1998 Peterbilt 379, unit 59, VIN 1XP5DB9X0WD477713."
+        }
       ],
       "smUpdates": [],
       "quotes": [],
-      "parts": [
-        {"pn":"FS1023FLG","stage":8,"desc":"Fuel/water separator filter (Fleetguard)","qty":1,"unit":46.73,"source":"received","status":"received","receivedAt":"2026-11-02"},
-        {"pn":"1R0749","stage":8,"desc":"Filter, fuel secondary (CAT)","qty":1,"unit":27.09,"source":"received","status":"received","receivedAt":"2026-11-02"},
-        {"pn":"1R0750","stage":8,"desc":"Filter, fuel (CAT)","qty":1,"unit":22.70,"source":"received","status":"received","receivedAt":"2026-11-02"},
-        {"pn":"M203315","stage":9,"desc":"Isolator, fuel tank","qty":2,"unit":31.60,"source":"received","status":"received","receivedAt":"2026-11-02"},
-        {"pn":"11-02331-000","stage":9,"desc":"Webbing, cotton ply (per ft)","qty":21,"unit":15.21,"source":"received","status":"received","receivedAt":"2026-11-02"},
-        {"pn":"1R0716","stage":8,"desc":"Filter, engine oil (CAT)","qty":1,"unit":27.23,"source":"received","status":"received","receivedAt":"2026-11-02"}
-      ]
+      "parts": []
     }
   ]
 };
