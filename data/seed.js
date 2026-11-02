@@ -796,18 +796,21 @@ window.SEED = {
       "customer": "TCL TRANSPORT, LLC",
       "unit": "1998 Peterbilt 379, Unit 59",
       "vin": "1XP5DB9X0WD477713",
-      "engine": "",
+      "engine": "CAT (1R0716 filter on the job; 3406E or C-12 likely, confirm)",
       "jobNumber": "7003",
-      "seedRev": 1,
+      "seedRev": 2,
       "ro": "",
-      "notes": "Opened 2026-11-02. New truck for TCL (not in our Fullbay unit history; their other units are 15, 18, 56 and a Columbia). No parts entered yet.",
+      "notes": "Opened 2026-11-02. New truck for TCL (not in our Fullbay unit history; their other units are 15, 18, 56 and a Columbia). First part received 11/02: CAT oil filter 1R0716, IN.",
       "created": "2026-11-02",
       "log": [
+        { "date": "2026-11-02", "text": "1R0716 CAT oil filter received, marked IN ($27.23)." },
         { "date": "2026-11-02", "text": "Job opened in the portal. 1998 Peterbilt 379, unit 59, VIN 1XP5DB9X0WD477713." }
       ],
       "smUpdates": [],
       "quotes": [],
-      "parts": []
+      "parts": [
+        {"pn":"1R0716","stage":8,"desc":"Filter, engine oil (CAT)","qty":1,"unit":27.23,"source":"received","status":"received","receivedAt":"2026-11-02"}
+      ]
     }
   ]
 };
