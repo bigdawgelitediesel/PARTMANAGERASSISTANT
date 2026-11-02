@@ -1128,12 +1128,12 @@ window.SEED = {
       "vin": "1XPXD49X4RD679298",
       "engine": "Cummins ISX / X15 14.9L",
       "jobNumber": "6682",
-      "seedRev": 6,
+      "seedRev": 7,
       "ro": "25324800",
       "notes": "Opened 2026-10-29. Engine/electrical conversion on a 2024 389X: Kustom Truck B5 engine harness, NAMUX fuse harness, J1708-to-J1939 converter, Cat 8T9655 isolation mounts, driveline yoke and u-joint, FASS 290, pyro and fuel pressure gauges, battery box and air tank relocation. All 43 lines on Fullbay RO 25324800 were IN as of 10/29/26. Prices are our most recent Fullbay purchase cost where we have one; lines with no history show blank.",
       "created": "2026-10-29",
       "log": [
-        { "date": "2026-11-02", "text": "10R4090 ECM, control group (CAT reman) (1) added, needed." },
+        { "date": "2026-11-02", "text": "10R4090 ECM (CAT reman) added and received, marked IN." },
         {
           "date": "2026-10-29",
           "text": "Two Kustom Truck Smart Gauge kits needed: 19115002 pyrometer $735 and 19115001 oil temp $495. Oil temp kit is listed Cat ONLY, confirm it works on the ISX before ordering."
@@ -1167,7 +1167,7 @@ window.SEED = {
         }
       ],
       "parts": [
-        {"pn":"10R4090","stage":8,"desc":"ECM, control group (CAT reman)","qty":1,"unit":3649.18,"source":"manual","status":"needed"},
+        {"pn":"10R4090","stage":8,"desc":"ECM, control group (CAT reman)","qty":1,"unit":3649.18,"source":"received","status":"received","receivedAt":"2026-11-02"},
         {
           "pn": "19115002",
           "stage": 8,
