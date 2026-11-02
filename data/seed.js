@@ -798,11 +798,12 @@ window.SEED = {
       "vin": "1XP5DB9X0WD477713",
       "engine": "CAT (1R0716 filter on the job; 3406E or C-12 likely, confirm)",
       "jobNumber": "7003",
-      "seedRev": 6,
+      "seedRev": 7,
       "ro": "",
       "notes": "Opened 2026-11-02. New truck for TCL (not in our Fullbay unit history; their other units are 15, 18, 56 and a Columbia). First part received 11/02: CAT oil filter 1R0716, IN.",
       "created": "2026-11-02",
       "log": [
+        { "date": "2026-11-02", "text": "FS1023FLG Fuel/water separator filter (Fleetguard) (1) received, marked IN." },
         { "date": "2026-11-02", "text": "1R0749 Filter, fuel secondary (CAT) (1) received, marked IN." },
         { "date": "2026-11-02", "text": "1R0750 Filter, fuel (CAT) (1) received, marked IN." },
         { "date": "2026-11-02", "text": "M203315 fuel tank isolators (2) received, marked IN." },
@@ -813,6 +814,7 @@ window.SEED = {
       "smUpdates": [],
       "quotes": [],
       "parts": [
+        {"pn":"FS1023FLG","stage":8,"desc":"Fuel/water separator filter (Fleetguard)","qty":1,"unit":46.73,"source":"received","status":"received","receivedAt":"2026-11-02"},
         {"pn":"1R0749","stage":8,"desc":"Filter, fuel secondary (CAT)","qty":1,"unit":27.09,"source":"received","status":"received","receivedAt":"2026-11-02"},
         {"pn":"1R0750","stage":8,"desc":"Filter, fuel (CAT)","qty":1,"unit":22.70,"source":"received","status":"received","receivedAt":"2026-11-02"},
         {"pn":"M203315","stage":9,"desc":"Isolator, fuel tank","qty":2,"unit":31.60,"source":"received","status":"received","receivedAt":"2026-11-02"},
