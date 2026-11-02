@@ -2354,11 +2354,13 @@ window.SEED = {
       "vin": "1XP5DB9X0WD477713",
       "engine": "",
       "jobNumber": "7003",
-      "seedRev": 10,
+      "seedRev": 12,
       "ro": "",
       "notes": "Opened 2026-11-02. New truck for TCL (not in our Fullbay unit history). No parts entered yet; the six lines entered 11/02 belonged to 6999 (unit 56) and were moved.",
       "created": "2026-11-02",
       "log": [
+        { "date": "2026-11-02", "text": "07-05861-2 Mount (Freightliner PN) (1) received, marked IN." },
+        { "date": "2026-11-02", "text": "PL1126AHTATR Bushing, mount (1) received, marked IN." },
         { "date": "2026-11-02", "text": "PL1015HTATR Motor / radiator mount (1) received, marked IN." },
         { "date": "2026-11-02", "text": "DR-PE-1000-001-ST No description in our history (Peterbilt, DR-PE prefix) (1) received, marked IN." },
         {
@@ -2373,6 +2375,8 @@ window.SEED = {
       "smUpdates": [],
       "quotes": [],
       "parts": [
+        {"pn":"07-05861-2","stage":7,"desc":"Mount (Freightliner PN)","qty":1,"unit":32.88,"source":"received","status":"received","receivedAt":"2026-11-02"},
+        {"pn":"PL1126AHTATR","stage":7,"desc":"Bushing, mount","qty":1,"unit":5.57,"source":"received","status":"received","receivedAt":"2026-11-02"},
         {"pn":"PL1015HTATR","stage":7,"desc":"Motor / radiator mount","qty":1,"unit":24.54,"source":"received","status":"received","receivedAt":"2026-11-02"},
         {"pn":"DR-PE-1000-001-ST","stage":9,"desc":"No description in our history (Peterbilt, DR-PE prefix)","qty":1,"unit":null,"source":"received","status":"received","receivedAt":"2026-11-02"}
       ]
