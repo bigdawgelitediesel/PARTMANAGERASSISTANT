@@ -789,6 +789,25 @@ window.SEED = {
         {"pn":"122485","stage":10,"desc":"Oil 10W-30","qty":12,"unit":22.5,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"},
         {"pn":"FREIGHT","stage":10,"desc":"Freight charge","qty":1,"unit":null,"source":"received","quoteId":"q-fb","status":"received","receivedAt":"2026-10-28"}
       ]
+    },
+    {
+      "id": "7003",
+      "name": "TCL Transport",
+      "customer": "TCL TRANSPORT, LLC",
+      "unit": "1998 Peterbilt 379, Unit 59",
+      "vin": "1XP5DB9X0WD477713",
+      "engine": "",
+      "jobNumber": "7003",
+      "seedRev": 1,
+      "ro": "",
+      "notes": "Opened 2026-11-02. New truck for TCL (not in our Fullbay unit history; their other units are 15, 18, 56 and a Columbia). No parts entered yet.",
+      "created": "2026-11-02",
+      "log": [
+        { "date": "2026-11-02", "text": "Job opened in the portal. 1998 Peterbilt 379, unit 59, VIN 1XP5DB9X0WD477713." }
+      ],
+      "smUpdates": [],
+      "quotes": [],
+      "parts": []
     }
   ]
 };
