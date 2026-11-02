@@ -2354,11 +2354,12 @@ window.SEED = {
       "vin": "1XP5DB9X0WD477713",
       "engine": "",
       "jobNumber": "7003",
-      "seedRev": 8,
+      "seedRev": 9,
       "ro": "",
       "notes": "Opened 2026-11-02. New truck for TCL (not in our Fullbay unit history). No parts entered yet; the six lines entered 11/02 belonged to 6999 (unit 56) and were moved.",
       "created": "2026-11-02",
       "log": [
+        { "date": "2026-11-02", "text": "DR-PE-1000-001-ST No description in our history (Peterbilt, DR-PE prefix) (1) received, marked IN." },
         {
           "date": "2026-11-02",
           "text": "Six received lines entered here by mistake were moved to job 6999 (unit 56)."
@@ -2370,7 +2371,9 @@ window.SEED = {
       ],
       "smUpdates": [],
       "quotes": [],
-      "parts": []
+      "parts": [
+        {"pn":"DR-PE-1000-001-ST","stage":9,"desc":"No description in our history (Peterbilt, DR-PE prefix)","qty":1,"unit":null,"source":"received","status":"received","receivedAt":"2026-11-02"}
+      ]
     }
   ]
 };
