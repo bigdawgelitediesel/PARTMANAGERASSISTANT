@@ -2356,11 +2356,13 @@ window.SEED = {
       "vin": "1XP5DB9X0WD477713",
       "engine": "",
       "jobNumber": "7003",
-      "seedRev": 18,
+      "seedRev": 20,
       "ro": "",
       "notes": "Opened 2026-11-02. New truck for TCL (not in our Fullbay unit history). No parts entered yet; the six lines entered 11/02 belonged to 6999 (unit 56) and were moved.",
       "created": "2026-11-02",
       "log": [
+        { "date": "2026-11-02", "text": "F16-6009031B413SB0 Clamp, hose T-bolt (Peterbilt) (8) added, needed." },
+        { "date": "2026-11-02", "text": "1010-1 Clamp (1) added, needed." },
         { "date": "2026-11-02", "text": "PL1077ATR Radiator mount (4) received, marked IN." },
         { "date": "2026-11-02", "text": "14-14256 Pipe, exhaust 64 deg (1) received, marked IN." },
         { "date": "2026-11-02", "text": "US-PEDAC-20BA Charge air cooler, Dura-Lite Evolution (Peterbilt) (1) received, marked IN." },
@@ -2380,6 +2382,8 @@ window.SEED = {
       "smUpdates": [],
       "quotes": [],
       "parts": [
+        {"pn":"F16-6009031B413SB0","stage":8,"desc":"Clamp, hose T-bolt (Peterbilt)","qty":8,"unit":17.12,"source":"manual","status":"needed"},
+        {"pn":"1010-1","stage":8,"desc":"Clamp","qty":1,"unit":18.09,"source":"manual","status":"needed"},
         {"pn":"PL1077ATR","stage":7,"desc":"Radiator mount","qty":4,"unit":19.08,"source":"received","status":"received","receivedAt":"2026-11-02"},
         {"pn":"14-14256","stage":8,"desc":"Pipe, exhaust 64 deg","qty":1,"unit":362.90,"source":"received","status":"received","receivedAt":"2026-11-02"},
         {"pn":"US-PEDAC-20BA","stage":7,"desc":"Charge air cooler, Dura-Lite Evolution (Peterbilt)","qty":1,"unit":1430.94,"source":"received","status":"received","receivedAt":"2026-11-02"},
