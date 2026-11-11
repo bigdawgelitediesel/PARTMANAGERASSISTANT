@@ -2429,15 +2429,15 @@ window.SEED = {
     },
     {
       "id": "7002",
-      "name": "Job 7002",
-      "customer": "",
-      "unit": "",
-      "vin": "",
-      "engine": "",
+      "name": "5 XR Farms",
+      "customer": "5 XR FARMS",
+      "unit": "2016 Peterbilt 389, Unit 29",
+      "vin": "1NPXD49X9GD360129",
+      "engine": "Cummins",
       "jobNumber": "7002",
-      "seedRev": 1,
+      "seedRev": 2,
       "ro": "",
-      "notes": "Customer, truck and VIN not yet entered.",
+      "notes": "2016 Peterbilt 389, unit 29, Cummins (CUM parts on prior visits). Customer matched from our Fullbay history on this VIN (5 XR Farms, prior visits 04/21/26 and 09/09/26).",
       "created": "2026-11-11",
       "log": [
         {
@@ -2446,7 +2446,7 @@ window.SEED = {
         },
         {
           "date": "2026-11-11",
-          "text": "Job opened in the portal from PO receipt. Customer, truck and VIN still to be entered."
+          "text": "Truck entered: 2016 Peterbilt 389, unit 29, VIN 1NPXD49X9GD360129. Customer 5 XR Farms per our history on this VIN."
         }
       ],
       "smUpdates": [],
