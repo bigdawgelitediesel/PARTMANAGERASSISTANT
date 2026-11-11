@@ -12,7 +12,7 @@ window.SEED = {
       "unit": "Tractor / Semi / Sleeper",
       "engine": "CAT C18",
       "jobNumber": "6657",
-      "seedRev": 13,
+      "seedRev": 14,
       "ro": "25166952",
       "notes": "Tech sheet signed Simper (rev 11/19/2025). Block back from machine shop, liners and shims in as of 08/19/26. The reman cylinder packs (20R0630) were dropped for bare liners, so pistons, pins, retainers, rings and rods are quoted separately on Peterbilt Q43751 (27 Oct 26, $6,999.06 with $1,233.54 refundable rod cores). Still not on any quote: rod bearings (check the 6060909 Bronze kit) and head studs.",
       "created": "2026-07-28",
@@ -36,6 +36,10 @@ window.SEED = {
         {
           "date": "2026-10-28",
           "text": "Fullbay RO 25166952 shows 18 lines received. Reconciled against Peterbilt Q38373. Still open: everything else on the quote plus the piston/ring/rod/head-stud gap."
+        },
+        {
+          "date": "2026-11-11",
+          "text": "PO 58781432 received: the full Q43751 piston and rod set from Jackson Group Peterbilt (bill 40916CY, $5,795.52, 7 lines, 48 pieces). 6 rods, 6 piston bodies, 6 pins, 12 retainers, 6 each top/intermediate/oil rings. Intermediate ring 1871503 billed $53.00 vs $48.00 quoted, everything else at quote. No core charge on the bill."
         }
       ],
       "smUpdates": [
@@ -73,6 +77,13 @@ window.SEED = {
           "number": "RO 25166952",
           "date": "2026-10-28",
           "note": "Parts list 6657, inventoryOnly=1. 18 lines received."
+        },
+        {
+          "id": "q-po58781432",
+          "vendor": "Jackson Group Peterbilt, Cheyenne",
+          "number": "PO 58781432 / bill 40916CY",
+          "date": "2026-11-11",
+          "note": "Received. Q43751 piston/rod set, 7 lines, $5,795.52."
         }
       ],
       "parts": [
@@ -1037,8 +1048,11 @@ window.SEED = {
           "unit": 374.85,
           "source": "quote",
           "quoteId": "q-pb2",
-          "status": "needed",
-          "note": "Fills the piston gap from the dropped 20R0630 packs. Quoted Q43751."
+          "status": "received",
+          "note": "Fills the piston gap from the dropped 20R0630 packs. Quoted Q43751. IN 11/11/26 on PO 58781432 (Peterbilt bill 40916CY).",
+          "receivedQty": 6,
+          "receivedUnit": 374.85,
+          "receivedAt": "2026-11-11"
         },
         {
           "pn": "5245565",
@@ -1048,7 +1062,11 @@ window.SEED = {
           "unit": 88.76,
           "source": "quote",
           "quoteId": "q-pb2",
-          "status": "needed"
+          "status": "received",
+          "receivedQty": 6,
+          "receivedUnit": 88.76,
+          "receivedAt": "2026-11-11",
+          "note": "IN 11/11/26 on PO 58781432 (Peterbilt bill 40916CY)."
         },
         {
           "pn": "2302569",
@@ -1058,7 +1076,11 @@ window.SEED = {
           "unit": 5.67,
           "source": "quote",
           "quoteId": "q-pb2",
-          "status": "needed"
+          "status": "received",
+          "receivedQty": 12,
+          "receivedUnit": 5.67,
+          "receivedAt": "2026-11-11",
+          "note": "IN 11/11/26 on PO 58781432 (Peterbilt bill 40916CY)."
         },
         {
           "pn": "2239159",
@@ -1068,7 +1090,11 @@ window.SEED = {
           "unit": 48.92,
           "source": "quote",
           "quoteId": "q-pb2",
-          "status": "needed"
+          "status": "received",
+          "receivedQty": 6,
+          "receivedUnit": 48.92,
+          "receivedAt": "2026-11-11",
+          "note": "IN 11/11/26 on PO 58781432 (Peterbilt bill 40916CY)."
         },
         {
           "pn": "1871503",
@@ -1078,7 +1104,11 @@ window.SEED = {
           "unit": 48,
           "source": "quote",
           "quoteId": "q-pb2",
-          "status": "needed"
+          "status": "received",
+          "receivedQty": 6,
+          "receivedUnit": 53,
+          "receivedAt": "2026-11-11",
+          "note": "IN 11/11/26 on PO 58781432 (Peterbilt bill 40916CY). Billed $53.00 vs $48.00 quoted."
         },
         {
           "pn": "2465659",
@@ -1088,7 +1118,11 @@ window.SEED = {
           "unit": 48,
           "source": "quote",
           "quoteId": "q-pb2",
-          "status": "needed"
+          "status": "received",
+          "receivedQty": 6,
+          "receivedUnit": 48,
+          "receivedAt": "2026-11-11",
+          "note": "IN 11/11/26 on PO 58781432 (Peterbilt bill 40916CY)."
         },
         {
           "pn": "10R2117",
@@ -1099,8 +1133,11 @@ window.SEED = {
           "core": 205.59,
           "source": "quote",
           "quoteId": "q-pb2",
-          "status": "needed",
-          "note": "The dropped 20R0630 pack included new rods. Needed unless the old rods are inspected and reused."
+          "status": "received",
+          "note": "The dropped 20R0630 pack included new rods. Needed unless the old rods are inspected and reused. IN 11/11/26 on PO 58781432 (Peterbilt bill 40916CY).",
+          "receivedQty": 6,
+          "receivedUnit": 341.05,
+          "receivedAt": "2026-11-11"
         },
         {
           "pn": "2613450",
@@ -1137,7 +1174,10 @@ window.SEED = {
       "notes": "Opened 2026-10-29. Engine/electrical conversion on a 2024 389X: Kustom Truck B5 engine harness, NAMUX fuse harness, J1708-to-J1939 converter, Cat 8T9655 isolation mounts, driveline yoke and u-joint, FASS 290, pyro and fuel pressure gauges, battery box and air tank relocation. All 43 lines on Fullbay RO 25324800 were IN as of 10/29/26. Prices are our most recent Fullbay purchase cost where we have one; lines with no history show blank.",
       "created": "2026-10-29",
       "log": [
-        { "date": "2026-11-02", "text": "10R4090 ECM (CAT reman) added and received, marked IN." },
+        {
+          "date": "2026-11-02",
+          "text": "10R4090 ECM (CAT reman) added and received, marked IN."
+        },
         {
           "date": "2026-10-29",
           "text": "Two Kustom Truck Smart Gauge kits needed: 19115002 pyrometer $735 and 19115001 oil temp $495. Oil temp kit is listed Cat ONLY, confirm it works on the ISX before ordering."
@@ -1175,7 +1215,16 @@ window.SEED = {
         }
       ],
       "parts": [
-        {"pn":"10R4090","stage":8,"desc":"ECM, control group (CAT reman)","qty":1,"unit":3649.18,"source":"received","status":"received","receivedAt":"2026-11-02"},
+        {
+          "pn": "10R4090",
+          "stage": 8,
+          "desc": "ECM, control group (CAT reman)",
+          "qty": 1,
+          "unit": 3649.18,
+          "source": "received",
+          "status": "received",
+          "receivedAt": "2026-11-02"
+        },
         {
           "pn": "19115002",
           "stage": 8,
@@ -2377,15 +2426,42 @@ window.SEED = {
       "notes": "Opened 2026-11-02. New truck for TCL (not in our Fullbay unit history). No parts entered yet; the six lines entered 11/02 belonged to 6999 (unit 56) and were moved.",
       "created": "2026-11-02",
       "log": [
-        { "date": "2026-11-02", "text": "F16-6009031B413SB0 Clamp, hose T-bolt (Peterbilt) (8) added, needed." },
-        { "date": "2026-11-02", "text": "1010-1 Clamp (1) added, needed." },
-        { "date": "2026-11-02", "text": "PL1077ATR Radiator mount (4) received, marked IN." },
-        { "date": "2026-11-02", "text": "14-14256 Pipe, exhaust 64 deg (1) received, marked IN." },
-        { "date": "2026-11-02", "text": "US-PEDAC-20BA Charge air cooler, Dura-Lite Evolution (Peterbilt) (1) received, marked IN." },
-        { "date": "2026-11-02", "text": "07-05861-2 Mount (Freightliner PN) (1) received, marked IN." },
-        { "date": "2026-11-02", "text": "PL1126AHTATR Bushing, mount (1) received, marked IN." },
-        { "date": "2026-11-02", "text": "PL1015HTATR Motor / radiator mount (1) received, marked IN." },
-        { "date": "2026-11-02", "text": "DR-PE-1000-001-ST No description in our history (Peterbilt, DR-PE prefix) (1) received, marked IN." },
+        {
+          "date": "2026-11-02",
+          "text": "F16-6009031B413SB0 Clamp, hose T-bolt (Peterbilt) (8) added, needed."
+        },
+        {
+          "date": "2026-11-02",
+          "text": "1010-1 Clamp (1) added, needed."
+        },
+        {
+          "date": "2026-11-02",
+          "text": "PL1077ATR Radiator mount (4) received, marked IN."
+        },
+        {
+          "date": "2026-11-02",
+          "text": "14-14256 Pipe, exhaust 64 deg (1) received, marked IN."
+        },
+        {
+          "date": "2026-11-02",
+          "text": "US-PEDAC-20BA Charge air cooler, Dura-Lite Evolution (Peterbilt) (1) received, marked IN."
+        },
+        {
+          "date": "2026-11-02",
+          "text": "07-05861-2 Mount (Freightliner PN) (1) received, marked IN."
+        },
+        {
+          "date": "2026-11-02",
+          "text": "PL1126AHTATR Bushing, mount (1) received, marked IN."
+        },
+        {
+          "date": "2026-11-02",
+          "text": "PL1015HTATR Motor / radiator mount (1) received, marked IN."
+        },
+        {
+          "date": "2026-11-02",
+          "text": "DR-PE-1000-001-ST No description in our history (Peterbilt, DR-PE prefix) (1) received, marked IN."
+        },
         {
           "date": "2026-11-02",
           "text": "Six received lines entered here by mistake were moved to job 6999 (unit 56)."
@@ -2398,15 +2474,94 @@ window.SEED = {
       "smUpdates": [],
       "quotes": [],
       "parts": [
-        {"pn":"F16-6009031B413SB0","stage":8,"desc":"Clamp, hose T-bolt (Peterbilt)","qty":8,"unit":17.12,"source":"manual","status":"needed"},
-        {"pn":"1010-1","stage":8,"desc":"Clamp","qty":1,"unit":18.09,"source":"manual","status":"needed"},
-        {"pn":"PL1077ATR","stage":7,"desc":"Radiator mount","qty":4,"unit":19.08,"source":"received","status":"received","receivedAt":"2026-11-02"},
-        {"pn":"14-14256","stage":8,"desc":"Pipe, exhaust 64 deg","qty":1,"unit":362.90,"source":"received","status":"received","receivedAt":"2026-11-02"},
-        {"pn":"US-PEDAC-20BA","stage":7,"desc":"Charge air cooler, Dura-Lite Evolution (Peterbilt)","qty":1,"unit":1430.94,"source":"received","status":"received","receivedAt":"2026-11-02"},
-        {"pn":"07-05861-2","stage":7,"desc":"Mount (Freightliner PN)","qty":2,"unit":27.43,"source":"received","status":"received","receivedAt":"2026-11-02"},
-        {"pn":"PL1126AHTATR","stage":7,"desc":"Bushing, mount","qty":4,"unit":7.42,"source":"received","status":"received","receivedAt":"2026-11-02"},
-        {"pn":"PL1015HTATR","stage":7,"desc":"Motor / radiator mount","qty":4,"unit":25.76,"source":"received","status":"received","receivedAt":"2026-11-02"},
-        {"pn":"DR-PE-1000-001-ST","stage":9,"desc":"Peterbilt part, description TBD (DR-PE prefix)","qty":1,"unit":2036.25,"source":"received","status":"received","receivedAt":"2026-11-02"}
+        {
+          "pn": "F16-6009031B413SB0",
+          "stage": 8,
+          "desc": "Clamp, hose T-bolt (Peterbilt)",
+          "qty": 8,
+          "unit": 17.12,
+          "source": "manual",
+          "status": "needed"
+        },
+        {
+          "pn": "1010-1",
+          "stage": 8,
+          "desc": "Clamp",
+          "qty": 1,
+          "unit": 18.09,
+          "source": "manual",
+          "status": "needed"
+        },
+        {
+          "pn": "PL1077ATR",
+          "stage": 7,
+          "desc": "Radiator mount",
+          "qty": 4,
+          "unit": 19.08,
+          "source": "received",
+          "status": "received",
+          "receivedAt": "2026-11-02"
+        },
+        {
+          "pn": "14-14256",
+          "stage": 8,
+          "desc": "Pipe, exhaust 64 deg",
+          "qty": 1,
+          "unit": 362.9,
+          "source": "received",
+          "status": "received",
+          "receivedAt": "2026-11-02"
+        },
+        {
+          "pn": "US-PEDAC-20BA",
+          "stage": 7,
+          "desc": "Charge air cooler, Dura-Lite Evolution (Peterbilt)",
+          "qty": 1,
+          "unit": 1430.94,
+          "source": "received",
+          "status": "received",
+          "receivedAt": "2026-11-02"
+        },
+        {
+          "pn": "07-05861-2",
+          "stage": 7,
+          "desc": "Mount (Freightliner PN)",
+          "qty": 2,
+          "unit": 27.43,
+          "source": "received",
+          "status": "received",
+          "receivedAt": "2026-11-02"
+        },
+        {
+          "pn": "PL1126AHTATR",
+          "stage": 7,
+          "desc": "Bushing, mount",
+          "qty": 4,
+          "unit": 7.42,
+          "source": "received",
+          "status": "received",
+          "receivedAt": "2026-11-02"
+        },
+        {
+          "pn": "PL1015HTATR",
+          "stage": 7,
+          "desc": "Motor / radiator mount",
+          "qty": 4,
+          "unit": 25.76,
+          "source": "received",
+          "status": "received",
+          "receivedAt": "2026-11-02"
+        },
+        {
+          "pn": "DR-PE-1000-001-ST",
+          "stage": 9,
+          "desc": "Peterbilt part, description TBD (DR-PE prefix)",
+          "qty": 1,
+          "unit": 2036.25,
+          "source": "received",
+          "status": "received",
+          "receivedAt": "2026-11-02"
+        }
       ]
     }
   ]
