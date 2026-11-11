@@ -12,7 +12,7 @@ window.SEED = {
       "unit": "Tractor / Semi / Sleeper",
       "engine": "CAT C18",
       "jobNumber": "6657",
-      "seedRev": 15,
+      "seedRev": 16,
       "ro": "25166952",
       "notes": "Tech sheet signed Simper (rev 11/19/2025). Block back from machine shop, liners and shims in as of 08/19/26. The reman cylinder packs (20R0630) were dropped for bare liners, so pistons, pins, retainers, rings and rods are quoted separately on Peterbilt Q43751 (27 Oct 26, $6,999.06 with $1,233.54 refundable rod cores). Still not on any quote: rod bearings (check the 6060909 Bronze kit) and head studs.",
       "created": "2026-07-28",
@@ -40,6 +40,10 @@ window.SEED = {
         {
           "date": "2026-11-11",
           "text": "PO 58781432 received: the full Q43751 piston and rod set from Jackson Group Peterbilt (bill 40916CY, $5,795.52, 7 lines, 48 pieces). 6 rods, 6 piston bodies, 6 pins, 12 retainers, 6 each top/intermediate/oil rings. Intermediate ring 1871503 billed $53.00 vs $48.00 quoted, everything else at quote. No core charge on the bill."
+        },
+        {
+          "date": "2026-11-11",
+          "text": "PO 34251744 received: 6060909 Cat Bronze overhaul kit (bearings + full gasket set) from Jackson Group Peterbilt, bill 40297CY, $2,918.59, $367 under the Q38373 quote. Next: open the kit and confirm the rod bearings fit, which may close the 2613450 gap line, and compare its gasket set against the 4366597 and 4380907 kits already on the shelf for overlap."
         }
       ],
       "smUpdates": [
@@ -84,6 +88,13 @@ window.SEED = {
           "number": "PO 58781432 / bill 40916CY",
           "date": "2026-11-11",
           "note": "Received. Q43751 piston/rod set, 7 lines, $5,795.52."
+        },
+        {
+          "id": "q-po34251744",
+          "vendor": "Jackson Group Peterbilt, Cheyenne",
+          "number": "PO 34251744 / bill 40297CY",
+          "date": "2026-11-11",
+          "note": "Received. 6060909 Bronze overhaul kit, 1 line, $2,918.59."
         }
       ],
       "parts": [
@@ -235,8 +246,11 @@ window.SEED = {
           "promo": -250,
           "source": "quote",
           "quoteId": "q-pb",
-          "status": "needed",
-          "note": "Bronze = main, rod and thrust bearings + complete gasket/seal set. Does NOT include pistons, rings, liners, rods or head bolts. Received gasket kits 4366597 / 4380907 may overlap this kit; inventory before ordering."
+          "status": "received",
+          "note": "Bronze = main, rod and thrust bearings + complete gasket/seal set. Does NOT include pistons, rings, liners, rods or head bolts. Received gasket kits 4366597 / 4380907 may overlap this kit; inventory before ordering. IN 11/11/26 on PO 34251744 (Peterbilt bill 40297CY). Billed $2,918.59 vs $3,285.95 quoted. Kit carries main, rod and thrust bearings: check them against the ACERT spec before buying 2613450 rod bearings separately.",
+          "receivedQty": 1,
+          "receivedUnit": 2918.59,
+          "receivedAt": "2026-11-11"
         },
         {
           "pn": "9Y3368",
