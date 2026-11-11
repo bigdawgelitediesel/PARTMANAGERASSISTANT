@@ -2654,15 +2654,15 @@ window.SEED = {
     },
     {
       "id": "7026",
-      "name": "Job 7026",
-      "customer": "",
-      "unit": "",
-      "vin": "",
-      "engine": "",
+      "name": "Mountain West Energy",
+      "customer": "MOUNTAIN WEST ENERGY SERVICES",
+      "unit": "2015 Kenworth T680, Unit 003",
+      "vin": "1XKYD49X4FJ432001",
+      "engine": "Cummins ISX15",
       "jobNumber": "7026",
-      "seedRev": 1,
+      "seedRev": 2,
       "ro": "",
-      "notes": "Cummins engine (CUM part suffixes). Customer, truck and VIN not yet entered.",
+      "notes": "2015 Kenworth T680, unit 003, Cummins ISX (1XKYD VIN prefix and CUM gaskets on the first PO).",
       "created": "2026-11-11",
       "log": [
         {
@@ -2671,7 +2671,7 @@ window.SEED = {
         },
         {
           "date": "2026-11-11",
-          "text": "Job opened in the portal from PO receipt. Customer, truck and VIN still to be entered."
+          "text": "Truck entered: 2015 Kenworth T680, unit 003, VIN 1XKYD49X4FJ432001, Mountain West Energy Services."
         }
       ],
       "smUpdates": [],
