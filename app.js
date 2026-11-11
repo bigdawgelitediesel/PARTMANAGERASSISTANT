@@ -41,6 +41,12 @@
           // refresh everything except the user's progress fields
           for (const k of Object.keys(sp)) if (!['status', 'installedAt', 'receivedAt', 'receivedQty', 'prevStatus', 'id'].includes(k)) lp[k] = sp[k];
           if (sp.status === 'superseded') lp.status = 'superseded';
+          // Seed can promote a line to IN (parts received on a PO) but never demote a local checkmark.
+          if (sp.status === 'received' && lp.status !== 'received' && lp.status !== 'superseded') {
+            lp.status = 'received';
+            if (sp.receivedAt) lp.receivedAt = sp.receivedAt;
+            if (sp.receivedQty != null) lp.receivedQty = sp.receivedQty;
+          }
         }
         local.seedRev = sj.seedRev;
       }
