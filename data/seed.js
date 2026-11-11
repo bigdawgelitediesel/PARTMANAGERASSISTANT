@@ -2428,6 +2428,80 @@ window.SEED = {
       ]
     },
     {
+      "id": "7002",
+      "name": "Job 7002",
+      "customer": "",
+      "unit": "",
+      "vin": "",
+      "engine": "",
+      "jobNumber": "7002",
+      "seedRev": 1,
+      "ro": "",
+      "notes": "Customer, truck and VIN not yet entered.",
+      "created": "2026-11-11",
+      "log": [
+        {
+          "date": "2026-11-11",
+          "text": "PO 99712434 received: twelve-point screws (1 + 3) plus $35 incoming freight from Jackson Group Peterbilt, bill 41537CYX1, $101.11."
+        },
+        {
+          "date": "2026-11-11",
+          "text": "Job opened in the portal from PO receipt. Customer, truck and VIN still to be entered."
+        }
+      ],
+      "smUpdates": [],
+      "quotes": [
+        {
+          "id": "q-po99712434",
+          "vendor": "Jackson Group Peterbilt, Cheyenne",
+          "number": "PO 99712434 / bill 41537CYX1",
+          "date": "2026-11-11",
+          "note": "Received. 2 screw lines + $35 incoming freight, $101.11."
+        }
+      ],
+      "parts": [
+        {
+          "pn": "3046599",
+          "stage": 9,
+          "desc": "Screw, twelve point",
+          "qty": 1,
+          "unit": 10.82,
+          "source": "manual",
+          "status": "received",
+          "receivedQty": 1,
+          "receivedUnit": 10.82,
+          "receivedAt": "2026-11-11",
+          "note": "IN 11/11/26 on PO 99712434. No prior purchase in our history."
+        },
+        {
+          "pn": "3946085",
+          "stage": 9,
+          "desc": "Screw, twelve point",
+          "qty": 3,
+          "unit": 18.43,
+          "source": "manual",
+          "status": "received",
+          "receivedQty": 3,
+          "receivedUnit": 18.43,
+          "receivedAt": "2026-11-11",
+          "note": "IN 11/11/26 on PO 99712434. No prior purchase in our history."
+        },
+        {
+          "pn": "FRTINCOMING",
+          "stage": 10,
+          "desc": "Incoming freight",
+          "qty": 1,
+          "unit": 35,
+          "source": "manual",
+          "status": "received",
+          "receivedQty": 1,
+          "receivedUnit": 35,
+          "receivedAt": "2026-11-11",
+          "note": "IN 11/11/26 on PO 99712434."
+        }
+      ]
+    },
+    {
       "id": "7003",
       "name": "TCL Transport",
       "customer": "TCL TRANSPORT, LLC",
@@ -2575,6 +2649,80 @@ window.SEED = {
           "source": "received",
           "status": "received",
           "receivedAt": "2026-11-02"
+        }
+      ]
+    },
+    {
+      "id": "7026",
+      "name": "Job 7026",
+      "customer": "",
+      "unit": "",
+      "vin": "",
+      "engine": "",
+      "jobNumber": "7026",
+      "seedRev": 1,
+      "ro": "",
+      "notes": "Cummins engine (CUM part suffixes). Customer, truck and VIN not yet entered.",
+      "created": "2026-11-11",
+      "log": [
+        {
+          "date": "2026-11-11",
+          "text": "PO 23499233 received: 3 Cummins gaskets from Jackson Group Peterbilt, bill 41660CY, $53.38. Exhaust outlet gasket, injector gasket, and one unidentified gasket."
+        },
+        {
+          "date": "2026-11-11",
+          "text": "Job opened in the portal from PO receipt. Customer, truck and VIN still to be entered."
+        }
+      ],
+      "smUpdates": [],
+      "quotes": [
+        {
+          "id": "q-po23499233",
+          "vendor": "Jackson Group Peterbilt, Cheyenne",
+          "number": "PO 23499233 / bill 41660CY",
+          "date": "2026-11-11",
+          "note": "Received. 3 Cummins gaskets, $53.38."
+        }
+      ],
+      "parts": [
+        {
+          "pn": "3684359CUM",
+          "stage": 6,
+          "desc": "Gasket, exhaust outlet connection (Cummins)",
+          "qty": 1,
+          "unit": 14.3,
+          "source": "manual",
+          "status": "received",
+          "receivedQty": 1,
+          "receivedUnit": 14.3,
+          "receivedAt": "2026-11-11",
+          "note": "IN 11/11/26 on PO 23499233."
+        },
+        {
+          "pn": "4963857CUM",
+          "stage": 6,
+          "desc": "Gasket, injector (Cummins)",
+          "qty": 1,
+          "unit": 18.73,
+          "source": "manual",
+          "status": "received",
+          "receivedQty": 1,
+          "receivedUnit": 18.73,
+          "receivedAt": "2026-11-11",
+          "note": "IN 11/11/26 on PO 23499233."
+        },
+        {
+          "pn": "4966441CUM",
+          "stage": 6,
+          "desc": "Gasket (Cummins)",
+          "qty": 1,
+          "unit": 20.35,
+          "source": "manual",
+          "status": "received",
+          "receivedQty": 1,
+          "receivedUnit": 20.35,
+          "receivedAt": "2026-11-11",
+          "note": "IN 11/11/26 on PO 23499233. No description in our history beyond \"gasket\"."
         }
       ]
     }
