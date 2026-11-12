@@ -1937,12 +1937,16 @@ window.SEED = {
       "vin": "3AKJHHDR0PSNH8637",
       "engine": "Detroit DD15 14.8L",
       "jobNumber": "6957",
-      "seedRev": 8,
+      "seedRev": 9,
       "hidePrices": true,
       "ro": "26971752",
       "notes": "Oil pan / oil pump / suction pipe job plus oil cooler, EGR cooler seals, compressor coolant lines, clutch and pilot bearing, filters and fluids. All 30 lines were IN as of 10/28/26 per the Fullbay parts list. Prices and totals are hidden on this job: the true cost was far higher than our history shows and the full pricing is no longer on hand.",
       "created": "2026-10-28",
       "log": [
+        {
+          "date": "2026-11-12",
+          "text": "HP fuel line kit A4720781210 is also IN. Still need the pump mounting O-ring A0179978945 and whatever low-pressure line O-rings Tee disturbs at the pump."
+        },
         {
           "date": "2026-11-12",
           "text": "High pressure fuel pump A4720902150 (Bosch 0 445 020 340) is IN. Install needs new mounting O-ring A0179978945 and pump-to-rail high pressure line kit A4720781210 (one-time use), plus O-rings for any low-pressure fuel lines pulled off the pump. If the old pump failed with metal in it, the rail, injector lines, injectors and filter module have to be flushed or replaced like the Aug 2025 Commercial Credit job (VIN ...NSNC9408). Confirm with Tee before ordering."
@@ -2008,8 +2012,9 @@ window.SEED = {
           "qty": 1,
           "unit": 70.03,
           "source": "manual",
-          "status": "needed",
-          "note": "One-time-use line. Recommended 11/12, not ordered yet."
+          "status": "received",
+          "receivedAt": "2026-11-12",
+          "note": "One-time-use line. Came in with the pump 11/12."
         },
         {
           "pn": "A0071530228",
