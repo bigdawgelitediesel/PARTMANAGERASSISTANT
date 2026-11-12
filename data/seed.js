@@ -1937,12 +1937,16 @@ window.SEED = {
       "vin": "3AKJHHDR0PSNH8637",
       "engine": "Detroit DD15 14.8L",
       "jobNumber": "6957",
-      "seedRev": 9,
+      "seedRev": 10,
       "hidePrices": true,
       "ro": "26971752",
       "notes": "Oil pan / oil pump / suction pipe job plus oil cooler, EGR cooler seals, compressor coolant lines, clutch and pilot bearing, filters and fluids. All 30 lines were IN as of 10/28/26 per the Fullbay parts list. Prices and totals are hidden on this job: the true cost was far higher than our history shows and the full pricing is no longer on hand.",
       "created": "2026-10-28",
       "log": [
+        {
+          "date": "2026-11-12",
+          "text": "Pump A4720902150 came with the mounting O-ring already on the flange (Jacob checked). Nothing else to order for the pump itself; only low-pressure line O-rings if Tee disturbs them."
+        },
         {
           "date": "2026-11-12",
           "text": "HP fuel line kit A4720781210 is also IN. Still need the pump mounting O-ring A0179978945 and whatever low-pressure line O-rings Tee disturbs at the pump."
@@ -1994,16 +1998,6 @@ window.SEED = {
           "status": "received",
           "receivedAt": "2026-11-12",
           "note": "Arrived 11/12. Cost shown is our last buy 08/2025, this one may have come from the customer."
-        },
-        {
-          "pn": "A0179978945",
-          "stage": 8,
-          "desc": "Mounting O-ring, high pressure fuel pump",
-          "qty": 1,
-          "unit": 23.27,
-          "source": "manual",
-          "status": "needed",
-          "note": "Goes with the HP pump. Recommended 11/12, not ordered yet."
         },
         {
           "pn": "A4720781210",
