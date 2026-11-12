@@ -1187,11 +1187,15 @@ window.SEED = {
       "vin": "1XPXD49X4RD679298",
       "engine": "Cummins ISX / X15 14.9L",
       "jobNumber": "6682",
-      "seedRev": 9,
+      "seedRev": 10,
       "ro": "25324800",
       "notes": "Opened 2026-10-29. Engine/electrical conversion on a 2024 389X: Kustom Truck B5 engine harness, NAMUX fuse harness, J1708-to-J1939 converter, Cat 8T9655 isolation mounts, driveline yoke and u-joint, FASS 290, pyro and fuel pressure gauges, battery box and air tank relocation. All 43 lines on Fullbay RO 25324800 were IN as of 10/29/26. Prices are our most recent Fullbay purchase cost where we have one; lines with no history show blank.",
       "created": "2026-10-29",
       "log": [
+        {
+          "date": "2026-11-12",
+          "text": "C18 head bolts/studs needed by tomorrow. Added as a gap line until PN is confirmed."
+        },
         {
           "date": "2026-11-02",
           "text": "10R4090 ECM (CAT reman) added and received, marked IN."
@@ -1237,6 +1241,16 @@ window.SEED = {
         }
       ],
       "parts": [
+        {
+          "pn": "C18-HEAD-STUDS",
+          "stage": 6,
+          "desc": "Head studs/bolts, CAT C18 (ARP or OEM, PN TBD)",
+          "qty": 1,
+          "unit": null,
+          "source": "gap",
+          "status": "needed",
+          "note": "Added 11/12, NEEDED BY 11/13. ARP 238-4201 is listed for C15 only, C18 fitment not confirmed (ARP 800-826-3045). Fallback: OEM CAT head bolts from the Cat dealer."
+        },
         {
           "pn": "10R4090",
           "stage": 8,
