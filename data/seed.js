@@ -12,7 +12,7 @@ window.SEED = {
       "unit": "Tractor / Semi / Sleeper",
       "engine": "CAT C18",
       "jobNumber": "6657",
-      "seedRev": 16,
+      "seedRev": 17,
       "ro": "25166952",
       "notes": "Tech sheet signed Simper (rev 11/19/2025). Block back from machine shop, liners and shims in as of 08/19/26. The reman cylinder packs (20R0630) were dropped for bare liners, so pistons, pins, retainers, rings and rods are quoted separately on Peterbilt Q43751 (27 Oct 26, $6,999.06 with $1,233.54 refundable rod cores). Still not on any quote: rod bearings (check the 6060909 Bronze kit) and head studs.",
       "created": "2026-07-28",
@@ -47,6 +47,10 @@ window.SEED = {
         }
       ],
       "smUpdates": [
+        {
+          "date": "2026-11-11",
+          "text": "Simper: truck will be here soon. All parts that were at Pete are here."
+        },
         {
           "date": "2026-10-27",
           "text": "Truck will be here this week. This will be Kevin's next project."
@@ -1183,7 +1187,7 @@ window.SEED = {
       "vin": "1XPXD49X4RD679298",
       "engine": "Cummins ISX / X15 14.9L",
       "jobNumber": "6682",
-      "seedRev": 8,
+      "seedRev": 9,
       "ro": "25324800",
       "notes": "Opened 2026-10-29. Engine/electrical conversion on a 2024 389X: Kustom Truck B5 engine harness, NAMUX fuse harness, J1708-to-J1939 converter, Cat 8T9655 isolation mounts, driveline yoke and u-joint, FASS 290, pyro and fuel pressure gauges, battery box and air tank relocation. All 43 lines on Fullbay RO 25324800 were IN as of 10/29/26. Prices are our most recent Fullbay purchase cost where we have one; lines with no history show blank.",
       "created": "2026-10-29",
@@ -1210,6 +1214,10 @@ window.SEED = {
         }
       ],
       "smUpdates": [
+        {
+          "date": "2026-11-11",
+          "text": "Roger Wilson: skirts sent to 4 States. Troy waiting on the box company to get back to us. Bevel working on wiring tonight."
+        },
         {
           "date": "2026-10-28",
           "text": "Skirts sent to 4 States. Bevel is working on this tonight with Troy."
@@ -1937,7 +1945,7 @@ window.SEED = {
       "vin": "3AKJHHDR0PSNH8637",
       "engine": "Detroit DD15 14.8L",
       "jobNumber": "6957",
-      "seedRev": 10,
+      "seedRev": 11,
       "hidePrices": true,
       "ro": "26971752",
       "notes": "Oil pan / oil pump / suction pipe job plus oil cooler, EGR cooler seals, compressor coolant lines, clutch and pilot bearing, filters and fluids. All 30 lines were IN as of 10/28/26 per the Fullbay parts list. Prices and totals are hidden on this job: the true cost was far higher than our history shows and the full pricing is no longer on hand.",
@@ -1965,6 +1973,10 @@ window.SEED = {
         }
       ],
       "smUpdates": [
+        {
+          "date": "2026-11-11",
+          "text": "Sapsan: fuel pump is here."
+        },
         {
           "date": "2026-10-27",
           "text": "This should complete tomorrow."
@@ -2469,7 +2481,7 @@ window.SEED = {
       "vin": "1NPXD49X9GD360129",
       "engine": "Cummins",
       "jobNumber": "7002",
-      "seedRev": 2,
+      "seedRev": 3,
       "ro": "",
       "notes": "2016 Peterbilt 389, unit 29, Cummins (CUM parts on prior visits). Customer matched from our Fullbay history on this VIN (5 XR Farms, prior visits 04/21/26 and 09/09/26).",
       "created": "2026-11-11",
@@ -2483,7 +2495,12 @@ window.SEED = {
           "text": "Truck entered: 2016 Peterbilt 389, unit 29, VIN 1NPXD49X9GD360129. Customer 5 XR Farms per our history on this VIN."
         }
       ],
-      "smUpdates": [],
+      "smUpdates": [
+        {
+          "date": "2026-11-11",
+          "text": "5 XR: Kevin is swapping injectors from Charity's old engine into this."
+        }
+      ],
       "quotes": [
         {
           "id": "q-po99712434",
@@ -2694,7 +2711,7 @@ window.SEED = {
       "vin": "1XKYD49X4FJ432001",
       "engine": "Cummins ISX15",
       "jobNumber": "7026",
-      "seedRev": 2,
+      "seedRev": 3,
       "ro": "",
       "notes": "2015 Kenworth T680, unit 003, Cummins ISX (1XKYD VIN prefix and CUM gaskets on the first PO).",
       "created": "2026-11-11",
@@ -2708,7 +2725,12 @@ window.SEED = {
           "text": "Truck entered: 2015 Kenworth T680, unit 003, VIN 1XKYD49X4FJ432001, Mountain West Energy Services."
         }
       ],
-      "smUpdates": [],
+      "smUpdates": [
+        {
+          "date": "2026-11-11",
+          "text": "Mountain West Energy: need to fix exhaust leak, then test drive and see what happens."
+        }
+      ],
       "quotes": [
         {
           "id": "q-po23499233",
