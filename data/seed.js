@@ -12,14 +12,14 @@ window.SEED = {
       "unit": "Tractor / Semi / Sleeper",
       "engine": "CAT C18",
       "jobNumber": "6657",
-      "seedRev": 18,
+      "seedRev": 19,
       "ro": "25166952",
       "notes": "Tech sheet signed Simper (rev 11/19/2025). Block back from machine shop, liners and shims in as of 08/19/26. The reman cylinder packs (20R0630) were dropped for bare liners, so pistons, pins, retainers, rings and rods are quoted separately on Peterbilt Q43751 (27 Oct 26, $6,999.06 with $1,233.54 refundable rod cores). Still not on any quote: rod bearings (check the 6060909 Bronze kit) and head studs.",
       "created": "2026-07-28",
       "log": [
         {
           "date": "2026-11-13",
-          "text": "PO 17838852 is IN."
+          "text": "PO 17838852 IN (Peterbilt bill 41744CY, $594.36): Cat head bolts 1241854 x10 and 1241855 x16 plus 5H1504 washers x26. Went the Cat bolt route, so the ARP head stud gap line is closed and replaced with these three lines."
         },
         {
           "date": "2026-08-19",
@@ -69,6 +69,13 @@ window.SEED = {
         }
       ],
       "quotes": [
+        {
+          "id": "q-po17838852",
+          "vendor": "Jackson Group Peterbilt, Cheyenne",
+          "number": "PO 17838852 / bill 41744CY",
+          "date": "2026-11-13",
+          "note": "Cat head bolts 1241854 x10 at $22.56, 1241855 x16 at $20.48, 5H1504 washers x26 at $1.58. $594.36 total, no tax. Closes the head stud gap."
+        },
         {
           "id": "q-pb",
           "vendor": "Jackson Group Peterbilt, Cheyenne",
@@ -1172,14 +1179,46 @@ window.SEED = {
           "note": "GAP. Not on Q43751 either. The 6060909 Bronze kit carries rod bearings; confirm they are the right ones before buying these separately."
         },
         {
-          "pn": "CATARP",
+          "pn": "1241854",
           "stage": 6,
-          "desc": "ARP head stud kit (or Cat bolts 1241854 x10 + 1241855 x16 + 9X8268 washers)",
-          "qty": 1,
-          "unit": 1349,
-          "source": "gap",
-          "status": "needed",
-          "note": "GAP. Head studs are not on Q38373 or Q43751. ARP kit ran $1,142 to $1,349 on past builds; Cat bolt route is roughly $530 plus washers."
+          "desc": "Head bolt, 12-point, long (Cat)",
+          "qty": 10,
+          "unit": 22.56,
+          "source": "po",
+          "quoteId": "q-po17838852",
+          "status": "received",
+          "note": "IN 11/13/26 on PO 17838852 (Peterbilt bill 41744CY). Replaces the ARP head stud kit gap line; Cat bolt route chosen.",
+          "receivedQty": 10,
+          "receivedUnit": 22.56,
+          "receivedAt": "2026-11-13"
+        },
+        {
+          "pn": "1241855",
+          "stage": 6,
+          "desc": "Head bolt, 12-point, short (Cat)",
+          "qty": 16,
+          "unit": 20.48,
+          "source": "po",
+          "quoteId": "q-po17838852",
+          "status": "received",
+          "note": "IN 11/13/26 on PO 17838852 (Peterbilt bill 41744CY). Replaces the ARP head stud kit gap line; Cat bolt route chosen.",
+          "receivedQty": 16,
+          "receivedUnit": 20.48,
+          "receivedAt": "2026-11-13"
+        },
+        {
+          "pn": "5H1504",
+          "stage": 6,
+          "desc": "Washer, head bolt (Cat)",
+          "qty": 26,
+          "unit": 1.58,
+          "source": "po",
+          "quoteId": "q-po17838852",
+          "status": "received",
+          "note": "IN 11/13/26 on PO 17838852 (Peterbilt bill 41744CY). Used in place of the 9X8268 washers listed on the old gap line.",
+          "receivedQty": 26,
+          "receivedUnit": 1.58,
+          "receivedAt": "2026-11-13"
         }
       ]
     },
