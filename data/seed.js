@@ -1187,11 +1187,15 @@ window.SEED = {
       "vin": "1XPXD49X4RD679298",
       "engine": "Cummins ISX / X15 14.9L",
       "jobNumber": "6682",
-      "seedRev": 10,
+      "seedRev": 11,
       "ro": "25324800",
       "notes": "Opened 2026-10-29. Engine/electrical conversion on a 2024 389X: Kustom Truck B5 engine harness, NAMUX fuse harness, J1708-to-J1939 converter, Cat 8T9655 isolation mounts, driveline yoke and u-joint, FASS 290, pyro and fuel pressure gauges, battery box and air tank relocation. All 43 lines on Fullbay RO 25324800 were IN as of 10/29/26. Prices are our most recent Fullbay purchase cost where we have one; lines with no history show blank.",
       "created": "2026-10-29",
       "log": [
+        {
+          "date": "2026-11-13",
+          "text": "PO 17838852 is IN."
+        },
         {
           "date": "2026-11-12",
           "text": "C18 head bolts/studs needed by tomorrow. Added as a gap line until PN is confirmed."
