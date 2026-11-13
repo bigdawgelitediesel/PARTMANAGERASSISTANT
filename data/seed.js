@@ -12,11 +12,15 @@ window.SEED = {
       "unit": "Tractor / Semi / Sleeper",
       "engine": "CAT C18",
       "jobNumber": "6657",
-      "seedRev": 17,
+      "seedRev": 18,
       "ro": "25166952",
       "notes": "Tech sheet signed Simper (rev 11/19/2025). Block back from machine shop, liners and shims in as of 08/19/26. The reman cylinder packs (20R0630) were dropped for bare liners, so pistons, pins, retainers, rings and rods are quoted separately on Peterbilt Q43751 (27 Oct 26, $6,999.06 with $1,233.54 refundable rod cores). Still not on any quote: rod bearings (check the 6060909 Bronze kit) and head studs.",
       "created": "2026-07-28",
       "log": [
+        {
+          "date": "2026-11-13",
+          "text": "PO 17838852 is IN."
+        },
         {
           "date": "2026-08-19",
           "text": "Block back from machine shop. Liners 5560701 x6 and shims 9Y3368 x6 installed. Spacer plate on order."
@@ -1187,15 +1191,11 @@ window.SEED = {
       "vin": "1XPXD49X4RD679298",
       "engine": "Cummins ISX / X15 14.9L",
       "jobNumber": "6682",
-      "seedRev": 11,
+      "seedRev": 12,
       "ro": "25324800",
       "notes": "Opened 2026-10-29. Engine/electrical conversion on a 2024 389X: Kustom Truck B5 engine harness, NAMUX fuse harness, J1708-to-J1939 converter, Cat 8T9655 isolation mounts, driveline yoke and u-joint, FASS 290, pyro and fuel pressure gauges, battery box and air tank relocation. All 43 lines on Fullbay RO 25324800 were IN as of 10/29/26. Prices are our most recent Fullbay purchase cost where we have one; lines with no history show blank.",
       "created": "2026-10-29",
       "log": [
-        {
-          "date": "2026-11-13",
-          "text": "PO 17838852 is IN."
-        },
         {
           "date": "2026-11-12",
           "text": "C18 head bolts/studs needed by tomorrow. Added as a gap line until PN is confirmed."
