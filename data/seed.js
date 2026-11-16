@@ -1861,9 +1861,9 @@ window.SEED = {
       "vin": "2NP3LN9X7CM149698",
       "engine": "Cummins (CUM part numbers; PX-8 / ISC likely)",
       "jobNumber": "6796",
-      "seedRev": 8,
+      "seedRev": 9,
       "ro": "",
-      "notes": "Opened 2026-10-28. Injector job: 6 injectors plus rocker cover gasket, engine brake solenoids, P/S pump gasket and hardware, entered from the Fullbay estimate on 10/28 (our cost; Fullbay sell subtotal $4,930.88). Still need injector pass-through tubes, no part number or price yet.",
+      "notes": "DONE 2026-11-16, job closed out. Opened 2026-10-28. Injector job: 6 injectors plus rocker cover gasket, engine brake solenoids, P/S pump gasket and hardware, entered from the Fullbay estimate on 10/28 (our cost; Fullbay sell subtotal $4,930.88). Still need injector pass-through tubes, no part number or price yet.",
       "created": "2026-10-28",
       "log": [
         {
@@ -1873,6 +1873,10 @@ window.SEED = {
         {
           "date": "2026-10-28",
           "text": "9 part lines added from the Fullbay estimate (6 injectors 5579405SE at $543.49 each). Pass-through tubes still need a part number and price."
+        },
+        {
+          "date": "2026-11-16",
+          "text": "Job done. Closed out in the portal 2026-11-16."
         }
       ],
       "smUpdates": [
